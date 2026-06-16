@@ -1,486 +1,497 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalakkal Kitchen Hotel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>கலக்கல் கிச்சன்</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#C0392B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --yellow:#F8C92B;
-    --red:#D8332A;
-    --brown:#2A1B12;
-    --cream:#FFF7E2;
-    --green:#3F6B3A;
-    --ink:#1E1410;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Poppins',sans-serif;
-    background:var(--cream);
-    color:var(--ink);
-  }
-  h1,h2,h3{font-family:'Anton',sans-serif; letter-spacing:1px; text-transform:uppercase;}
-  .eyebrow{font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:4px; font-size:.75rem; font-weight:600;}
+:root{
+  --red:#C0392B;
+  --red-light:#FADBD8;
+  --red-mid:#F1948A;
+  --red-soft:#FDF0EE;
+  --red-border:#F5B7B1;
+  --accent:#E74C3C;
+  --gold:#D4AC0D;
+  --white:#FFFFFF;
+  --text:#2C0A0A;
+  --muted:#7B3535;
+  --bg:#FFF8F8;
+  --green:#1E8449;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Serif Tamil',serif; background:var(--bg); color:var(--text); font-size:16px; max-width:480px; margin:0 auto; position:relative;}
 
-  /* HEADER */
-  header{
-    position:sticky; top:0; z-index:50;
-    background:var(--brown);
-    color:var(--cream);
-    display:flex; align-items:center; justify-content:space-between;
-    padding:14px 6%;
-    box-shadow:0 2px 10px rgba(0,0,0,.15);
-  }
-  .logo{display:flex; align-items:center; gap:10px;}
-  .logo-mark{
-    width:42px; height:42px; border-radius:50%;
-    background:var(--yellow);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Anton',sans-serif; color:var(--red); font-size:1.3rem;
-    border:3px solid var(--red);
-  }
-  .logo-text{font-family:'Anton',sans-serif; font-size:1.1rem; line-height:1; letter-spacing:1px;}
-  .logo-text span{display:block; font-family:'Oswald',sans-serif; font-size:.6rem; letter-spacing:3px; color:var(--yellow); font-weight:500; margin-top:3px;}
-  nav{display:flex; gap:28px; align-items:center;}
-  nav a{color:var(--cream); text-decoration:none; font-family:'Oswald',sans-serif; font-weight:500; letter-spacing:1px; font-size:.85rem; text-transform:uppercase; transition:color .2s;}
-  nav a:hover{color:var(--yellow);}
-  .cart-btn{
-    background:var(--red); color:var(--cream); border:none; border-radius:30px;
-    padding:10px 20px; font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1px;
-    cursor:pointer; display:flex; align-items:center; gap:8px; font-size:.85rem;
-    transition:transform .15s, background .2s;
-  }
-  .cart-btn:hover{background:#b8281f; transform:translateY(-2px);}
-  .cart-count{
-    background:var(--yellow); color:var(--ink); border-radius:50%; width:22px; height:22px;
-    display:flex; align-items:center; justify-content:center; font-size:.75rem; font-weight:700;
-  }
+/* TOP BAR */
+.topbar{
+  background:var(--red); color:var(--white);
+  padding:14px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+  position:sticky; top:0; z-index:100;
+  box-shadow:0 3px 12px rgba(192,57,43,.3);
+}
+.topbar-left{display:flex; align-items:center; gap:10px;}
+.logo-box{background:var(--white); padding:6px 10px; border-radius:6px;}
+.logo-box span{color:var(--red); font-family:'Lora',serif; font-weight:700; font-size:1rem;}
+.topbar-title{line-height:1.2;}
+.topbar-title strong{display:block; font-size:1rem; font-weight:700; letter-spacing:.3px;}
+.topbar-title small{font-size:.7rem; color:#FADBD8; letter-spacing:.5px;}
+.cart-fab{
+  background:var(--white); color:var(--red); border:none;
+  padding:10px 16px; border-radius:30px; font-family:'Lora',serif; font-weight:700;
+  font-size:.85rem; cursor:pointer; display:flex; align-items:center; gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.15); min-width:70px; justify-content:center;
+}
+.cart-count{
+  background:var(--gold); color:var(--white); border-radius:50%;
+  width:20px; height:20px; display:flex; align-items:center; justify-content:center;
+  font-size:.7rem; font-weight:700;
+}
 
-  /* HERO - roadside sign board recreation */
-  .hero{
-    position:relative;
-    background:linear-gradient(180deg,#cfe7f0 0%, #e9eef0 60%, #d8c9ad 100%);
-    padding:70px 6% 90px;
-    display:flex; justify-content:center; align-items:flex-start; gap:60px;
-    overflow:hidden;
-    flex-wrap:wrap;
-  }
-  .hero::before{
-    content:""; position:absolute; bottom:0; left:0; right:0; height:120px;
-    background:repeating-linear-gradient(90deg, #b8b8b8 0 60px, #a8a8a8 60px 64px);
-    opacity:.4;
-  }
-  .signboard{
-    position:relative; z-index:2;
-    background:var(--yellow);
-    width:300px;
-    box-shadow:0 25px 50px rgba(0,0,0,.25);
-    border:6px solid var(--brown);
-    animation:settle .9s ease-out;
-  }
-  @keyframes settle{from{transform:translateY(-40px) rotate(-2deg); opacity:0;} to{transform:translateY(0) rotate(-1.5deg); opacity:1;}}
-  .signboard-top{
-    background:var(--brown); color:var(--yellow);
-    padding:14px 10px; text-align:center;
-  }
-  .signboard-top .tamil{font-size:1.3rem; font-weight:700; font-family:'Oswald',sans-serif; letter-spacing:1px; margin-bottom:4px;}
-  .signboard-top .sub{font-size:.65rem; color:var(--cream); letter-spacing:1px; font-family:'Oswald',sans-serif;}
-  .signboard-body{
-    padding:18px 0; text-align:center; line-height:.95;
-  }
-  .signboard-body h1{
-    font-size:3.4rem; color:var(--red); -webkit-text-stroke:3px var(--cream);
-    line-height:1.05;
-  }
-  .signboard-foot{
-    background:var(--brown); padding:14px; display:flex; justify-content:center; gap:8px;
-  }
-  .thali-mini{width:48px; height:48px; border-radius:50%; background:var(--green); border:2px solid var(--yellow);}
+/* HERO BANNER */
+.hero{
+  background:linear-gradient(135deg, #FADBD8 0%, #FDECEA 50%, #FFF0EF 100%);
+  padding:28px 16px 24px;
+  text-align:center;
+  border-bottom:3px solid var(--red-border);
+}
+.hero-badge{
+  display:inline-block; background:var(--red); color:var(--white);
+  font-size:.72rem; padding:4px 14px; border-radius:20px; margin-bottom:12px; letter-spacing:.5px;
+}
+.hero h1{font-family:'Noto Serif Tamil',serif; font-size:1.6rem; color:var(--red); font-weight:700; line-height:1.3; margin-bottom:6px;}
+.hero .sub{font-size:.82rem; color:var(--muted); margin-bottom:18px;}
+.hero-order-btn{
+  background:var(--red); color:var(--white); border:none;
+  padding:16px 40px; font-size:1.1rem; font-weight:700; border-radius:10px;
+  cursor:pointer; width:100%; max-width:280px;
+  box-shadow:0 4px 14px rgba(192,57,43,.35);
+  font-family:'Noto Serif Tamil',serif;
+  transition:transform .15s;
+}
+.hero-order-btn:active{transform:scale(.97);}
+.hero-tags{display:flex; justify-content:center; gap:8px; margin-top:14px; flex-wrap:wrap;}
+.htag{background:var(--white); border:1.5px solid var(--red-border); color:var(--muted); padding:5px 14px; border-radius:20px; font-size:.75rem;}
 
-  .hero-text{
-    max-width:480px; padding-top:30px; z-index:2; animation:fadeUp 1s ease-out .2s both;
-  }
-  @keyframes fadeUp{from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);}}
-  .hero-text .eyebrow{color:var(--green); margin-bottom:14px;}
-  .hero-text h2{font-size:2.8rem; line-height:1.1; color:var(--ink); margin-bottom:18px;}
-  .hero-text h2 em{font-style:normal; color:var(--red);}
-  .hero-text p{font-size:1rem; color:#5a4a3c; margin-bottom:28px; line-height:1.7;}
-  .btn-primary{
-    background:var(--red); color:var(--cream); border:none; padding:16px 36px;
-    font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:2px; text-transform:uppercase;
-    border-radius:6px; cursor:pointer; font-size:.9rem; box-shadow:0 8px 20px rgba(216,51,42,.3);
-    transition:transform .15s;
-  }
-  .btn-primary:hover{transform:translateY(-3px);}
-  .hero-tags{display:flex; gap:10px; margin-top:24px; flex-wrap:wrap;}
-  .tag{
-    background:var(--cream); border:1.5px solid var(--green); color:var(--green);
-    padding:6px 16px; border-radius:30px; font-family:'Oswald',sans-serif; font-size:.75rem;
-    font-weight:600; letter-spacing:1px;
-  }
+/* INFO STRIP */
+.info-strip{
+  display:flex; background:var(--white); border-bottom:1.5px solid var(--red-border);
+}
+.info-item{
+  flex:1; padding:14px 8px; text-align:center;
+  border-right:1px solid var(--red-border);
+}
+.info-item:last-child{border-right:none;}
+.info-item .ii{font-size:1.4rem; margin-bottom:4px; display:block;}
+.info-item p{font-size:.65rem; color:var(--muted); line-height:1.4;}
+.info-item strong{display:block; font-size:.8rem; color:var(--text); font-weight:700; margin-bottom:2px;}
 
-  /* SECTIONS */
-  section{padding:70px 6%;}
-  .section-head{text-align:center; max-width:600px; margin:0 auto 50px;}
-  .section-head .eyebrow{color:var(--red); margin-bottom:10px;}
-  .section-head h2{font-size:2.4rem; color:var(--ink);}
-  .section-head h2 span{color:var(--green);}
+/* CATEGORY TABS — big picture tiles */
+.cat-section{padding:16px 12px 8px;}
+.cat-section h2{font-size:.95rem; color:var(--red); font-weight:700; margin-bottom:12px; padding-left:4px;}
+.cat-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px;}
+.cat-tile{
+  background:var(--white); border:2px solid var(--red-border);
+  border-radius:14px; padding:20px 10px 14px;
+  text-align:center; cursor:pointer; transition:.18s;
+  box-shadow:0 2px 8px rgba(192,57,43,.06);
+}
+.cat-tile.active,.cat-tile:active{
+  background:var(--red); border-color:var(--red);
+}
+.cat-tile.active p,.cat-tile:active p{color:var(--white);}
+.cat-tile .ct-icon{font-size:2.4rem; margin-bottom:8px; display:block;}
+.cat-tile p{font-size:.9rem; font-weight:700; color:var(--text);}
+.cat-tile .ct-sub{font-size:.7rem; color:var(--muted); margin-top:2px; font-weight:400;}
+.cat-tile.active .ct-sub{color:#FADBD8;}
 
-  /* MENU */
-  .menu-section{background:var(--brown); color:var(--cream);}
-  .menu-section .section-head h2{color:var(--cream);}
-  .menu-tabs{display:flex; justify-content:center; gap:14px; margin-bottom:40px; flex-wrap:wrap;}
-  .menu-tab{
-    background:transparent; border:2px solid var(--yellow); color:var(--yellow);
-    padding:10px 26px; border-radius:30px; font-family:'Oswald',sans-serif; font-weight:600;
-    letter-spacing:1px; cursor:pointer; text-transform:uppercase; font-size:.8rem; transition:.2s;
-  }
-  .menu-tab.active, .menu-tab:hover{background:var(--yellow); color:var(--brown);}
-  .menu-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:28px; max-width:1100px; margin:0 auto;}
-  .menu-card{
-    background:#3a2a1d; border-radius:14px; padding:22px; text-align:center;
-    border:1px solid #4a3826; transition:transform .25s, border-color .25s;
-  }
-  .menu-card:hover{transform:translateY(-6px); border-color:var(--yellow);}
-  .plate{
-    width:110px; height:110px; border-radius:50%; margin:0 auto 16px;
-    display:flex; align-items:center; justify-content:center; font-size:2.6rem;
-    background:radial-gradient(circle at 35% 30%, #fff 0%, var(--green) 45%, #2d4a2a 100%);
-    border:4px solid var(--yellow); box-shadow: inset 0 0 0 6px #fff8e8;
-  }
-  .menu-card h3{font-size:1.05rem; color:var(--yellow); margin-bottom:6px; letter-spacing:.5px;}
-  .menu-card p.desc{font-size:.8rem; color:#cdbfae; margin-bottom:14px; line-height:1.5; min-height:38px;}
-  .menu-card .price-row{display:flex; align-items:center; justify-content:space-between;}
-  .price{font-family:'Oswald',sans-serif; font-weight:700; color:var(--cream); font-size:1.1rem;}
-  .add-btn{
-    background:var(--red); color:var(--cream); border:none; width:38px; height:38px; border-radius:50%;
-    font-size:1.3rem; cursor:pointer; transition:.2s; line-height:1;
-  }
-  .add-btn:hover{background:var(--yellow); color:var(--brown); transform:rotate(90deg);}
+/* MENU ITEMS */
+.menu-section{padding:8px 12px 24px;}
+.menu-section h2{font-size:.95rem; color:var(--red); font-weight:700; margin-bottom:12px; padding-left:4px;}
+.menu-list{display:flex; flex-direction:column; gap:10px;}
+.menu-item{
+  background:var(--white); border:1.5px solid var(--red-border);
+  border-radius:12px; padding:14px;
+  display:flex; align-items:center; gap:12px;
+  box-shadow:0 1px 6px rgba(192,57,43,.05);
+}
+.item-icon{
+  font-size:2.2rem; width:60px; height:60px; min-width:60px;
+  background:var(--red-soft); border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+}
+.item-info{flex:1;}
+.item-info h3{font-size:.95rem; font-weight:700; color:var(--text); margin-bottom:3px;}
+.item-info p{font-size:.75rem; color:var(--muted); line-height:1.4;}
+.veg-dot{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:4px; vertical-align:middle;}
+.veg{background:var(--green);}
+.nonveg{background:var(--red);}
+.item-right{text-align:right; min-width:68px;}
+.item-price{font-family:'Lora',serif; font-weight:700; color:var(--red); font-size:1.05rem; display:block; margin-bottom:6px;}
+.add-btn{
+  background:var(--red); color:var(--white); border:none;
+  width:36px; height:36px; border-radius:8px;
+  font-size:1.4rem; cursor:pointer; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  transition:.15s; margin-left:auto;
+}
+.add-btn:active{background:var(--accent); transform:scale(.92);}
+.in-cart{
+  display:flex; align-items:center; gap:4px;
+}
+.in-cart button{
+  background:var(--red-light); border:1px solid var(--red-border); color:var(--red);
+  width:30px; height:30px; border-radius:6px; font-size:1.1rem; cursor:pointer; font-weight:700;
+}
+.in-cart span{font-family:'Lora',serif; font-weight:700; font-size:.95rem; min-width:18px; text-align:center;}
 
-  /* ABOUT */
-  .about{display:flex; gap:60px; align-items:center; flex-wrap:wrap; max-width:1100px; margin:0 auto;}
-  .about-visual{
-    flex:1; min-width:280px; height:320px; border-radius:16px;
-    background:repeating-linear-gradient(135deg, var(--yellow) 0 30px, #f0b91f 30px 60px);
-    position:relative; overflow:hidden;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .about-visual .badge{
-    background:var(--brown); color:var(--yellow); width:200px; height:200px; border-radius:50%;
-    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
-    border:6px solid var(--cream); box-shadow:0 15px 40px rgba(0,0,0,.3);
-  }
-  .about-visual .badge strong{font-family:'Anton',sans-serif; font-size:1.4rem; letter-spacing:1px;}
-  .about-visual .badge span{font-family:'Oswald',sans-serif; font-size:.7rem; letter-spacing:3px; margin-top:6px; color:var(--cream);}
-  .about-text{flex:1; min-width:280px;}
-  .about-text .eyebrow{color:var(--red); margin-bottom:12px;}
-  .about-text h2{font-size:2.2rem; margin-bottom:18px;}
-  .about-text p{color:#5a4a3c; line-height:1.8; margin-bottom:16px; font-size:.95rem;}
-  .hours{
-    border-left:4px solid var(--green); padding-left:18px; margin-top:20px;
-  }
-  .hours .eyebrow{color:var(--green);}
-  .hours p{margin-top:6px; font-weight:600; color:var(--ink);}
+/* CALL SECTION */
+.call-section{
+  background:var(--red-light); border-top:2px solid var(--red-border); border-bottom:2px solid var(--red-border);
+  padding:20px 16px; text-align:center; margin:4px 0;
+}
+.call-section p{font-size:.85rem; color:var(--muted); margin-bottom:12px;}
+.call-btn{
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--green); color:var(--white); border:none;
+  padding:14px 24px; border-radius:10px; font-size:1rem; font-weight:700;
+  cursor:pointer; width:100%; text-decoration:none;
+  font-family:'Noto Serif Tamil',serif;
+}
 
-  /* LOCATION / CONTACT */
-  .contact{background:var(--green); color:var(--cream);}
-  .contact .section-head h2{color:var(--cream);}
-  .contact .section-head h2 span{color:var(--yellow);}
-  .contact-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; max-width:900px; margin:0 auto;}
-  .contact-card{
-    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2);
-    border-radius:12px; padding:28px; text-align:center;
-  }
-  .contact-card .icon{font-size:1.8rem; margin-bottom:12px;}
-  .contact-card h3{font-family:'Oswald',sans-serif; font-size:.95rem; letter-spacing:1px; margin-bottom:8px; color:var(--yellow);}
-  .contact-card p{font-size:.85rem; line-height:1.6;}
-  .contact-card a{color:var(--cream); text-decoration:underline;}
+/* ABOUT / INFO */
+.about-section{padding:20px 12px; background:var(--white); border-top:1.5px solid var(--red-border);}
+.about-section h2{font-size:1rem; color:var(--red); font-weight:700; margin-bottom:12px;}
+.about-card{background:var(--red-soft); border:1.5px solid var(--red-border); border-radius:12px; padding:16px;}
+.about-card p{font-size:.82rem; color:var(--muted); line-height:1.8; margin-bottom:8px;}
+.about-card p:last-child{margin-bottom:0;}
 
-  footer{
-    background:var(--brown); color:#cdbfae; text-align:center; padding:30px 6%; font-size:.8rem;
-    font-family:'Oswald',sans-serif; letter-spacing:1px;
-  }
-  footer strong{color:var(--yellow);}
+/* FOOTER */
+footer{
+  background:var(--red); color:var(--white); text-align:center;
+  padding:18px 16px; font-size:.78rem; line-height:1.8;
+}
+footer strong{color:#FADBD8;}
 
-  /* CART DRAWER */
-  .overlay{
-    position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:99; opacity:0; pointer-events:none; transition:opacity .25s;
-  }
-  .overlay.open{opacity:1; pointer-events:auto;}
-  .cart-drawer{
-    position:fixed; top:0; right:-420px; width:380px; max-width:90vw; height:100%; background:var(--cream);
-    z-index:100; box-shadow:-10px 0 30px rgba(0,0,0,.2); transition:right .3s ease; display:flex; flex-direction:column;
-  }
-  .cart-drawer.open{right:0;}
-  .cart-header{background:var(--brown); color:var(--cream); padding:20px 24px; display:flex; justify-content:space-between; align-items:center;}
-  .cart-header h3{font-size:1.2rem; letter-spacing:1px;}
-  .close-cart{background:none; border:none; color:var(--cream); font-size:1.6rem; cursor:pointer;}
-  .cart-items{flex:1; overflow-y:auto; padding:18px 24px;}
-  .cart-item{display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid #e8d9bf;}
-  .cart-item-name{font-weight:600; font-size:.9rem;}
-  .cart-item-price{font-family:'Oswald',sans-serif; font-size:.85rem; color:var(--red); font-weight:700;}
-  .qty-controls{display:flex; align-items:center; gap:8px; margin-top:6px;}
-  .qty-controls button{
-    width:24px; height:24px; border-radius:50%; border:1px solid var(--green); background:none;
-    color:var(--green); cursor:pointer; font-size:.9rem; line-height:1;
-  }
-  .empty-cart{text-align:center; color:#a89580; padding:60px 20px; font-size:.9rem;}
-  .cart-footer{padding:20px 24px; border-top:2px solid var(--brown);}
-  .cart-total{display:flex; justify-content:space-between; font-family:'Oswald',sans-serif; font-weight:700; font-size:1.2rem; margin-bottom:16px;}
-  .checkout-form input, .checkout-form textarea{
-    width:100%; padding:10px 12px; margin-bottom:10px; border:1.5px solid #d8c9ad; border-radius:6px;
-    font-family:'Poppins',sans-serif; font-size:.85rem; background:#fff;
-  }
-  .checkout-form label{font-size:.75rem; font-family:'Oswald',sans-serif; letter-spacing:1px; color:#6a5a4a; display:block; margin-bottom:4px;}
-  .whatsapp-btn{
-    width:100%; background:#25D366; color:#fff; border:none; padding:14px; border-radius:8px;
-    font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:1px; cursor:pointer; font-size:.95rem;
-    display:flex; align-items:center; justify-content:center; gap:8px; transition:transform .15s;
-  }
-  .whatsapp-btn:hover{transform:translateY(-2px);}
-
-  @media(max-width:640px){
-    nav{display:none;}
-    .hero{flex-direction:column; align-items:center; text-align:center; padding:50px 6% 70px;}
-    .hero-text h2{font-size:2.1rem;}
-    .signboard{width:240px;}
-    .signboard-body h1{font-size:2.4rem;}
-    .about{flex-direction:column;}
-    section{padding:50px 5%;}
-  }
+/* CART DRAWER */
+.overlay{position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:200; opacity:0; pointer-events:none; transition:.25s;}
+.overlay.open{opacity:1; pointer-events:auto;}
+.cart-drawer{
+  position:fixed; bottom:-100%; left:0; right:0; max-width:480px; margin:0 auto;
+  background:var(--white); z-index:201;
+  border-radius:20px 20px 0 0; transition:.35s ease;
+  box-shadow:0 -8px 30px rgba(0,0,0,.2);
+  max-height:90vh; display:flex; flex-direction:column;
+}
+.cart-drawer.open{bottom:0;}
+.cart-handle{width:40px; height:4px; background:var(--red-border); border-radius:2px; margin:12px auto 0;}
+.cart-header{background:var(--red); color:var(--white); padding:16px 20px; display:flex; justify-content:space-between; align-items:center;}
+.cart-header h3{font-size:1rem; font-weight:700;}
+.close-cart{background:none; border:none; color:var(--white); font-size:1.5rem; cursor:pointer;}
+.cart-items{flex:1; overflow-y:auto; padding:14px 16px;}
+.cart-item-row{display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--red-border);}
+.cart-item-name{font-weight:700; font-size:.88rem; color:var(--text);}
+.cart-item-price{font-family:'Lora',serif; font-size:.88rem; color:var(--red); font-weight:700;}
+.cart-qty{display:flex; align-items:center; gap:6px; margin-top:4px;}
+.cart-qty button{width:26px; height:26px; border:1px solid var(--red-border); background:var(--red-soft); color:var(--red); cursor:pointer; border-radius:6px; font-weight:700;}
+.empty-cart{text-align:center; color:var(--muted); padding:40px 20px; font-size:.88rem;}
+.empty-cart .big{font-size:2.5rem; display:block; margin-bottom:10px;}
+.cart-footer{padding:16px; border-top:2px solid var(--red-border);}
+.cart-total-row{display:flex; justify-content:space-between; font-family:'Lora',serif; font-weight:700; font-size:1.1rem; margin-bottom:14px; color:var(--red);}
+.checkout-form label{font-size:.72rem; color:var(--muted); display:block; margin-bottom:3px; font-weight:600; letter-spacing:.5px;}
+.checkout-form input,.checkout-form textarea{
+  width:100%; padding:12px; margin-bottom:10px;
+  border:1.5px solid var(--red-border); border-radius:8px;
+  font-family:'Noto Serif Tamil',serif; font-size:.9rem; background:var(--red-soft);
+  color:var(--text);
+}
+.checkout-form input:focus,.checkout-form textarea:focus{outline:none; border-color:var(--red);}
+.whatsapp-btn{
+  width:100%; background:#25D366; color:#fff; border:none;
+  padding:15px; border-radius:10px;
+  font-family:'Noto Serif Tamil',serif; font-weight:700; font-size:1rem;
+  display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer;
+}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <div class="logo-mark">KK</div>
-    <div class="logo-text">Kalakkal Kitchen<span>Hotel &middot; Veg &amp; Non-Veg</span></div>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="logo-box"><span>KK</span></div>
+    <div class="topbar-title">
+      <strong>கலக்கல் கிச்சன்</strong>
+      <small>Hotel · Veg & Non-Veg</small>
+    </div>
   </div>
-  <nav>
-    <a href="#menu">Menu</a>
-    <a href="#about">About</a>
-    <a href="#contact">Visit Us</a>
-  </nav>
-  <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
-</header>
+  <button class="cart-fab" onclick="toggleCart()">🛒 <span class="cart-count" id="cartCount">0</span></button>
+</div>
 
-<section class="hero">
-  <div class="signboard">
-    <div class="signboard-top">
-      <div class="tamil">கலக்கல் கிட்சன்</div>
-      <div class="sub">உயர் தர சைவம் &amp; அசைவம்</div>
-    </div>
-    <div class="signboard-body">
-      <h1>HOTEL</h1>
-    </div>
-    <div class="signboard-foot">
-      <div class="thali-mini"></div>
-      <div class="thali-mini"></div>
-      <div class="thali-mini"></div>
-    </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">⭐ Salem's Favourite Hotel</div>
+  <h1>கலக்கல் கிச்சன்<br>ஹோட்டல்</h1>
+  <p class="sub">உயர் தர சைவம் &amp; அசைவம் உணவகம்</p>
+  <button class="hero-order-btn" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">
+    🍽️ உணவு ஆர்டர் செய்யுங்கள்
+  </button>
+  <div class="hero-tags">
+    <span class="htag">🥦 Veg</span>
+    <span class="htag">🍗 Non-Veg</span>
+    <span class="htag">🕕 6AM–10:30PM</span>
+    <span class="htag">📦 Delivery</span>
   </div>
-  <div class="hero-text">
-    <div class="eyebrow">Roadside &middot; Real &middot; Ready in minutes</div>
-    <h2>Premium Veg &amp; Non-Veg, <em>Kalakkal</em> Style</h2>
-    <p>From hot idli-vadai breakfasts to a full meals plate and tandoori specials by night — order ahead online and we'll have it ready for pickup, or get it delivered to your door.</p>
-    <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView()">View Menu &amp; Order</button>
-    <div class="hero-tags">
-      <span class="tag">Pure Veg Options</span>
-      <span class="tag">Non-Veg Specials</span>
-      <span class="tag">Open Daily</span>
-    </div>
-  </div>
-</section>
+</div>
 
-<section class="menu-section" id="menu">
-  <div class="section-head">
-    <div class="eyebrow">Today's Spread</div>
-    <h2>Our <span>Menu</span></h2>
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-item">
+    <span class="ii">📞</span>
+    <strong>அழைக்கவும்</strong>
+    <p>+91 63790 42970</p>
   </div>
-  <div class="menu-tabs">
-    <button class="menu-tab active" data-cat="breakfast" onclick="filterMenu('breakfast', this)">Breakfast</button>
-    <button class="menu-tab" data-cat="meals" onclick="filterMenu('meals', this)">Meals</button>
-    <button class="menu-tab" data-cat="nonveg" onclick="filterMenu('nonveg', this)">Non-Veg</button>
-    <button class="menu-tab" data-cat="beverages" onclick="filterMenu('beverages', this)">Beverages</button>
+  <div class="info-item">
+    <span class="ii">🕕</span>
+    <strong>நேரம்</strong>
+    <p>6AM – 10:30PM<br>தினமும் திறந்திருக்கும்</p>
   </div>
-  <div class="menu-grid" id="menuGrid"></div>
-</section>
+  <div class="info-item">
+    <span class="ii">📦</span>
+    <strong>டெலிவரி</strong>
+    <p>Home Delivery<br>Available</p>
+  </div>
+</div>
 
-<section class="about" id="about">
-  <div class="about-visual">
-    <div class="badge"><strong>SINCE</strong><strong style="font-size:2.4rem;">2024</strong><span>Roadside Favourite</span></div>
-  </div>
-  <div class="about-text">
-    <div class="eyebrow">Our Story</div>
-    <h2>Good Food, No Frills</h2>
-    <p>Kalakkal Kitchen Hotel sits right on the highway — a familiar yellow signboard for travelers and locals alike. We serve fresh, high-quality vegetarian and non-vegetarian meals made the traditional way, every single day.</p>
-    <p>Whether you're stopping by for a quick breakfast on a long drive or ordering a full meal for the family, we keep it simple, hot, and tasty.</p>
-    <div class="hours">
-      <div class="eyebrow">Hours</div>
-      <p>Open Daily &middot; 6:00 AM – 10:30 PM</p>
+<!-- CATEGORIES -->
+<div class="cat-section" id="categories">
+  <h2>🍴 என்ன சாப்பிட விரும்புகிறீர்கள்? What would you like?</h2>
+  <div class="cat-grid">
+    <div class="cat-tile active" id="cat-breakfast" onclick="selectCat('breakfast',this)">
+      <span class="ct-icon">🍲</span>
+      <p>காலை உணவு</p>
+      <p class="ct-sub">Breakfast</p>
+    </div>
+    <div class="cat-tile" id="cat-meals" onclick="selectCat('meals',this)">
+      <span class="ct-icon">🍛</span>
+      <p>மதிய சாப்பாடு</p>
+      <p class="ct-sub">Full Meals</p>
+    </div>
+    <div class="cat-tile" id="cat-nonveg" onclick="selectCat('nonveg',this)">
+      <span class="ct-icon">🍗</span>
+      <p>அசைவம்</p>
+      <p class="ct-sub">Non-Veg</p>
+    </div>
+    <div class="cat-tile" id="cat-beverages" onclick="selectCat('beverages',this)">
+      <span class="ct-icon">☕</span>
+      <p>பானங்கள்</p>
+      <p class="ct-sub">Beverages</p>
     </div>
   </div>
-</section>
+</div>
 
-<section class="contact" id="contact">
-  <div class="section-head">
-    <div class="eyebrow">Find Us</div>
-    <h2>Visit <span>Kalakkal Kitchen</span></h2>
+<!-- MENU -->
+<div class="menu-section" id="menuSection">
+  <h2 id="menuTitle">🍲 காலை உணவு — Breakfast</h2>
+  <div class="menu-list" id="menuList"></div>
+</div>
+
+<!-- CALL SECTION -->
+<div class="call-section">
+  <p>📞 Phone-ல் ஆர்டர் செய்யவும் / Order by Phone</p>
+  <a href="tel:+916379042970" class="call-btn">📱 +91 63790 42970 — அழைக்கவும் / Call Now</a>
+</div>
+
+<!-- ABOUT -->
+<div class="about-section">
+  <h2>🏨 எங்களை பற்றி / About Us</h2>
+  <div class="about-card">
+    <p>🌿 கலக்கல் கிச்சன் ஹோட்டல் — Highway ரோட்டில் உள்ள நம்பகமான உணவகம். சைவம் மற்றும் அசைவம் — தரமான சமையல் தினமும் தயார்.</p>
+    <p>🍽️ Fresh food made daily. Traditional Tamil recipes. Best quality ingredients. Family-friendly hotel for everyone.</p>
+    <p>📍 Salem Highway Road &nbsp;|&nbsp; 📞 +91 63790 42970 &nbsp;|&nbsp; 🕕 6AM – 10:30PM</p>
   </div>
-  <div class="contact-grid">
-    <div class="contact-card">
-      <div class="icon">📍</div>
-      <h3>Location</h3>
-      <p>Highway Roadside Signboard<br>(Add full address here)</p>
-    </div>
-    <div class="contact-card">
-      <div class="icon">📞</div>
-      <h3>Phone / WhatsApp</h3>
-      <p><a href="tel:+916379042970">+91 63790 42970</a></p>
-    </div>
-    <div class="contact-card">
-      <div class="icon">⏰</div>
-      <h3>Hours</h3>
-      <p>6:00 AM – 10:30 PM<br>Open all days</p>
-    </div>
-  </div>
-</section>
+</div>
 
 <footer>
-  &copy; 2026 <strong>Kalakkal Kitchen Hotel</strong> &middot; All Rights Reserved
+  <strong>கலக்கல் கிச்சன் ஹோட்டல்</strong><br>
+  +91 63790 42970 · Salem Highway<br>
+  © 2026 All Rights Reserved
 </footer>
 
-<!-- CART -->
+<!-- OVERLAY & CART DRAWER (slides up from bottom like app) -->
 <div class="overlay" id="overlay" onclick="toggleCart()"></div>
 <div class="cart-drawer" id="cartDrawer">
+  <div class="cart-handle"></div>
   <div class="cart-header">
-    <h3>Your Order</h3>
-    <button class="close-cart" onclick="toggleCart()">&times;</button>
+    <h3>🛒 உங்கள் ஆர்டர் / Your Order</h3>
+    <button class="close-cart" onclick="toggleCart()">✕</button>
   </div>
   <div class="cart-items" id="cartItems">
-    <div class="empty-cart">Your cart is empty.<br>Add something tasty from the menu!</div>
+    <div class="empty-cart"><span class="big">🛒</span>Cart empty!<br>சாப்பாடு சேர்க்கவும்.</div>
   </div>
   <div class="cart-footer" id="cartFooter" style="display:none;">
-    <div class="cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
-    <form class="checkout-form" id="checkoutForm">
-      <label>Your Name</label>
-      <input type="text" id="custName" placeholder="Enter your name" required>
-      <label>Phone Number</label>
-      <input type="tel" id="custPhone" placeholder="Enter your phone number" required>
-      <label>Delivery Address / Pickup Note</label>
-      <textarea id="custAddress" rows="2" placeholder="Address, or 'Pickup at hotel'" required></textarea>
-      <button type="submit" class="whatsapp-btn">📲 Send Order via WhatsApp</button>
+    <div class="cart-total-row"><span>மொத்தம் / Total</span><span id="cartTotal">₹0</span></div>
+    <form id="checkoutForm" class="checkout-form">
+      <label>உங்கள் பெயர் / Your Name</label>
+      <input type="text" id="custName" placeholder="பெயர் எழுதுங்கள்..." required>
+      <label>தொலைபேசி / Phone Number</label>
+      <input type="tel" id="custPhone" placeholder="உங்கள் number..." required>
+      <label>முகவரி / Address</label>
+      <textarea id="custAddress" rows="2" placeholder="வீட்டு முகவரி அல்லது 'Hotel-ல் வருகிறேன்'" required></textarea>
+      <button type="submit" class="whatsapp-btn">📲 WhatsApp-ல் ஆர்டர் அனுப்பு / Send Order</button>
     </form>
   </div>
 </div>
 
 <script>
-const HOTEL_WHATSAPP = "916379042970"; // country code + number, no + or spaces
+const HOTEL_WA = "916379042970";
 
-const menuItems = [
-  {id:1, cat:'breakfast', name:'Idli (2pcs) + Sambar', desc:'Soft steamed idli with sambar & chutney', price:40},
-  {id:2, cat:'breakfast', name:'Masala Dosa', desc:'Crispy dosa with spiced potato filling', price:60},
-  {id:3, cat:'breakfast', name:'Pongal', desc:'Ghee pongal served with chutney', price:50},
-  {id:4, cat:'breakfast', name:'Vada (2pcs)', desc:'Crispy medu vada with sambar', price:40},
-  {id:5, cat:'meals', name:'Veg Meals (Full)', desc:'Rice, sambar, rasam, poriyal, curd', price:90},
-  {id:6, cat:'meals', name:'Curd Rice', desc:'Comforting curd rice with pickle', price:50},
-  {id:7, cat:'meals', name:'Veg Fried Rice', desc:'Mixed vegetable fried rice', price:80},
-  {id:8, cat:'meals', name:'Chapati (3pcs) + Kurma', desc:'Soft chapati with veg kurma', price:70},
-  {id:9, cat:'nonveg', name:'Chicken Biryani', desc:'Aromatic biryani with chicken curry', price:150},
-  {id:10, cat:'nonveg', name:'Chicken 65', desc:'Spicy deep-fried chicken starter', price:120},
-  {id:11, cat:'nonveg', name:'Mutton Curry + Rice', desc:'Rich mutton curry with steamed rice', price:180},
-  {id:12, cat:'nonveg', name:'Egg Curry + Rice', desc:'Egg curry served with rice', price:80},
-  {id:13, cat:'beverages', name:'Filter Coffee', desc:'Classic South Indian filter coffee', price:20},
-  {id:14, cat:'beverages', name:'Masala Tea', desc:'Spiced milk tea', price:15},
-  {id:15, cat:'beverages', name:'Fresh Lime Soda', desc:'Sweet or salt lime soda', price:30},
-  {id:16, cat:'beverages', name:'Buttermilk', desc:'Spiced chilled buttermilk', price:20},
-];
-
-const plateEmoji = {breakfast:'🍛', meals:'🍚', nonveg:'🍗', beverages:'🥤'};
+const menuData = {
+  breakfast:{
+    title:"🍲 காலை உணவு — Breakfast",
+    items:[
+      {id:1,name:"இட்லி (2) + சாம்பார்",sub:"Idli + Sambar",price:40,icon:"🫓",veg:true},
+      {id:2,name:"மசாலா தோசை",sub:"Masala Dosa",price:60,icon:"🥞",veg:true},
+      {id:3,name:"பொங்கல்",sub:"Pongal + Chutney",price:50,icon:"🍚",veg:true},
+      {id:4,name:"வடை (2) + சாம்பார்",sub:"Vada + Sambar",price:40,icon:"🍩",veg:true},
+      {id:5,name:"சப்பாத்தி (3) + கூர்மா",sub:"Chapati + Kurma",price:70,icon:"🫓",veg:true},
+      {id:6,name:"உப்புமா",sub:"Upma",price:35,icon:"🍲",veg:true},
+    ]
+  },
+  meals:{
+    title:"🍛 மதிய சாப்பாடு — Full Meals",
+    items:[
+      {id:7,name:"வெஜ் மீல்ஸ் (full)",sub:"Full Veg Meals",price:90,icon:"🍛",veg:true},
+      {id:8,name:"தயிர் சாதம்",sub:"Curd Rice",price:50,icon:"🍚",veg:true},
+      {id:9,name:"வெஜ் ஃப்ரைட் ரைஸ்",sub:"Veg Fried Rice",price:80,icon:"🍳",veg:true},
+      {id:10,name:"பிரியாணி (வெஜ்)",sub:"Veg Biryani",price:100,icon:"🫕",veg:true},
+    ]
+  },
+  nonveg:{
+    title:"🍗 அசைவம் — Non-Veg",
+    items:[
+      {id:11,name:"சிக்கன் பிரியாணி",sub:"Chicken Biryani",price:150,icon:"🍖",veg:false},
+      {id:12,name:"சிக்கன் 65",sub:"Chicken 65",price:120,icon:"🍗",veg:false},
+      {id:13,name:"மட்டன் கறி + சாதம்",sub:"Mutton Curry + Rice",price:180,icon:"🥘",veg:false},
+      {id:14,name:"முட்டை கறி + சாதம்",sub:"Egg Curry + Rice",price:80,icon:"🍳",veg:false},
+      {id:15,name:"சிக்கன் கறி + சாதம்",sub:"Chicken Curry + Rice",price:130,icon:"🥗",veg:false},
+    ]
+  },
+  beverages:{
+    title:"☕ பானங்கள் — Beverages",
+    items:[
+      {id:16,name:"ஃபில்டர் காபி",sub:"Filter Coffee",price:20,icon:"☕",veg:true},
+      {id:17,name:"மசாலா தேநீர்",sub:"Masala Tea",price:15,icon:"🍵",veg:true},
+      {id:18,name:"லெமன் சோடா",sub:"Fresh Lime Soda",price:30,icon:"🍋",veg:true},
+      {id:19,name:"மோர்",sub:"Buttermilk",price:20,icon:"🥛",veg:true},
+    ]
+  }
+};
 
 let cart = {};
 let currentCat = 'breakfast';
 
+function selectCat(cat, el){
+  currentCat = cat;
+  document.querySelectorAll('.cat-tile').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  renderMenu();
+  document.getElementById('menuSection').scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
 function renderMenu(){
-  const grid = document.getElementById('menuGrid');
-  grid.innerHTML = '';
-  menuItems.filter(i=>i.cat===currentCat).forEach(item=>{
-    const card = document.createElement('div');
-    card.className = 'menu-card';
-    card.innerHTML = `
-      <div class="plate">${plateEmoji[item.cat]}</div>
-      <h3>${item.name}</h3>
-      <p class="desc">${item.desc}</p>
-      <div class="price-row">
-        <span class="price">₹${item.price}</span>
-        <button class="add-btn" onclick="addToCart(${item.id})">+</button>
+  const data = menuData[currentCat];
+  document.getElementById('menuTitle').textContent = data.title;
+  const list = document.getElementById('menuList');
+  list.innerHTML = '';
+  data.items.forEach(item=>{
+    const inCart = cart[item.id] || 0;
+    const div = document.createElement('div');
+    div.className = 'menu-item';
+    div.id = 'item-'+item.id;
+    div.innerHTML = `
+      <div class="item-icon">${item.icon}</div>
+      <div class="item-info">
+        <h3>${item.name}</h3>
+        <p><span class="veg-dot ${item.veg?'veg':'nonveg'}"></span>${item.sub}</p>
+      </div>
+      <div class="item-right">
+        <span class="item-price">₹${item.price}</span>
+        ${inCart === 0
+          ? `<button class="add-btn" onclick="addItem(${item.id})">+</button>`
+          : `<div class="in-cart">
+               <button onclick="removeItem(${item.id})">−</button>
+               <span>${inCart}</span>
+               <button onclick="addItem(${item.id})">+</button>
+             </div>`
+        }
       </div>
     `;
-    grid.appendChild(card);
+    list.appendChild(div);
   });
 }
 
-function filterMenu(cat, el){
-  currentCat = cat;
-  document.querySelectorAll('.menu-tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  renderMenu();
-}
-
-function addToCart(id){
+function addItem(id){
   cart[id] = (cart[id]||0) + 1;
-  updateCartUI();
+  updateAll();
 }
-function changeQty(id, delta){
-  cart[id] = (cart[id]||0) + delta;
-  if(cart[id] <= 0) delete cart[id];
-  updateCartUI();
+function removeItem(id){
+  if(cart[id]) cart[id]--;
+  if(cart[id]<=0) delete cart[id];
+  updateAll();
 }
 
-function updateCartUI(){
+function updateAll(){
+  renderMenu();
+  updateCartCount();
+  updateCartDrawer();
+}
+
+function updateCartCount(){
+  let total = Object.values(cart).reduce((a,b)=>a+b,0);
+  document.getElementById('cartCount').textContent = total;
+}
+
+function updateCartDrawer(){
+  const ids = Object.keys(cart);
   const itemsEl = document.getElementById('cartItems');
   const footerEl = document.getElementById('cartFooter');
-  const countEl = document.getElementById('cartCount');
-  const totalEl = document.getElementById('cartTotal');
-
-  const ids = Object.keys(cart);
-  let totalCount = 0, totalPrice = 0;
-  ids.forEach(id=> totalCount += cart[id]);
-  countEl.textContent = totalCount;
-
-  if(ids.length === 0){
-    itemsEl.innerHTML = '<div class="empty-cart">Your cart is empty.<br>Add something tasty from the menu!</div>';
-    footerEl.style.display = 'none';
+  if(ids.length===0){
+    itemsEl.innerHTML = '<div class="empty-cart"><span class="big">🛒</span>Cart empty!<br>சாப்பாடு சேர்க்கவும்.</div>';
+    footerEl.style.display='none';
     return;
   }
-
-  itemsEl.innerHTML = '';
+  itemsEl.innerHTML='';
+  let total=0;
   ids.forEach(id=>{
-    const item = menuItems.find(m=>m.id==id);
+    const allItems = Object.values(menuData).flatMap(c=>c.items);
+    const item = allItems.find(i=>i.id==id);
+    if(!item) return;
     const qty = cart[id];
-    totalPrice += item.price * qty;
+    total += item.price * qty;
     const row = document.createElement('div');
-    row.className = 'cart-item';
-    row.innerHTML = `
+    row.className='cart-item-row';
+    row.innerHTML=`
       <div>
-        <div class="cart-item-name">${item.name}</div>
-        <div class="qty-controls">
-          <button onclick="changeQty(${id},-1)">−</button>
+        <div class="cart-item-name">${item.icon} ${item.name}</div>
+        <div class="cart-qty">
+          <button onclick="removeItem(${id})">−</button>
           <span>${qty}</span>
-          <button onclick="changeQty(${id},1)">+</button>
+          <button onclick="addItem(${id})">+</button>
         </div>
       </div>
-      <div class="cart-item-price">₹${item.price * qty}</div>
+      <div class="cart-item-price">₹${item.price*qty}</div>
     `;
     itemsEl.appendChild(row);
   });
-  totalEl.textContent = '₹' + totalPrice;
-  footerEl.style.display = 'block';
+  document.getElementById('cartTotal').textContent = '₹'+total;
+  footerEl.style.display='block';
 }
 
 function toggleCart(){
@@ -488,32 +499,30 @@ function toggleCart(){
   document.getElementById('overlay').classList.toggle('open');
 }
 
-document.getElementById('checkoutForm').addEventListener('submit', function(e){
+document.getElementById('checkoutForm').addEventListener('submit',function(e){
   e.preventDefault();
   const ids = Object.keys(cart);
-  if(ids.length === 0) return;
-
+  if(!ids.length) return;
   const name = document.getElementById('custName').value;
   const phone = document.getElementById('custPhone').value;
   const address = document.getElementById('custAddress').value;
-
-  let msg = `*New Order - Kalakkal Kitchen Hotel*\n\n`;
-  msg += `*Name:* ${name}\n*Phone:* ${phone}\n*Address/Note:* ${address}\n\n*Items:*\n`;
-  let total = 0;
+  const allItems = Object.values(menuData).flatMap(c=>c.items);
+  let msg = `🍽️ *புதிய ஆர்டர் - கலக்கல் கிச்சன் ஹோட்டல்*\n\n`;
+  msg += `👤 *பெயர்:* ${name}\n📞 *தொலைபேசி:* ${phone}\n📍 *முகவரி:* ${address}\n\n`;
+  msg += `*ஆர்டர் விவரம்:*\n`;
+  let total=0;
   ids.forEach(id=>{
-    const item = menuItems.find(m=>m.id==id);
+    const item = allItems.find(i=>i.id==id);
+    if(!item) return;
     const qty = cart[id];
-    total += item.price * qty;
-    msg += `- ${item.name} x${qty} = ₹${item.price*qty}\n`;
+    total += item.price*qty;
+    msg += `${item.icon} ${item.name} x${qty} = ₹${item.price*qty}\n`;
   });
-  msg += `\n*Total: ₹${total}*`;
-
-  const url = `https://wa.me/${HOTEL_WHATSAPP}?text=${encodeURIComponent(msg)}`;
-  window.open(url, '_blank');
+  msg += `\n💰 *மொத்தம் / Total: ₹${total}*\n\nஆர்டர் confirm செய்யவும்! ✅`;
+  window.open(`https://wa.me/${HOTEL_WA}?text=${encodeURIComponent(msg)}`,'_blank');
 });
 
 renderMenu();
 </script>
-
 </body>
 </html>
