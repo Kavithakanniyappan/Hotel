@@ -513,51 +513,90 @@ const WA = "916379042970";
 
 const menuData = {
   nonveg:{items:[
-    {id:1, en:"Biriyani", ta:"பிரியாணி", desc:"Flavourful chicken biriyani", price:120, icon:"🍖", veg:false, img:"https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=75"},
-    {id:2, en:"Chicken Fried Rice", ta:"சிக்கன் ஃப்ரைட் ரைஸ்", desc:"Spiced chicken fried rice", price:120, icon:"🍚", veg:false, img:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=75"},
-    {id:3, en:"Chilli Chicken", ta:"சில்லி சிக்கன்", desc:"Crispy chilli chicken tossed in sauce", price:110, icon:"🍗", veg:false, img:"https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=75"},
-    {id:4, en:"Pepper Chicken", ta:"பெப்பர் சிக்கன்", desc:"Aromatic pepper chicken dry", price:110, icon:"🍗", veg:false, img:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=75"},
-    {id:5, en:"Chicken Chettinad", ta:"சிக்கன் சேத்திநாடு", desc:"Traditional Chettinad spiced chicken", price:120, icon:"🥘", veg:false, img:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75"},
-    {id:6, en:"Egg Fried Rice", ta:"முட்டை ஃப்ரைட் ரைஸ்", desc:"Egg fried rice with veggies", price:110, icon:"🍳", veg:false, img:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=75"},
-    {id:7, en:"Omelette", ta:"ஆம்லெட்", desc:"Fresh egg omelette", price:25, icon:"🍳", veg:false, img:"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=75"},
-    {id:8, en:"Egg Podimas", ta:"முட்டை போடிமாஸ்", desc:"Scrambled spiced egg", price:50, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=75"},
-    {id:9, en:"Kalaki", ta:"கலகி", desc:"Special egg kalaki", price:25, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=75"},
-    {id:10, en:"Egg Full Boil", ta:"முட்டை பூல் போயில்", desc:"Full boiled egg", price:25, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=75"},
-    {id:11, en:"Parotta + Curry", ta:"பரோட்டா + கறி (அசைவம்)", desc:"Soft parotta with non-veg curry", price:45, icon:"🫓", veg:false, img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=75"},
-    {id:12, en:"Kothu Parotta", ta:"கோத்து பரோட்டா", desc:"Minced parotta with egg & masala", price:100, icon:"🍛", veg:false, img:"https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400&q=75"},
+    // Biriyani - real chicken biriyani rice dish
+    {id:1, en:"Biriyani", ta:"பிரியாணி", desc:"Flavourful chicken biriyani", price:120, icon:"🍖", veg:false, img:"https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=80"},
+    // Chicken Fried Rice - fried rice with chicken pieces
+    {id:2, en:"Chicken Fried Rice", ta:"சிக்கன் ஃப்ரைட் ரைஸ்", desc:"Spiced chicken fried rice", price:120, icon:"🍚", veg:false, img:"https://images.unsplash.com/photo-1645696301019-35adcc18407e?w=400&q=80"},
+    // Chilli Chicken - dry chilli chicken Indo-Chinese
+    {id:3, en:"Chilli Chicken", ta:"சில்லி சிக்கன்", desc:"Crispy chilli chicken tossed in sauce", price:110, icon:"🍗", veg:false, img:"https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80"},
+    // Pepper Chicken - dry pepper chicken
+    {id:4, en:"Pepper Chicken", ta:"பெப்பர் சிக்கன்", desc:"Aromatic pepper chicken dry", price:110, icon:"🍗", veg:false, img:"https://images.unsplash.com/photo-1598103442097-8b74394b95c1?w=400&q=80"},
+    // Chicken Chettinad - dark spiced curry
+    {id:5, en:"Chicken Chettinad", ta:"சிக்கன் சேத்திநாடு", desc:"Traditional Chettinad spiced chicken", price:120, icon:"🥘", veg:false, img:"https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&q=80"},
+    // Egg Fried Rice - yellow egg fried rice
+    {id:6, en:"Egg Fried Rice", ta:"முட்டை ஃப்ரைட் ரைஸ்", desc:"Egg fried rice with veggies", price:110, icon:"🍳", veg:false, img:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=80"},
+    // Omelette - plain folded omelette
+    {id:7, en:"Omelette", ta:"ஆம்லெட்", desc:"Fresh egg omelette", price:25, icon:"🍳", veg:false, img:"https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=80"},
+    // Egg Podimas - scrambled spiced egg
+    {id:8, en:"Egg Podimas", ta:"முட்டை போடிமாஸ்", desc:"Scrambled spiced egg", price:50, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=80"},
+    // Kalaki - egg mix kalaki
+    {id:9, en:"Kalaki", ta:"கலகி", desc:"Special egg kalaki", price:25, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1607690424560-35d967d6ad7b?w=400&q=80"},
+    // Egg Full Boil - whole boiled eggs
+    {id:10, en:"Egg Full Boil", ta:"முட்டை பூல் போயில்", desc:"Full boiled egg", price:25, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1510174768340-6dc788db5baf?w=400&q=80"},
+    // Parotta + Curry - layered parotta with curry bowl
+    {id:11, en:"Parotta + Curry", ta:"பரோட்டா + கறி (அசைவம்)", desc:"Soft parotta with non-veg curry", price:45, icon:"🫓", veg:false, img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80"},
+    // Kothu Parotta - minced kothu parotta on tawa
+    {id:12, en:"Kothu Parotta", ta:"கோத்து பரோட்டா", desc:"Minced parotta with egg & masala", price:100, icon:"🍛", veg:false, img:"https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=80"},
   ]},
   veg:{items:[
-    {id:13, en:"Parotta Set (Veg)", ta:"பரோட்டா செட் (சைவம்)", desc:"Soft parotta with veg curry", price:45, icon:"🫓", veg:true, img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=75"},
-    {id:14, en:"Idly (4 pcs)", ta:"இட்லி (4 இட்லி)", desc:"Soft steamed idly with sambar & chutney", price:40, icon:"🍲", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=75"},
-    {id:15, en:"Veg Fried Rice", ta:"வெஜ் ஃப்ரைட் ரைஸ்", desc:"Mixed vegetable fried rice", price:100, icon:"🍚", veg:true, img:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=75"},
-    {id:16, en:"Chapathi (2 set)", ta:"சப்பாத்தி (2 செட்)", desc:"Soft chapathi with veg kurma", price:50, icon:"🫓", veg:true, img:"https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=75"},
-    {id:17, en:"Gobi Chilli", ta:"கோபி சில்லி", desc:"Crispy cauliflower chilli", price:110, icon:"🥦", veg:true, img:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=75"},
-    {id:18, en:"Plain Dosa (Set)", ta:"பேளன் தோசை", desc:"Crispy plain dosa with chutney", price:40, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=75"},
-    {id:19, en:"Onion Dosa (Set)", ta:"வெங்காய தோசை", desc:"Dosa with onion topping", price:40, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=75"},
-    {id:20, en:"Masala Dosa (Set)", ta:"மசாலா தோசை", desc:"Crispy dosa with potato masala", price:60, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=75"},
-    {id:21, en:"Podi Dosa (Set)", ta:"பொடி தோசை", desc:"Dosa with gun powder chutney", price:60, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=75"},
-    {id:22, en:"Ghee Dosa (Set)", ta:"கீ தோசை", desc:"Crispy dosa with pure ghee", price:70, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=75"},
+    // Parotta Veg - parotta with dal/veg curry
+    {id:13, en:"Parotta Set (Veg)", ta:"பரோட்டா செட் (சைவம்)", desc:"Soft parotta with veg curry", price:45, icon:"🫓", veg:true, img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80"},
+    // Idly - white round soft idly with sambar
+    {id:14, en:"Idly (4 pcs)", ta:"இட்லி (4 இட்லி)", desc:"Soft steamed idly with sambar & chutney", price:40, icon:"🍲", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=80"},
+    // Veg Fried Rice - colourful veg fried rice
+    {id:15, en:"Veg Fried Rice", ta:"வெஜ் ஃப்ரைட் ரைஸ்", desc:"Mixed vegetable fried rice", price:100, icon:"🍚", veg:true, img:"https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80"},
+    // Chapathi - stacked soft chapathi with kurma
+    {id:16, en:"Chapathi (2 set)", ta:"சப்பாத்தி (2 செட்)", desc:"Soft chapathi with veg kurma", price:50, icon:"🫓", veg:true, img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80"},
+    // Gobi Chilli - fried cauliflower chilli dry
+    {id:17, en:"Gobi Chilli", ta:"கோபி சில்லி", desc:"Crispy cauliflower chilli", price:110, icon:"🥦", veg:true, img:"https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&q=80"},
+    // Plain Dosa - thin crispy golden dosa
+    {id:18, en:"Plain Dosa (Set)", ta:"பேளன் தோசை", desc:"Crispy plain dosa with chutney", price:40, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"},
+    // Onion Dosa - dosa with onion toppings
+    {id:19, en:"Onion Dosa (Set)", ta:"வெங்காய தோசை", desc:"Dosa with onion topping", price:40, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=80"},
+    // Masala Dosa - rolled dosa with potato filling
+    {id:20, en:"Masala Dosa (Set)", ta:"மசாலா தோசை", desc:"Crispy dosa with potato masala", price:60, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=400&q=80"},
+    // Podi Dosa - dosa with podi powder
+    {id:21, en:"Podi Dosa (Set)", ta:"பொடி தோசை", desc:"Dosa with gun powder chutney", price:60, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"},
+    // Ghee Dosa - golden dosa with ghee
+    {id:22, en:"Ghee Dosa (Set)", ta:"கீ தோசை", desc:"Crispy dosa with pure ghee", price:70, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=80"},
   ]},
   drinks:{items:[
-    {id:23, en:"Tea", ta:"தேநீர்", desc:"Hot fresh tea", price:15, icon:"🍵", veg:true, img:"https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=75"},
-    {id:24, en:"Coffee", ta:"காபி", desc:"Filter coffee", price:20, icon:"☕", veg:true, img:"https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&q=75"},
-    {id:25, en:"Boost", ta:"பூஸ்ட்", desc:"Boost energy drink", price:30, icon:"🥛", veg:true, img:"https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=75"},
-    {id:26, en:"Horlicks", ta:"ஹார்லிக்ஸ்", desc:"Horlicks health drink", price:30, icon:"🥛", veg:true, img:"https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=75"},
-    {id:27, en:"Mango Juice", ta:"மாம்பழ ஜூஸ்", desc:"Fresh mango juice", price:40, icon:"🥭", veg:true, img:"https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=75"},
-    {id:28, en:"Lemon Juice", ta:"எலுமிச்சை ஜூஸ்", desc:"Fresh lemon juice with salt or sugar", price:30, icon:"🍋", veg:true, img:"https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400&q=75"},
-    {id:29, en:"Watermelon Juice", ta:"தர்பூசணி ஜூஸ்", desc:"Chilled fresh watermelon juice", price:40, icon:"🍉", veg:true, img:"https://images.unsplash.com/photo-1497534446932-c925b458314e?w=400&q=75"},
-    {id:30, en:"Pineapple Juice", ta:"அன்னாசி ஜூஸ்", desc:"Sweet fresh pineapple juice", price:40, icon:"🍍", veg:true, img:"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=75"},
-    {id:31, en:"Grape Juice", ta:"திராட்சை ஜூஸ்", desc:"Fresh grape juice, chilled", price:40, icon:"🍇", veg:true, img:"https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=75"},
-    {id:32, en:"Coconut Water", ta:"இளநீர்", desc:"Fresh tender coconut water", price:30, icon:"🥥", veg:true, img:"https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400&q=75"},
-    {id:33, en:"Water Bottle (500ml)", ta:"தண்ணீர் (500ml)", desc:"Packaged drinking water 500ml", price:15, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&q=75"},
-    {id:34, en:"Water Bottle (1L)", ta:"தண்ணீர் (1 லிட்டர்)", desc:"Packaged drinking water 1 Litre", price:20, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&q=75"},
-    {id:35, en:"Water Bottle (2L)", ta:"தண்ணீர் (2 லிட்டர்)", desc:"Packaged drinking water 2 Litres", price:35, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&q=75"},
+    // Tea - cup of tea with milk
+    {id:23, en:"Tea", ta:"தேநீர்", desc:"Hot fresh tea", price:15, icon:"🍵", veg:true, img:"https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80"},
+    // Coffee - south Indian filter coffee in tumbler
+    {id:24, en:"Coffee", ta:"காபி", desc:"Filter coffee", price:20, icon:"☕", veg:true, img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80"},
+    // Boost - chocolate malt drink in glass
+    {id:25, en:"Boost", ta:"பூஸ்ட்", desc:"Boost energy drink", price:30, icon:"🥛", veg:true, img:"https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80"},
+    // Horlicks - milky health drink in glass
+    {id:26, en:"Horlicks", ta:"ஹார்லிக்ஸ்", desc:"Horlicks health drink", price:30, icon:"🥛", veg:true, img:"https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&q=80"},
+    // Mango Juice - bright orange mango juice glass
+    {id:27, en:"Mango Juice", ta:"மாம்பழ ஜூஸ்", desc:"Fresh mango juice", price:40, icon:"🥭", veg:true, img:"https://images.unsplash.com/photo-1546173159-315724a31696?w=400&q=80"},
+    // Lemon Juice - yellow lemon juice with straw
+    {id:28, en:"Lemon Juice", ta:"எலுமிச்சை ஜூஸ்", desc:"Fresh lemon juice with salt or sugar", price:30, icon:"🍋", veg:true, img:"https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400&q=80"},
+    // Watermelon Juice - red watermelon juice glass
+    {id:29, en:"Watermelon Juice", ta:"தர்பூசணி ஜூஸ்", desc:"Chilled fresh watermelon juice", price:40, icon:"🍉", veg:true, img:"https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&q=80"},
+    // Pineapple Juice - yellow pineapple juice glass
+    {id:30, en:"Pineapple Juice", ta:"அன்னாசி ஜூஸ்", desc:"Sweet fresh pineapple juice", price:40, icon:"🍍", veg:true, img:"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80"},
+    // Grape Juice - purple grape juice glass
+    {id:31, en:"Grape Juice", ta:"திராட்சை ஜூஸ்", desc:"Fresh grape juice, chilled", price:40, icon:"🍇", veg:true, img:"https://images.unsplash.com/photo-1506802913710-9ef36e7e42bc?w=400&q=80"},
+    // Coconut Water - tender coconut with straw
+    {id:32, en:"Coconut Water", ta:"இளநீர்", desc:"Fresh tender coconut water", price:30, icon:"🥥", veg:true, img:"https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400&q=80"},
+    // Water 500ml - small plastic water bottle
+    {id:33, en:"Water Bottle (500ml)", ta:"தண்ணீர் (500ml)", desc:"Packaged drinking water 500ml", price:15, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1532983022536-3cf74e23b3c4?w=400&q=80"},
+    // Water 1L - 1 litre water bottle
+    {id:34, en:"Water Bottle (1L)", ta:"தண்ணீர் (1 லிட்டர்)", desc:"Packaged drinking water 1 Litre", price:20, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1592417817038-d13fd7342605?w=400&q=80"},
+    // Water 2L - big 2 litre water bottle
+    {id:35, en:"Water Bottle (2L)", ta:"தண்ணீர் (2 லிட்டர்)", desc:"Packaged drinking water 2 Litres", price:35, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1616118132534-381148898bb4?w=400&q=80"},
   ]},
   snacks:{items:[
-    {id:36, en:"Pani Puri", ta:"பானி பூரி", desc:"Crispy puri with spiced water", price:50, icon:"🫙", veg:true, img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=75"},
-    {id:37, en:"Bread Omelette", ta:"பிரட் ஆம்லெட்", desc:"Egg omelette with bread", price:60, icon:"🥪", veg:false, img:"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=75"},
-    {id:38, en:"Cheese Bread Omelette", ta:"சீஸ் பிரட் ஆம்லெட்", desc:"Cheese omelette with bread", price:80, icon:"🧀", veg:false, img:"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=75"},
-    {id:39, en:"Chicken Bread Omelette", ta:"சிக்கன் பிரட் ஆம்லெட்", desc:"Chicken omelette with bread", price:100, icon:"🥪", veg:false, img:"https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=75"},
+    // Pani Puri - crispy puris on plate with chutneys
+    {id:36, en:"Pani Puri", ta:"பானி பூரி", desc:"Crispy puri with spiced water", price:50, icon:"🫙", veg:true, img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"},
+    // Bread Omelette - egg between bread slices
+    {id:37, en:"Bread Omelette", ta:"பிரட் ஆம்லெட்", desc:"Egg omelette with bread", price:60, icon:"🥪", veg:false, img:"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=80"},
+    // Cheese Bread Omelette - cheesy egg bread
+    {id:38, en:"Cheese Bread Omelette", ta:"சீஸ் பிரட் ஆம்லெட்", desc:"Cheese omelette with bread", price:80, icon:"🧀", veg:false, img:"https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=80"},
+    // Chicken Bread Omelette - chicken stuffed bread omelette
+    {id:39, en:"Chicken Bread Omelette", ta:"சிக்கன் பிரட் ஆம்லெட்", desc:"Chicken omelette with bread", price:100, icon:"🥪", veg:false, img:"https://images.unsplash.com/photo-1607690424560-35d967d6ad7b?w=400&q=80"},
   ]}
 };
 
