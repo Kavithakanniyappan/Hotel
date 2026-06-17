@@ -10,84 +10,63 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 :root{
-  --cream:#FDF6EE;
-  --cream2:#FAF0E4;
-  --warm-white:#FFFDF9;
-  --rust:#C0392B;
-  --rust2:#A93226;
-  --rust-light:#FDECEA;
-  --rust-pale:#FEF5F4;
-  --saffron:#E67E22;
-  --saffron-light:#FEF3E8;
-  --gold:#C9A84C;
-  --gold-light:#FBF5E4;
-  --text:#1C1009;
-  --text2:#4A2F1A;
-  --muted:#7B5533;
-  --border:#EDD5BE;
-  --border2:#E8C9A8;
-  --green:#1E6B35;
-  --green-light:#EAF4EC;
-  --shadow:rgba(90,40,10,.10);
-  --shadow2:rgba(90,40,10,.18);
+  --cream:#FDF6EE; --cream2:#FAF0E4; --warm-white:#FFFDF9;
+  --rust:#C0392B; --rust2:#A93226; --rust-light:#FDECEA; --rust-pale:#FEF5F4;
+  --saffron:#E67E22; --saffron-light:#FEF3E8;
+  --gold:#C9A84C; --gold-light:#FBF5E4;
+  --text:#1C1009; --text2:#4A2F1A; --muted:#7B5533;
+  --border:#EDD5BE; --border2:#E8C9A8;
+  --green:#1E6B35; --green-light:#EAF4EC;
+  --shadow:rgba(90,40,10,.10); --shadow2:rgba(90,40,10,.18);
 }
 body{font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text);}
-
-/* SCROLLBAR */
 ::-webkit-scrollbar{width:6px;}
 ::-webkit-scrollbar-track{background:var(--cream2);}
 ::-webkit-scrollbar-thumb{background:var(--rust); border-radius:4px;}
 
 /* NAV */
 nav{background:var(--warm-white); border-bottom:2px solid var(--border); position:sticky; top:0; z-index:100; box-shadow:0 2px 20px var(--shadow);}
-.nav-inner{max-width:1200px; margin:0 auto; padding:0 5%; display:flex; align-items:center; justify-content:space-between; height:72px;}
-.nav-logo{display:flex; align-items:center; gap:14px; text-decoration:none;}
-.nav-logo-box{background:var(--rust); color:#fff; width:48px; height:48px; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:800; font-size:1.05rem; border-radius:4px; box-shadow:0 2px 8px rgba(192,57,43,.3);}
-.nav-logo-text strong{display:block; font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--rust); line-height:1.2;}
-.nav-logo-text span{display:block; font-family:'Noto Serif Tamil',serif; font-size:.68rem; color:var(--muted);}
-.nav-links{display:flex; gap:30px; align-items:center;}
+.nav-inner{max-width:1200px; margin:0 auto; padding:0 5%; display:flex; align-items:center; justify-content:space-between; height:68px;}
+.nav-brand{text-decoration:none;}
+.nav-brand strong{display:block; font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--rust); line-height:1.2;}
+.nav-brand span{display:block; font-family:'Noto Serif Tamil',serif; font-size:.67rem; color:var(--muted);}
+.nav-links{display:flex; gap:28px; align-items:center;}
 .nav-links a{text-decoration:none; color:var(--text2); font-size:.85rem; font-weight:600; position:relative; padding-bottom:3px; transition:.2s;}
 .nav-links a::after{content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--rust); transition:.2s;}
 .nav-links a:hover{color:var(--rust);}
 .nav-links a:hover::after{width:100%;}
 .nav-right{display:flex; align-items:center; gap:10px;}
-.admin-btn{background:var(--gold-light); color:var(--gold); border:1.5px solid var(--gold); padding:8px 16px; font-family:'DM Sans',sans-serif; font-size:.78rem; font-weight:700; cursor:pointer; border-radius:4px; transition:.15s;}
+.admin-btn{background:var(--gold-light); color:var(--gold); border:1.5px solid var(--gold); padding:8px 14px; font-family:'DM Sans',sans-serif; font-size:.76rem; font-weight:700; cursor:pointer; border-radius:4px; transition:.15s;}
 .admin-btn:hover{background:var(--gold); color:#fff;}
-.nav-cart{background:var(--rust); color:#fff; border:none; padding:10px 20px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.85rem; cursor:pointer; display:flex; align-items:center; gap:8px; border-radius:4px; transition:.2s; box-shadow:0 2px 8px rgba(192,57,43,.25);}
+.nav-cart{background:var(--rust); color:#fff; border:none; padding:10px 18px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.84rem; cursor:pointer; display:flex; align-items:center; gap:8px; border-radius:4px; transition:.2s; box-shadow:0 2px 8px rgba(192,57,43,.25);}
 .nav-cart:hover{background:var(--rust2);}
-.cart-badge{background:var(--saffron); color:#fff; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.68rem; font-weight:700;}
+.cart-badge{background:var(--saffron); color:#fff; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.65rem; font-weight:700;}
 
 /* HERO */
-.hero{background:linear-gradient(135deg, var(--cream) 0%, var(--cream2) 40%, var(--saffron-light) 100%); border-bottom:2px solid var(--border); padding:80px 5% 70px; position:relative; overflow:hidden;}
-.hero::before{content:''; position:absolute; top:-80px; right:-80px; width:400px; height:400px; background:radial-gradient(circle, rgba(230,126,34,.08) 0%, transparent 70%); border-radius:50%;}
-.hero::after{content:''; position:absolute; bottom:-60px; left:10%; width:300px; height:300px; background:radial-gradient(circle, rgba(192,57,43,.06) 0%, transparent 70%); border-radius:50%;}
-.hero-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:70px; flex-wrap:wrap; position:relative; z-index:1;}
+.hero{background:linear-gradient(135deg,var(--cream) 0%,var(--cream2) 40%,var(--saffron-light) 100%); border-bottom:2px solid var(--border); padding:80px 5% 70px; position:relative; overflow:hidden;}
+.hero::before{content:''; position:absolute; top:-80px; right:-80px; width:400px; height:400px; background:radial-gradient(circle,rgba(230,126,34,.08) 0%,transparent 70%); border-radius:50%;}
+.hero-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:60px; flex-wrap:wrap; position:relative; z-index:1;}
 .hero-left{flex:1.2; min-width:300px;}
-.hero-badge{display:inline-flex; align-items:center; gap:7px; background:var(--rust-light); border:1px solid rgba(192,57,43,.25); color:var(--rust); padding:6px 16px; font-size:.74rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px; border-radius:20px;}
+.hero-badge{display:inline-flex; align-items:center; gap:7px; background:var(--rust-light); border:1px solid rgba(192,57,43,.25); color:var(--rust); padding:6px 16px; font-size:.73rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px; border-radius:20px;}
 .hero-tamil{font-family:'Noto Serif Tamil',serif; font-size:1.1rem; color:var(--muted); margin-bottom:10px;}
-.hero-left h1{font-family:'Playfair Display',serif; font-size:3.2rem; line-height:1.12; color:var(--text); margin-bottom:16px; letter-spacing:-.5px;}
+.hero-left h1{font-family:'Playfair Display',serif; font-size:3rem; line-height:1.12; color:var(--text); margin-bottom:16px; letter-spacing:-.5px;}
 .hero-left h1 em{font-style:italic; color:var(--rust);}
-.hero-sub{font-family:'Noto Serif Tamil',serif; font-size:.84rem; color:var(--muted); margin-bottom:28px; line-height:1.9;}
+.hero-sub{font-family:'Noto Serif Tamil',serif; font-size:.83rem; color:var(--muted); margin-bottom:28px; line-height:1.9;}
 .hero-btns{display:flex; gap:14px; flex-wrap:wrap;}
-.btn-red{background:var(--rust); color:#fff; border:2px solid var(--rust); padding:15px 32px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.9rem; cursor:pointer; letter-spacing:.3px; transition:.2s; text-decoration:none; display:inline-block; border-radius:4px; box-shadow:0 4px 14px rgba(192,57,43,.25);}
+.btn-red{background:var(--rust); color:#fff; border:2px solid var(--rust); padding:14px 30px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.9rem; cursor:pointer; transition:.2s; text-decoration:none; display:inline-block; border-radius:5px; box-shadow:0 4px 14px rgba(192,57,43,.25);}
 .btn-red:hover{background:var(--rust2); border-color:var(--rust2); transform:translateY(-1px);}
-.btn-outline{background:transparent; color:var(--rust); border:2px solid var(--rust); padding:15px 32px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.9rem; cursor:pointer; letter-spacing:.3px; transition:.2s; text-decoration:none; display:inline-block; border-radius:4px;}
+.btn-outline{background:transparent; color:var(--rust); border:2px solid var(--rust); padding:14px 30px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.9rem; cursor:pointer; transition:.2s; text-decoration:none; display:inline-block; border-radius:5px;}
 .btn-outline:hover{background:var(--rust-light);}
 .hero-stats{display:flex; gap:28px; margin-top:32px; flex-wrap:wrap;}
-.hstat{text-align:center;}
-.hstat .num{font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; color:var(--rust); line-height:1;}
+.hstat .num{font-family:'Playfair Display',serif; font-size:1.9rem; font-weight:700; color:var(--rust); line-height:1;}
 .hstat .lbl{font-size:.7rem; color:var(--muted); font-weight:600; letter-spacing:.5px; margin-top:3px;}
 .hstat-div{width:1px; height:40px; background:var(--border2); align-self:center;}
-.hero-right{flex:1; min-width:280px; display:flex; justify-content:center;}
-.hero-img-stack{position:relative; width:320px; height:320px;}
-.hi-main{width:260px; height:260px; border-radius:12px; object-fit:cover; border:4px solid var(--warm-white); box-shadow:0 16px 48px var(--shadow2); position:absolute; top:0; left:0;}
-.hi-secondary{width:160px; height:160px; border-radius:10px; object-fit:cover; border:3px solid var(--warm-white); box-shadow:0 8px 28px var(--shadow2); position:absolute; bottom:0; right:0;}
-.hi-badge{position:absolute; top:200px; left:180px; background:var(--rust); color:#fff; padding:10px 14px; border-radius:8px; text-align:center; box-shadow:0 4px 14px rgba(192,57,43,.35); z-index:2;}
-.hi-badge strong{display:block; font-family:'Playfair Display',serif; font-size:1rem;}
-.hi-badge span{font-size:.65rem; opacity:.85;}
+.hero-right{flex:1; min-width:260px; display:flex; justify-content:center;}
+/* Hero visual: big emoji plate */
+.hero-plate{width:280px; height:280px; background:linear-gradient(135deg,#FF8C42,#C0392B); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:7rem; box-shadow:0 20px 60px rgba(192,57,43,.3), 0 0 0 16px rgba(192,57,43,.08);}
 
 /* INFO BAND */
-.info-band{background:var(--rust); color:#fff; padding:18px 5%;}
+.info-band{background:var(--rust); color:#fff; padding:16px 5%;}
 .info-band-inner{max-width:1200px; margin:0 auto; display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:14px;}
 .ib-item{display:flex; align-items:center; gap:12px; font-size:.82rem;}
 .ib-item .ico{font-size:1.3rem;}
@@ -96,75 +75,117 @@ nav{background:var(--warm-white); border-bottom:2px solid var(--border); positio
 .ib-div{width:1px; height:36px; background:rgba(255,255,255,.2);}
 
 /* PAY BANNER */
-.pay-banner{background:var(--green); color:#fff; padding:13px 5%; text-align:center; font-size:.83rem;}
+.pay-banner{background:var(--green); color:#fff; padding:12px 5%; text-align:center; font-size:.82rem;}
 .pay-banner strong{color:#90EE90;}
 
 /* SECTION */
-.section{padding:80px 5%;}
+.section{padding:76px 5%;}
 .section-inner{max-width:1200px; margin:0 auto;}
-.sec-head{margin-bottom:48px;}
+.sec-head{margin-bottom:46px;}
 .sec-head.center{text-align:center;}
 .sec-head.center p{margin:0 auto;}
 .sec-head .eyebrow{font-size:.72rem; letter-spacing:2.5px; color:var(--saffron); text-transform:uppercase; font-weight:700; margin-bottom:10px; display:flex; align-items:center; gap:8px;}
-.sec-head .eyebrow::before,.sec-head.center .eyebrow::before{content:''; flex:none; width:24px; height:2px; background:var(--saffron);}
+.sec-head .eyebrow::before{content:''; flex:none; width:24px; height:2px; background:var(--saffron);}
 .sec-head.center .eyebrow{justify-content:center;}
-.sec-head h2{font-family:'Playfair Display',serif; font-size:2.4rem; color:var(--text); margin-bottom:10px; line-height:1.2;}
+.sec-head h2{font-family:'Playfair Display',serif; font-size:2.3rem; color:var(--text); margin-bottom:10px; line-height:1.2;}
 .sec-head h2 em{font-style:italic; color:var(--rust);}
-.sec-head p{font-size:.88rem; color:var(--muted); max-width:520px; line-height:1.85;}
+.sec-head p{font-size:.87rem; color:var(--muted); max-width:520px; line-height:1.85;}
 
 /* ADMIN */
-.admin-panel{display:none; background:var(--gold-light); border-bottom:2px solid var(--gold); padding:20px 5%; position:sticky; top:72px; z-index:90;}
+.admin-panel{display:none; background:var(--gold-light); border-bottom:2px solid var(--gold); padding:18px 5%; position:sticky; top:68px; z-index:90;}
 .admin-panel.show{display:block;}
 .admin-inner{max-width:1200px; margin:0 auto;}
-.admin-inner h3{font-family:'Playfair Display',serif; font-size:1rem; color:var(--text2); margin-bottom:16px;}
-.admin-inner p{font-size:.78rem; color:var(--muted); margin-bottom:14px;}
+.admin-inner h3{font-family:'Playfair Display',serif; font-size:1rem; color:var(--text2); margin-bottom:6px;}
+.admin-inner p{font-size:.76rem; color:var(--muted); margin-bottom:14px;}
 .stock-grid{display:flex; flex-wrap:wrap; gap:8px;}
-.stock-item{background:var(--warm-white); border:1.5px solid var(--border2); padding:8px 16px; display:flex; align-items:center; gap:12px; font-size:.78rem; border-radius:6px;}
-.stock-toggle{position:relative; width:44px; height:24px; cursor:pointer; flex-shrink:0;}
+.stock-item{background:var(--warm-white); border:1.5px solid var(--border2); padding:7px 14px; display:flex; align-items:center; gap:10px; font-size:.77rem; border-radius:6px;}
+.stock-toggle{position:relative; width:42px; height:22px; cursor:pointer; flex-shrink:0;}
 .stock-toggle input{opacity:0; width:0; height:0;}
-.toggle-slider{position:absolute; inset:0; background:#D5C5B5; transition:.3s; border-radius:24px;}
-.toggle-slider:before{content:''; position:absolute; height:18px; width:18px; left:3px; bottom:3px; background:white; transition:.3s; border-radius:50%; box-shadow:0 1px 4px rgba(0,0,0,.2);}
+.toggle-slider{position:absolute; inset:0; background:#CCC0B0; transition:.3s; border-radius:22px;}
+.toggle-slider:before{content:''; position:absolute; height:16px; width:16px; left:3px; bottom:3px; background:#fff; transition:.3s; border-radius:50%; box-shadow:0 1px 3px rgba(0,0,0,.2);}
 .stock-toggle input:checked + .toggle-slider{background:var(--green);}
 .stock-toggle input:checked + .toggle-slider:before{transform:translateX(20px);}
 .stock-name{flex:1; font-weight:600; color:var(--text);}
-.stock-label{font-size:.68rem; font-weight:700; min-width:60px; text-align:right;}
+.stock-label{font-size:.67rem; font-weight:700; min-width:58px; text-align:right;}
 .stock-label.avail{color:var(--green);}
 .stock-label.out{color:var(--rust);}
 
 /* MENU */
 .menu-section{background:var(--cream2);}
-.menu-tabs{display:flex; gap:10px; margin-bottom:36px; flex-wrap:wrap;}
-.mtab{flex:1; min-width:120px; background:var(--warm-white); border:2px solid var(--border2); padding:14px 10px; font-family:'DM Sans',sans-serif; font-weight:600; font-size:.82rem; cursor:pointer; transition:.2s; color:var(--muted); text-align:center; border-radius:8px;}
-.mtab .mtab-icon{font-size:1.5rem; display:block; margin-bottom:6px;}
+.menu-tabs{display:flex; gap:10px; margin-bottom:34px; flex-wrap:wrap;}
+.mtab{flex:1; min-width:120px; background:var(--warm-white); border:2px solid var(--border2); padding:13px 10px; font-family:'DM Sans',sans-serif; font-weight:600; font-size:.82rem; cursor:pointer; transition:.2s; color:var(--muted); text-align:center; border-radius:8px;}
+.mtab .mtab-icon{font-size:1.5rem; display:block; margin-bottom:5px;}
 .mtab.active,.mtab:hover{background:var(--rust); color:#fff; border-color:var(--rust); box-shadow:0 4px 14px rgba(192,57,43,.2);}
-.menu-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(252px,1fr)); gap:20px;}
+.menu-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px;}
 
 /* CARD */
-.mcard{background:var(--warm-white); border:1.5px solid var(--border); border-radius:10px; overflow:hidden; transition:transform .22s, box-shadow .22s; position:relative;}
-.mcard:hover{transform:translateY(-4px); box-shadow:0 12px 36px var(--shadow2);}
-.mcard.out-of-stock{pointer-events:none;}
+.mcard{background:var(--warm-white); border:1.5px solid var(--border); border-radius:12px; overflow:hidden; transition:transform .22s,box-shadow .22s; position:relative;}
+.mcard:hover{transform:translateY(-5px); box-shadow:0 14px 40px var(--shadow2);}
 
-/* OOS OVERLAY */
-.oos-overlay{display:none; position:absolute; inset:0; background:rgba(255,255,255,.82); z-index:10; flex-direction:column; align-items:center; justify-content:center; gap:8px; backdrop-filter:blur(2px);}
+/* OOS overlay shown to customers */
+.oos-overlay{display:none; position:absolute; inset:0; background:rgba(255,252,248,.88); z-index:10; flex-direction:column; align-items:center; justify-content:center; gap:6px; backdrop-filter:blur(3px); border-radius:12px;}
 .mcard.out-of-stock .oos-overlay{display:flex;}
-.oos-icon{font-size:2.2rem;}
-.oos-text{font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--rust);}
-.oos-sub{font-family:'Noto Serif Tamil',serif; font-size:.75rem; color:var(--muted);}
+.mcard.out-of-stock{pointer-events:none;}
+.oos-icon{font-size:2.4rem;}
+.oos-title{font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--rust);}
+.oos-sub{font-family:'Noto Serif Tamil',serif; font-size:.73rem; color:var(--muted);}
+.oos-note{font-size:.7rem; color:var(--muted); margin-top:2px; font-style:italic;}
 
-.mcard-img{height:160px; overflow:hidden; position:relative; background:var(--cream2);}
-.mcard-img img{width:100%; height:100%; object-fit:cover; transition:transform .3s;}
-.mcard:hover .mcard-img img{transform:scale(1.04);}
-.mcard-img .fallback{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:3.5rem;}
-.veg-badge{position:absolute; top:10px; left:10px; background:var(--warm-white); border:2px solid; padding:3px 5px; border-radius:3px; display:flex; align-items:center; gap:3px;}
-.vdot{width:10px; height:10px; border-radius:50%; display:inline-block;}
-.vdot.v{background:var(--green); border:2px solid var(--green);}
-.vdot.nv{background:var(--rust); border:2px solid var(--rust);}
-.veg-badge.v{border-color:var(--green);}
-.veg-badge.nv{border-color:var(--rust);}
+/* CARD IMAGE — emoji + gradient, NO photo */
+.mcard-img{height:148px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:5px; position:relative;}
+.dish-emoji{font-size:4rem; line-height:1; filter:drop-shadow(0 4px 10px rgba(0,0,0,.18)); transition:transform .3s; display:block;}
+.mcard:hover .dish-emoji{transform:scale(1.14) rotate(-3deg);}
+.dish-label{font-size:.6rem; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; opacity:.5;}
+.veg-badge{position:absolute; top:9px; left:9px; background:rgba(255,255,255,.92); border:1.5px solid; padding:3px 8px; border-radius:20px; display:flex; align-items:center; gap:4px; font-size:.6rem; font-weight:700; backdrop-filter:blur(4px);}
+.vdot{width:7px; height:7px; border-radius:50%; display:inline-block; flex-shrink:0;}
+.vdot.v{background:var(--green);}
+.vdot.nv{background:var(--rust);}
+.veg-badge.v{border-color:var(--green); color:var(--green);}
+.veg-badge.nv{border-color:var(--rust); color:var(--rust);}
+
+/* Individual dish gradient backgrounds */
+.bg-biriyani{background:linear-gradient(135deg,#FFCC80,#D84315);}
+.bg-cfrice{background:linear-gradient(135deg,#FFE0B2,#E65100);}
+.bg-chilli{background:linear-gradient(135deg,#FFCDD2,#B71C1C);}
+.bg-pepper{background:linear-gradient(135deg,#D7CCC8,#4E342E);}
+.bg-chettinad{background:linear-gradient(135deg,#FFCCBC,#BF360C);}
+.bg-efrice{background:linear-gradient(135deg,#FFF9C4,#F57F17);}
+.bg-omelette{background:linear-gradient(135deg,#FFF8E1,#FFD54F);}
+.bg-podimas{background:linear-gradient(135deg,#FFE082,#FF8F00);}
+.bg-kalaki{background:linear-gradient(135deg,#FFF59D,#F9A825);}
+.bg-boilegg{background:linear-gradient(135deg,#F5F5F5,#E0E0E0);}
+.bg-parotta{background:linear-gradient(135deg,#D7CCC8,#795548);}
+.bg-kothu{background:linear-gradient(135deg,#FFAB91,#BF360C);}
+.bg-vegparotta{background:linear-gradient(135deg,#DCEDC8,#558B2F);}
+.bg-idly{background:linear-gradient(135deg,#F5F5F5,#BDBDBD);}
+.bg-vegfrice{background:linear-gradient(135deg,#C8E6C9,#2E7D32);}
+.bg-chapathi{background:linear-gradient(135deg,#FFF3E0,#E65100);}
+.bg-gobi{background:linear-gradient(135deg,#FFFDE7,#FBC02D);}
+.bg-plaindosa{background:linear-gradient(135deg,#FAFAFA,#D7CCC8);}
+.bg-oniondosa{background:linear-gradient(135deg,#FFE0B2,#F57C00);}
+.bg-masaladosa{background:linear-gradient(135deg,#FFF3E0,#E65100);}
+.bg-podidosa{background:linear-gradient(135deg,#EFEBE9,#6D4C41);}
+.bg-gheedosa{background:linear-gradient(135deg,#FFFDE7,#F9A825);}
+.bg-tea{background:linear-gradient(135deg,#BCAAA4,#4E342E);}
+.bg-coffee{background:linear-gradient(135deg,#D7CCC8,#3E2723);}
+.bg-boost{background:linear-gradient(135deg,#DCEDC8,#33691E);}
+.bg-horlicks{background:linear-gradient(135deg,#FFF9C4,#F57F17);}
+.bg-mango{background:linear-gradient(135deg,#FFF9C4,#FF6F00);}
+.bg-lemon{background:linear-gradient(135deg,#F9FBE7,#AFB42B);}
+.bg-watermelon{background:linear-gradient(135deg,#FCE4EC,#C62828);}
+.bg-pineapple{background:linear-gradient(135deg,#FFFDE7,#F9A825);}
+.bg-grape{background:linear-gradient(135deg,#EDE7F6,#6A1B9A);}
+.bg-coconut{background:linear-gradient(135deg,#E0F7FA,#00838F);}
+.bg-water{background:linear-gradient(135deg,#E3F2FD,#1565C0);}
+.bg-panipuri{background:linear-gradient(135deg,#FFF3E0,#BF360C);}
+.bg-breadom{background:linear-gradient(135deg,#FFF8E1,#E65100);}
+.bg-cheesebom{background:linear-gradient(135deg,#FFFDE7,#F9A825);}
+.bg-chickenbom{background:linear-gradient(135deg,#FFCCBC,#BF360C);}
+
 .mcard-body{padding:14px 16px 10px;}
-.mcard-body h3{font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--text); margin-bottom:2px;}
-.mcard-body .mtamil{font-family:'Noto Serif Tamil',serif; font-size:.72rem; color:var(--muted); margin-bottom:6px;}
-.mcard-body .desc{font-size:.76rem; color:var(--muted); line-height:1.65; font-style:italic; margin-bottom:10px; min-height:28px;}
+.mcard-body h3{font-family:'Playfair Display',serif; font-size:1rem; color:var(--text); margin-bottom:2px;}
+.mcard-body .mtamil{font-family:'Noto Serif Tamil',serif; font-size:.71rem; color:var(--muted); margin-bottom:5px;}
+.mcard-body .desc{font-size:.75rem; color:var(--muted); line-height:1.65; font-style:italic; margin-bottom:10px; min-height:26px;}
 .mcard-bottom{display:flex; align-items:center; justify-content:space-between; border-top:1px solid var(--border); padding:10px 16px;}
 .mprice{font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:var(--rust);}
 .madd{background:var(--rust); color:#fff; border:none; width:36px; height:36px; font-size:1.4rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:.15s; border-radius:6px;}
@@ -175,110 +196,109 @@ nav{background:var(--warm-white); border-bottom:2px solid var(--border); positio
 .min-cart button:hover{background:var(--rust); color:#fff;}
 .min-cart span{font-family:'Playfair Display',serif; font-weight:700; font-size:.95rem; min-width:18px; text-align:center;}
 
-/* SPECIALS STRIP */
-.specials{background:var(--warm-white); border-top:2px solid var(--border); border-bottom:2px solid var(--border); padding:48px 5%;}
+/* SPECIALS */
+.specials{background:var(--warm-white); border-top:2px solid var(--border); border-bottom:2px solid var(--border); padding:46px 5%;}
 .specials-inner{max-width:1200px; margin:0 auto;}
-.spec-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0;}
-.spec-item{padding:28px 24px; text-align:center; border-right:1px solid var(--border);}
+.spec-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:0;}
+.spec-item{padding:26px 22px; text-align:center; border-right:1px solid var(--border);}
 .spec-item:last-child{border-right:none;}
-.spec-ico{font-size:2.2rem; margin-bottom:10px;}
-.spec-item h3{font-family:'Playfair Display',serif; font-size:1rem; color:var(--rust); margin-bottom:6px;}
-.spec-item p{font-size:.78rem; color:var(--muted); line-height:1.7;}
+.spec-ico{font-size:2rem; margin-bottom:10px;}
+.spec-item h3{font-family:'Playfair Display',serif; font-size:.95rem; color:var(--rust); margin-bottom:5px;}
+.spec-item p{font-size:.77rem; color:var(--muted); line-height:1.7;}
 
 /* ABOUT */
 .about-section{background:var(--warm-white);}
-.about-grid{display:flex; gap:70px; align-items:center; flex-wrap:wrap;}
-.about-imgs{flex:1; min-width:260px; display:grid; grid-template-columns:1fr 1fr; gap:12px;}
-.about-imgs img{border-radius:8px; object-fit:cover; width:100%; border:2px solid var(--border);}
-.about-imgs img:first-child{grid-column:1/-1; height:180px;}
-.about-imgs img:not(:first-child){height:120px;}
+.about-grid{display:flex; gap:60px; align-items:center; flex-wrap:wrap;}
+.about-visual{flex:1; min-width:240px; display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+.av-box{border-radius:10px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:24px 16px; text-align:center; gap:6px;}
+.av-box:first-child{grid-column:1/-1; background:linear-gradient(135deg,var(--rust),var(--rust2)); color:#fff; padding:30px;}
+.av-box:first-child .av-big{font-family:'Playfair Display',serif; font-size:3.5rem; font-weight:800; color:#FFE082;}
+.av-box:first-child .av-lbl{font-size:.72rem; letter-spacing:2px; color:#FFCDD2; text-transform:uppercase;}
+.av-box.small{background:var(--cream2); border:1.5px solid var(--border);}
+.av-box.small .av-ico{font-size:1.8rem;}
+.av-box.small strong{font-family:'Playfair Display',serif; font-size:.85rem; color:var(--rust);}
+.av-box.small span{font-size:.7rem; color:var(--muted);}
 .about-text{flex:1.2; min-width:280px;}
 .about-text .eyebrow{font-size:.72rem; letter-spacing:2.5px; color:var(--saffron); text-transform:uppercase; font-weight:700; margin-bottom:10px; display:flex; align-items:center; gap:8px;}
 .about-text .eyebrow::before{content:''; width:24px; height:2px; background:var(--saffron);}
-.about-text h2{font-family:'Playfair Display',serif; font-size:2.1rem; color:var(--text); margin-bottom:16px;}
-.about-text p{font-size:.87rem; color:var(--muted); line-height:1.95; margin-bottom:12px;}
-.about-tamil{font-family:'Noto Serif Tamil',serif; font-size:.84rem; color:var(--text2); background:var(--cream2); border-left:4px solid var(--rust); padding:14px 18px; margin:18px 0; line-height:1.9; border-radius:0 6px 6px 0;}
-.hours-box{display:flex; border:1.5px solid var(--border2); border-radius:8px; overflow:hidden; margin-top:20px;}
-.hbox{flex:1; padding:16px; text-align:center; border-right:1px solid var(--border);}
+.about-text h2{font-family:'Playfair Display',serif; font-size:2rem; color:var(--text); margin-bottom:14px;}
+.about-text p{font-size:.86rem; color:var(--muted); line-height:1.95; margin-bottom:12px;}
+.about-tamil{font-family:'Noto Serif Tamil',serif; font-size:.83rem; color:var(--text2); background:var(--cream2); border-left:4px solid var(--rust); padding:13px 17px; margin:16px 0; line-height:1.9; border-radius:0 6px 6px 0;}
+.hours-box{display:flex; border:1.5px solid var(--border2); border-radius:8px; overflow:hidden; margin-top:18px;}
+.hbox{flex:1; padding:14px; text-align:center; border-right:1px solid var(--border);}
 .hbox:last-child{border-right:none;}
-.hbox .hico{font-size:1.3rem; margin-bottom:6px;}
-.hbox strong{display:block; font-family:'Playfair Display',serif; font-size:.95rem; color:var(--rust); margin-bottom:3px;}
-.hbox span{font-size:.72rem; color:var(--muted); line-height:1.6;}
+.hbox .hico{font-size:1.2rem; margin-bottom:5px;}
+.hbox strong{display:block; font-family:'Playfair Display',serif; font-size:.9rem; color:var(--rust); margin-bottom:2px;}
+.hbox span{font-size:.7rem; color:var(--muted); line-height:1.6;}
 
 /* PAYMENT */
-.pay-section{background:linear-gradient(135deg, #1E6B35 0%, #145226 100%); color:#fff; padding:60px 5%; text-align:center;}
-.pay-section h2{font-family:'Playfair Display',serif; font-size:2.1rem; margin-bottom:10px;}
-.pay-section > p{font-family:'Noto Serif Tamil',serif; font-size:.88rem; color:#A8D8B5; margin-bottom:36px;}
-.pay-methods{display:flex; justify-content:center; gap:20px; flex-wrap:wrap; max-width:560px; margin:0 auto 28px;}
-.pay-card{background:rgba(255,255,255,.1); border:2px solid rgba(255,255,255,.22); padding:24px 32px; text-align:center; flex:1; min-width:180px; border-radius:10px; backdrop-filter:blur(4px);}
-.pay-card .pico{font-size:2.5rem; margin-bottom:10px;}
-.pay-card strong{display:block; font-family:'Playfair Display',serif; font-size:1rem; margin-bottom:5px;}
-.pay-card span{font-size:.76rem; color:#A8D8B5;}
-.pay-gpay{font-size:.83rem; color:#A8D8B5; margin-top:8px;}
+.pay-section{background:linear-gradient(135deg,#1E6B35 0%,#145226 100%); color:#fff; padding:58px 5%; text-align:center;}
+.pay-section h2{font-family:'Playfair Display',serif; font-size:2rem; margin-bottom:10px;}
+.pay-section>p{font-family:'Noto Serif Tamil',serif; font-size:.87rem; color:#A8D8B5; margin-bottom:34px;}
+.pay-methods{display:flex; justify-content:center; gap:18px; flex-wrap:wrap; max-width:520px; margin:0 auto 24px;}
+.pay-card{background:rgba(255,255,255,.1); border:2px solid rgba(255,255,255,.22); padding:22px 28px; text-align:center; flex:1; min-width:170px; border-radius:10px; backdrop-filter:blur(4px);}
+.pay-card .pico{font-size:2.4rem; margin-bottom:8px;}
+.pay-card strong{display:block; font-family:'Playfair Display',serif; font-size:.95rem; margin-bottom:4px;}
+.pay-card span{font-size:.74rem; color:#A8D8B5;}
+.pay-gpay{font-size:.82rem; color:#A8D8B5; margin-top:6px;}
 
-/* CALL STRIP */
-.call-strip{background:var(--saffron); padding:50px 5%; text-align:center; color:#fff;}
-.call-strip h2{font-family:'Playfair Display',serif; font-size:1.9rem; margin-bottom:8px;}
-.call-strip p{font-family:'Noto Serif Tamil',serif; font-size:.85rem; color:rgba(255,255,255,.8); margin-bottom:24px;}
-.call-btn{display:inline-flex; align-items:center; gap:10px; background:#fff; color:var(--saffron); text-decoration:none; padding:16px 40px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:1rem; transition:.2s; border-radius:6px; box-shadow:0 4px 18px rgba(0,0,0,.15);}
+/* CALL */
+.call-strip{background:var(--saffron); padding:48px 5%; text-align:center; color:#fff;}
+.call-strip h2{font-family:'Playfair Display',serif; font-size:1.85rem; margin-bottom:8px;}
+.call-strip p{font-family:'Noto Serif Tamil',serif; font-size:.84rem; color:rgba(255,255,255,.8); margin-bottom:22px;}
+.call-btn{display:inline-flex; align-items:center; gap:10px; background:#fff; color:var(--saffron); text-decoration:none; padding:15px 38px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.98rem; transition:.2s; border-radius:6px; box-shadow:0 4px 18px rgba(0,0,0,.15);}
 .call-btn:hover{background:var(--saffron-light);}
 
 /* CONTACT */
 .contact-section{background:var(--cream2);}
-.contact-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:16px; max-width:1000px; margin:0 auto;}
-.ccard{background:var(--warm-white); border:1.5px solid var(--border); padding:28px 20px; text-align:center; transition:.2s; border-radius:8px;}
+.contact-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; max-width:980px; margin:0 auto;}
+.ccard{background:var(--warm-white); border:1.5px solid var(--border); padding:26px 18px; text-align:center; transition:.2s; border-radius:8px;}
 .ccard:hover{border-color:var(--rust); box-shadow:0 6px 22px var(--shadow);}
-.ccard .cico{font-size:1.9rem; margin-bottom:12px;}
-.ccard h3{font-family:'Playfair Display',serif; font-size:.95rem; color:var(--rust); margin-bottom:8px;}
-.ccard p{font-size:.8rem; color:var(--muted); line-height:1.8;}
+.ccard .cico{font-size:1.8rem; margin-bottom:10px;}
+.ccard h3{font-family:'Playfair Display',serif; font-size:.92rem; color:var(--rust); margin-bottom:7px;}
+.ccard p{font-size:.79rem; color:var(--muted); line-height:1.8;}
 .ccard a{color:var(--rust); text-decoration:none; font-weight:700;}
 .ccard a:hover{text-decoration:underline;}
 
 /* FOOTER */
-footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
-.footer-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;}
-.footer-brand strong{display:block; font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--gold); margin-bottom:4px;}
-.footer-brand span{font-family:'Noto Serif Tamil',serif; font-size:.74rem; color:#8A6C50;}
-.footer-links{display:flex; gap:22px; flex-wrap:wrap;}
-.footer-links a{color:#C8A882; text-decoration:none; font-size:.78rem;}
+footer{background:#1C1009; color:#C8A882; padding:34px 5%;}
+.footer-inner{max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:18px;}
+.footer-brand strong{display:block; font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--gold); margin-bottom:3px;}
+.footer-brand span{font-family:'Noto Serif Tamil',serif; font-size:.72rem; color:#8A6C50;}
+.footer-links{display:flex; gap:20px; flex-wrap:wrap;}
+.footer-links a{color:#C8A882; text-decoration:none; font-size:.77rem;}
 .footer-links a:hover{color:var(--gold);}
-.footer-copy{font-size:.72rem; color:#5A3D22; font-style:italic;}
+.footer-copy{font-size:.71rem; color:#5A3D22; font-style:italic;}
 
 /* CART DRAWER */
 .overlay{position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:200; opacity:0; pointer-events:none; transition:.25s;}
 .overlay.open{opacity:1; pointer-events:auto;}
 .cart-drawer{position:fixed; top:0; right:-440px; width:400px; max-width:95vw; height:100%; background:var(--warm-white); z-index:201; box-shadow:-8px 0 36px rgba(0,0,0,.2); transition:.3s ease; display:flex; flex-direction:column; border-left:3px solid var(--rust);}
 .cart-drawer.open{right:0;}
-.cdh{background:var(--rust); color:#fff; padding:20px 22px; display:flex; justify-content:space-between; align-items:center;}
-.cdh h3{font-family:'Playfair Display',serif; font-size:1.1rem;}
-.cdh button{background:none; border:none; color:#fff; font-size:1.6rem; cursor:pointer; line-height:1;}
-.cd-items{flex:1; overflow-y:auto; padding:16px 18px;}
-.cd-row{display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid var(--border);}
-.cd-row .icon{font-size:1.6rem; min-width:34px; text-align:center;}
+.cdh{background:var(--rust); color:#fff; padding:18px 20px; display:flex; justify-content:space-between; align-items:center;}
+.cdh h3{font-family:'Playfair Display',serif; font-size:1.05rem;}
+.cdh button{background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer; line-height:1;}
+.cd-items{flex:1; overflow-y:auto; padding:14px 16px;}
+.cd-row{display:flex; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid var(--border);}
+.cd-row .icon{font-size:1.5rem; min-width:32px; text-align:center;}
 .cd-info{flex:1;}
-.cd-info h4{font-weight:700; font-size:.86rem; color:var(--text); margin-bottom:4px;}
-.cd-qty{display:flex; align-items:center; gap:6px;}
-.cd-qty button{width:26px; height:26px; border:1.5px solid var(--border2); background:var(--rust-light); color:var(--rust); cursor:pointer; font-weight:700; font-size:.9rem; border-radius:4px;}
+.cd-info h4{font-weight:700; font-size:.84rem; color:var(--text); margin-bottom:4px;}
+.cd-qty{display:flex; align-items:center; gap:5px;}
+.cd-qty button{width:25px; height:25px; border:1.5px solid var(--border2); background:var(--rust-light); color:var(--rust); cursor:pointer; font-weight:700; font-size:.88rem; border-radius:4px;}
 .cd-qty span{font-family:'Playfair Display',serif; font-weight:700; font-size:.9rem; min-width:16px; text-align:center;}
-.cd-price{font-family:'Playfair Display',serif; font-weight:700; color:var(--rust); font-size:.95rem;}
-.cd-empty{text-align:center; padding:60px 20px; color:var(--muted); font-style:italic; font-size:.88rem; line-height:1.9;}
-.cd-empty .e-ico{font-size:3rem; margin-bottom:12px; display:block;}
-.cd-foot{padding:16px 18px; border-top:2px solid var(--rust);}
-.cd-total{display:flex; justify-content:space-between; font-family:'Playfair Display',serif; font-weight:700; font-size:1.15rem; color:var(--rust); margin-bottom:14px;}
-.cf label{display:block; font-size:.7rem; color:var(--muted); font-weight:700; letter-spacing:.5px; text-transform:uppercase; margin-bottom:4px;}
-.cf input,.cf textarea,.cf select{width:100%; padding:10px 13px; margin-bottom:10px; border:1.5px solid var(--border2); font-family:'DM Sans',sans-serif; font-size:.83rem; background:var(--cream); color:var(--text); border-radius:5px;}
+.cd-price{font-family:'Playfair Display',serif; font-weight:700; color:var(--rust); font-size:.92rem;}
+.cd-empty{text-align:center; padding:56px 20px; color:var(--muted); font-style:italic; font-size:.87rem; line-height:2;}
+.cd-empty .e-ico{font-size:3rem; display:block; margin-bottom:10px;}
+.cd-foot{padding:14px 16px; border-top:2px solid var(--rust);}
+.cd-total{display:flex; justify-content:space-between; font-family:'Playfair Display',serif; font-weight:700; font-size:1.1rem; color:var(--rust); margin-bottom:12px;}
+.cf label{display:block; font-size:.68rem; color:var(--muted); font-weight:700; letter-spacing:.5px; text-transform:uppercase; margin-bottom:3px;}
+.cf input,.cf textarea,.cf select{width:100%; padding:10px 12px; margin-bottom:9px; border:1.5px solid var(--border2); font-family:'DM Sans',sans-serif; font-size:.82rem; background:var(--cream); color:var(--text); border-radius:5px;}
 .cf input:focus,.cf textarea:focus,.cf select:focus{outline:none; border-color:var(--rust);}
-.wa-btn{width:100%; background:#25D366; color:#fff; border:none; padding:14px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.92rem; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer; transition:.15s; border-radius:5px;}
+.wa-btn{width:100%; background:#25D366; color:#fff; border:none; padding:13px; font-family:'DM Sans',sans-serif; font-weight:700; font-size:.9rem; display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer; transition:.15s; border-radius:5px;}
 .wa-btn:hover{background:#1da851;}
 
-@media(max-width:900px){.nav-links,.ib-div{display:none;} .about-grid{flex-direction:column;} .spec-grid{grid-template-columns:1fr 1fr;} .spec-item:nth-child(2){border-right:none;} .spec-item{border-bottom:1px solid var(--border);}  }
-@media(max-width:600px){
-  .hero{padding:50px 5% 44px;} .hero-left h1{font-size:2.2rem;}
-  .hero-img-stack{display:none;} .section{padding:50px 5%;} .sec-head h2{font-size:1.8rem;}
-  .pay-methods{flex-direction:column;} .footer-inner{flex-direction:column; text-align:center;}
-  .spec-grid{grid-template-columns:1fr;} .spec-item{border-right:none;}
-  .about-imgs{display:none;}
-}
+@media(max-width:900px){.nav-links,.ib-div{display:none;} .spec-grid{grid-template-columns:1fr 1fr;} .spec-item:nth-child(2){border-right:none;} .spec-item{border-bottom:1px solid var(--border);} .about-grid{flex-direction:column;}}
+@media(max-width:600px){.hero{padding:48px 5% 40px;} .hero-left h1{font-size:2.1rem;} .hero-plate{width:200px;height:200px;font-size:5rem;} .section{padding:48px 5%;} .sec-head h2{font-size:1.75rem;} .pay-methods{flex-direction:column;} .footer-inner{flex-direction:column;text-align:center;} .spec-grid{grid-template-columns:1fr;} .spec-item{border-right:none;}}
 </style>
 </head>
 <body>
@@ -286,12 +306,9 @@ footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-box">KK</div>
-      <div class="nav-logo-text">
-        <strong>Kalakkal Kitchen</strong>
-        <span>கலக்கல் கிச்சன் ஹோட்டல்</span>
-      </div>
+    <a href="#" class="nav-brand">
+      <strong>Kalakkal Kitchen Hotel</strong>
+      <span>கலக்கல் கிச்சன் ஹோட்டல் · Kozhipuliyur</span>
     </a>
     <div class="nav-links">
       <a href="#menu">Menu</a>
@@ -307,11 +324,11 @@ footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
   </div>
 </nav>
 
-<!-- ADMIN STOCK PANEL -->
+<!-- ADMIN -->
 <div class="admin-panel" id="adminPanel">
   <div class="admin-inner">
     <h3>🔧 Stock Manager</h3>
-    <p>Toggle items to mark them Available or Out of Stock. Customers will see a "Not Available" message on out-of-stock items.</p>
+    <p>Toggle items Available or Out of Stock. Customers will see a clear "Not Available" message on the dish card.</p>
     <div class="stock-grid" id="stockGrid"></div>
   </div>
 </div>
@@ -337,11 +354,7 @@ footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
       </div>
     </div>
     <div class="hero-right">
-      <div class="hero-img-stack">
-        <img class="hi-main" src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=520&q=80" alt="Biriyani" onerror="this.style.display='none'">
-        <img class="hi-secondary" src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=320&q=80" alt="Dosa" onerror="this.style.display='none'">
-        <div class="hi-badge"><strong>Open Daily</strong><span>1PM – 11PM</span></div>
-      </div>
+      <div class="hero-plate">🍛</div>
     </div>
   </div>
 </section>
@@ -359,19 +372,16 @@ footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
   </div>
 </div>
 
-<!-- PAYMENT BANNER -->
-<div class="pay-banner">
-  ✅ We accept <strong>💵 Cash on Delivery</strong> &amp; <strong>📲 GPay · +91 63790 42970</strong> — Pay whichever is easy!
-</div>
+<div class="pay-banner">✅ We accept <strong>💵 Cash on Delivery</strong> &amp; <strong>📲 GPay · +91 63790 42970</strong> — Pay whichever is easy!</div>
 
-<!-- SPECIALS STRIP -->
+<!-- SPECIALS -->
 <div class="specials">
   <div class="specials-inner">
     <div class="spec-grid">
       <div class="spec-item"><div class="spec-ico">🍳</div><h3>Fresh Daily</h3><p>Cooked fresh every afternoon with quality ingredients</p></div>
       <div class="spec-item"><div class="spec-ico">🏠</div><h3>Home Delivery</h3><p>Order by phone or WhatsApp, we'll bring it to your door</p></div>
       <div class="spec-item"><div class="spec-ico">💳</div><h3>Easy Payment</h3><p>Pay by Cash or GPay — no hassle either way</p></div>
-      <div class="spec-item"><div class="spec-ico">🌶️</div><h3>Traditional Taste</h3><p>Classic Tamil recipes with authentic spices & masalas</p></div>
+      <div class="spec-item"><div class="spec-ico">🌶️</div><h3>Traditional Taste</h3><p>Classic Tamil recipes with authentic spices &amp; masalas</p></div>
     </div>
   </div>
 </div>
@@ -398,19 +408,20 @@ footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
 <section class="section about-section" id="about">
   <div class="section-inner">
     <div class="about-grid">
-      <div class="about-imgs">
-        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=700&q=80" alt="Hotel food" onerror="this.style.display='none'">
-        <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=350&q=80" alt="Dosa" onerror="this.style.display='none'">
-        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=350&q=80" alt="Veg food" onerror="this.style.display='none'">
+      <div class="about-visual">
+        <div class="av-box">
+          <div class="av-big">2024</div>
+          <div class="av-lbl">Established</div>
+        </div>
+        <div class="av-box small"><div class="av-ico">🍽️</div><strong>Fresh Food</strong><span>Daily cooking</span></div>
+        <div class="av-box small"><div class="av-ico">📍</div><strong>Kozhipuliyur</strong><span>X Road</span></div>
       </div>
       <div class="about-text">
         <div class="eyebrow">Our Story</div>
         <h2>Good Food, Made Fresh <em>Every Day</em></h2>
         <p>கலக்கல் கிச்சன் ஹோட்டல் — Vandavasi to Chetpet Road, Kozhipuliyur X Road, Near Suraj School. Quality food, fresh every afternoon. Open daily 1 PM to 11 PM.</p>
         <p>From crispy dosas and biriyani to kothu parotta and fresh juices — everything made fresh daily with traditional recipes and the best quality ingredients.</p>
-        <div class="about-tamil">
-          கலக்கல் கிச்சன் ஹோட்டல் — தரமான சமையல், புத்தம் புதிய உணவு. Kozhipuliyur X Road, Suraj School அருகில். தினமும் மதியம் 1 மணி முதல் இரவு 11 மணி வரை திறந்திருக்கும்.
-        </div>
+        <div class="about-tamil">கலக்கல் கிச்சன் ஹோட்டல் — தரமான சமையல், புத்தம் புதிய உணவு. Kozhipuliyur X Road, Suraj School அருகில். தினமும் மதியம் 1 மணி முதல் இரவு 11 மணி வரை திறந்திருக்கும்.</div>
         <div class="hours-box">
           <div class="hbox"><div class="hico">🕑</div><strong>1:00 PM</strong><span>Opens Every Afternoon</span></div>
           <div class="hbox"><div class="hico">🌙</div><strong>11:00 PM</strong><span>Closes Every Night</span></div>
@@ -426,16 +437,8 @@ footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
   <h2>💳 We Accept Both Payments</h2>
   <p>பணம் கட்ட எந்த முறையும் சரி — Pay however is easy for you!</p>
   <div class="pay-methods">
-    <div class="pay-card">
-      <div class="pico">💵</div>
-      <strong>Cash on Delivery</strong>
-      <span>Pay when your order arrives</span>
-    </div>
-    <div class="pay-card">
-      <div class="pico">📲</div>
-      <strong>GPay / UPI</strong>
-      <span>Pay instantly online</span>
-    </div>
+    <div class="pay-card"><div class="pico">💵</div><strong>Cash on Delivery</strong><span>Pay when your order arrives</span></div>
+    <div class="pay-card"><div class="pico">📲</div><strong>GPay / UPI</strong><span>Pay instantly online</span></div>
   </div>
   <div class="pay-gpay">GPay Number: <strong>+91 63790 42970</strong></div>
 </section>
@@ -491,14 +494,14 @@ footer{background:#1C1009; color:#C8A882; padding:36px 5%;}
   </div>
   <div class="cd-foot" id="cdFoot" style="display:none;">
     <div class="cd-total"><span>Total / மொத்தம்</span><span id="cdTotal">₹0</span></div>
-    <div class="cf" id="checkoutForm">
+    <div class="cf">
       <label>Your Name / பெயர்</label>
       <input type="text" id="custName" placeholder="உங்கள் பெயர்...">
       <label>Phone / தொலைபேசி</label>
       <input type="tel" id="custPhone" placeholder="+91 ...">
       <label>Address / முகவரி</label>
       <textarea id="custAddress" rows="2" placeholder="வீட்டு முகவரி அல்லது 'Pickup at hotel'"></textarea>
-      <label>Payment Method / பணம் செலுத்தும் முறை</label>
+      <label>Payment / பணம் செலுத்தும் முறை</label>
       <select id="payMethod">
         <option value="Cash on Delivery">💵 Cash on Delivery</option>
         <option value="GPay">📲 GPay (+91 63790 42970)</option>
@@ -513,90 +516,51 @@ const WA = "916379042970";
 
 const menuData = {
   nonveg:{items:[
-    // Biriyani - real chicken biriyani rice dish
-    {id:1, en:"Biriyani", ta:"பிரியாணி", desc:"Flavourful chicken biriyani", price:120, icon:"🍖", veg:false, img:"https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=80"},
-    // Chicken Fried Rice - fried rice with chicken pieces
-    {id:2, en:"Chicken Fried Rice", ta:"சிக்கன் ஃப்ரைட் ரைஸ்", desc:"Spiced chicken fried rice", price:120, icon:"🍚", veg:false, img:"https://images.unsplash.com/photo-1645696301019-35adcc18407e?w=400&q=80"},
-    // Chilli Chicken - dry chilli chicken Indo-Chinese
-    {id:3, en:"Chilli Chicken", ta:"சில்லி சிக்கன்", desc:"Crispy chilli chicken tossed in sauce", price:110, icon:"🍗", veg:false, img:"https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80"},
-    // Pepper Chicken - dry pepper chicken
-    {id:4, en:"Pepper Chicken", ta:"பெப்பர் சிக்கன்", desc:"Aromatic pepper chicken dry", price:110, icon:"🍗", veg:false, img:"https://images.unsplash.com/photo-1598103442097-8b74394b95c1?w=400&q=80"},
-    // Chicken Chettinad - dark spiced curry
-    {id:5, en:"Chicken Chettinad", ta:"சிக்கன் சேத்திநாடு", desc:"Traditional Chettinad spiced chicken", price:120, icon:"🥘", veg:false, img:"https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&q=80"},
-    // Egg Fried Rice - yellow egg fried rice
-    {id:6, en:"Egg Fried Rice", ta:"முட்டை ஃப்ரைட் ரைஸ்", desc:"Egg fried rice with veggies", price:110, icon:"🍳", veg:false, img:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=80"},
-    // Omelette - plain folded omelette
-    {id:7, en:"Omelette", ta:"ஆம்லெட்", desc:"Fresh egg omelette", price:25, icon:"🍳", veg:false, img:"https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=80"},
-    // Egg Podimas - scrambled spiced egg
-    {id:8, en:"Egg Podimas", ta:"முட்டை போடிமாஸ்", desc:"Scrambled spiced egg", price:50, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=80"},
-    // Kalaki - egg mix kalaki
-    {id:9, en:"Kalaki", ta:"கலகி", desc:"Special egg kalaki", price:25, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1607690424560-35d967d6ad7b?w=400&q=80"},
-    // Egg Full Boil - whole boiled eggs
-    {id:10, en:"Egg Full Boil", ta:"முட்டை பூல் போயில்", desc:"Full boiled egg", price:25, icon:"🥚", veg:false, img:"https://images.unsplash.com/photo-1510174768340-6dc788db5baf?w=400&q=80"},
-    // Parotta + Curry - layered parotta with curry bowl
-    {id:11, en:"Parotta + Curry", ta:"பரோட்டா + கறி (அசைவம்)", desc:"Soft parotta with non-veg curry", price:45, icon:"🫓", veg:false, img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80"},
-    // Kothu Parotta - minced kothu parotta on tawa
-    {id:12, en:"Kothu Parotta", ta:"கோத்து பரோட்டா", desc:"Minced parotta with egg & masala", price:100, icon:"🍛", veg:false, img:"https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&q=80"},
+    {id:1,  en:"Biriyani",               ta:"பிரியாணி",                desc:"Flavourful chicken biriyani",              price:120, icon:"🍖", veg:false, bg:"bg-biriyani",   label:"Chicken Biriyani"},
+    {id:2,  en:"Chicken Fried Rice",     ta:"சிக்கன் ஃப்ரைட் ரைஸ்",  desc:"Spiced chicken fried rice",               price:120, icon:"🍚", veg:false, bg:"bg-cfrice",     label:"Fried Rice"},
+    {id:3,  en:"Chilli Chicken",         ta:"சில்லி சிக்கன்",          desc:"Crispy chilli chicken tossed in sauce",   price:110, icon:"🍗", veg:false, bg:"bg-chilli",     label:"Chilli"},
+    {id:4,  en:"Pepper Chicken",         ta:"பெப்பர் சிக்கன்",         desc:"Aromatic pepper chicken dry",             price:110, icon:"🍗", veg:false, bg:"bg-pepper",     label:"Pepper Dry"},
+    {id:5,  en:"Chicken Chettinad",      ta:"சிக்கன் சேத்திநாடு",      desc:"Traditional Chettinad spiced chicken",    price:120, icon:"🥘", veg:false, bg:"bg-chettinad",  label:"Chettinad"},
+    {id:6,  en:"Egg Fried Rice",         ta:"முட்டை ஃப்ரைட் ரைஸ்",   desc:"Egg fried rice with veggies",             price:110, icon:"🍳", veg:false, bg:"bg-efrice",     label:"Egg Rice"},
+    {id:7,  en:"Omelette",               ta:"ஆம்லெட்",                 desc:"Fresh egg omelette",                      price:25,  icon:"🍳", veg:false, bg:"bg-omelette",   label:"Omelette"},
+    {id:8,  en:"Egg Podimas",            ta:"முட்டை போடிமாஸ்",         desc:"Scrambled spiced egg",                    price:50,  icon:"🥚", veg:false, bg:"bg-podimas",    label:"Podimas"},
+    {id:9,  en:"Kalaki",                 ta:"கலகி",                    desc:"Special egg kalaki",                      price:25,  icon:"🥚", veg:false, bg:"bg-kalaki",     label:"Kalaki"},
+    {id:10, en:"Egg Full Boil",          ta:"முட்டை பூல் போயில்",      desc:"Full boiled egg",                         price:25,  icon:"🥚", veg:false, bg:"bg-boilegg",    label:"Full Boil"},
+    {id:11, en:"Parotta + Curry",        ta:"பரோட்டா + கறி (அசைவம்)", desc:"Soft parotta with non-veg curry",         price:45,  icon:"🫓", veg:false, bg:"bg-parotta",    label:"Parotta Set"},
+    {id:12, en:"Kothu Parotta",          ta:"கோத்து பரோட்டா",          desc:"Minced parotta with egg & masala",        price:100, icon:"🍛", veg:false, bg:"bg-kothu",      label:"Kothu"},
   ]},
   veg:{items:[
-    // Parotta Veg - parotta with dal/veg curry
-    {id:13, en:"Parotta Set (Veg)", ta:"பரோட்டா செட் (சைவம்)", desc:"Soft parotta with veg curry", price:45, icon:"🫓", veg:true, img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&q=80"},
-    // Idly - white round soft idly with sambar
-    {id:14, en:"Idly (4 pcs)", ta:"இட்லி (4 இட்லி)", desc:"Soft steamed idly with sambar & chutney", price:40, icon:"🍲", veg:true, img:"https://images.unsplash.com/photo-1630383249896-424e482df921?w=400&q=80"},
-    // Veg Fried Rice - colourful veg fried rice
-    {id:15, en:"Veg Fried Rice", ta:"வெஜ் ஃப்ரைட் ரைஸ்", desc:"Mixed vegetable fried rice", price:100, icon:"🍚", veg:true, img:"https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80"},
-    // Chapathi - stacked soft chapathi with kurma
-    {id:16, en:"Chapathi (2 set)", ta:"சப்பாத்தி (2 செட்)", desc:"Soft chapathi with veg kurma", price:50, icon:"🫓", veg:true, img:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80"},
-    // Gobi Chilli - fried cauliflower chilli dry
-    {id:17, en:"Gobi Chilli", ta:"கோபி சில்லி", desc:"Crispy cauliflower chilli", price:110, icon:"🥦", veg:true, img:"https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&q=80"},
-    // Plain Dosa - thin crispy golden dosa
-    {id:18, en:"Plain Dosa (Set)", ta:"பேளன் தோசை", desc:"Crispy plain dosa with chutney", price:40, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"},
-    // Onion Dosa - dosa with onion toppings
-    {id:19, en:"Onion Dosa (Set)", ta:"வெங்காய தோசை", desc:"Dosa with onion topping", price:40, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=400&q=80"},
-    // Masala Dosa - rolled dosa with potato filling
-    {id:20, en:"Masala Dosa (Set)", ta:"மசாலா தோசை", desc:"Crispy dosa with potato masala", price:60, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=400&q=80"},
-    // Podi Dosa - dosa with podi powder
-    {id:21, en:"Podi Dosa (Set)", ta:"பொடி தோசை", desc:"Dosa with gun powder chutney", price:60, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"},
-    // Ghee Dosa - golden dosa with ghee
-    {id:22, en:"Ghee Dosa (Set)", ta:"கீ தோசை", desc:"Crispy dosa with pure ghee", price:70, icon:"🥞", veg:true, img:"https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=80"},
+    {id:13, en:"Parotta Set (Veg)",      ta:"பரோட்டா செட் (சைவம்)",   desc:"Soft parotta with veg curry",             price:45,  icon:"🫓", veg:true,  bg:"bg-vegparotta", label:"Veg Parotta"},
+    {id:14, en:"Idly (4 pcs)",           ta:"இட்லி (4 இட்லி)",         desc:"Soft steamed idly with sambar & chutney", price:40,  icon:"🍲", veg:true,  bg:"bg-idly",       label:"Idly"},
+    {id:15, en:"Veg Fried Rice",         ta:"வெஜ் ஃப்ரைட் ரைஸ்",      desc:"Mixed vegetable fried rice",              price:100, icon:"🍚", veg:true,  bg:"bg-vegfrice",   label:"Veg Rice"},
+    {id:16, en:"Chapathi (2 set)",       ta:"சப்பாத்தி (2 செட்)",       desc:"Soft chapathi with veg kurma",            price:50,  icon:"🫓", veg:true,  bg:"bg-chapathi",   label:"Chapathi"},
+    {id:17, en:"Gobi Chilli",            ta:"கோபி சில்லி",              desc:"Crispy cauliflower chilli",               price:110, icon:"🥦", veg:true,  bg:"bg-gobi",       label:"Gobi"},
+    {id:18, en:"Plain Dosa (Set)",       ta:"பேளன் தோசை",               desc:"Crispy plain dosa with chutney",          price:40,  icon:"🥞", veg:true,  bg:"bg-plaindosa",  label:"Plain Dosa"},
+    {id:19, en:"Onion Dosa (Set)",       ta:"வெங்காய தோசை",             desc:"Dosa with onion topping",                 price:40,  icon:"🥞", veg:true,  bg:"bg-oniondosa",  label:"Onion Dosa"},
+    {id:20, en:"Masala Dosa (Set)",      ta:"மசாலா தோசை",               desc:"Crispy dosa with potato masala",          price:60,  icon:"🥞", veg:true,  bg:"bg-masaladosa", label:"Masala Dosa"},
+    {id:21, en:"Podi Dosa (Set)",        ta:"பொடி தோசை",                desc:"Dosa with gun powder chutney",            price:60,  icon:"🥞", veg:true,  bg:"bg-podidosa",   label:"Podi Dosa"},
+    {id:22, en:"Ghee Dosa (Set)",        ta:"கீ தோசை",                  desc:"Crispy dosa with pure ghee",              price:70,  icon:"🥞", veg:true,  bg:"bg-gheedosa",   label:"Ghee Dosa"},
   ]},
   drinks:{items:[
-    // Tea - cup of tea with milk
-    {id:23, en:"Tea", ta:"தேநீர்", desc:"Hot fresh tea", price:15, icon:"🍵", veg:true, img:"https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80"},
-    // Coffee - south Indian filter coffee in tumbler
-    {id:24, en:"Coffee", ta:"காபி", desc:"Filter coffee", price:20, icon:"☕", veg:true, img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80"},
-    // Boost - chocolate malt drink in glass
-    {id:25, en:"Boost", ta:"பூஸ்ட்", desc:"Boost energy drink", price:30, icon:"🥛", veg:true, img:"https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&q=80"},
-    // Horlicks - milky health drink in glass
-    {id:26, en:"Horlicks", ta:"ஹார்லிக்ஸ்", desc:"Horlicks health drink", price:30, icon:"🥛", veg:true, img:"https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&q=80"},
-    // Mango Juice - bright orange mango juice glass
-    {id:27, en:"Mango Juice", ta:"மாம்பழ ஜூஸ்", desc:"Fresh mango juice", price:40, icon:"🥭", veg:true, img:"https://images.unsplash.com/photo-1546173159-315724a31696?w=400&q=80"},
-    // Lemon Juice - yellow lemon juice with straw
-    {id:28, en:"Lemon Juice", ta:"எலுமிச்சை ஜூஸ்", desc:"Fresh lemon juice with salt or sugar", price:30, icon:"🍋", veg:true, img:"https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400&q=80"},
-    // Watermelon Juice - red watermelon juice glass
-    {id:29, en:"Watermelon Juice", ta:"தர்பூசணி ஜூஸ்", desc:"Chilled fresh watermelon juice", price:40, icon:"🍉", veg:true, img:"https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&q=80"},
-    // Pineapple Juice - yellow pineapple juice glass
-    {id:30, en:"Pineapple Juice", ta:"அன்னாசி ஜூஸ்", desc:"Sweet fresh pineapple juice", price:40, icon:"🍍", veg:true, img:"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400&q=80"},
-    // Grape Juice - purple grape juice glass
-    {id:31, en:"Grape Juice", ta:"திராட்சை ஜூஸ்", desc:"Fresh grape juice, chilled", price:40, icon:"🍇", veg:true, img:"https://images.unsplash.com/photo-1506802913710-9ef36e7e42bc?w=400&q=80"},
-    // Coconut Water - tender coconut with straw
-    {id:32, en:"Coconut Water", ta:"இளநீர்", desc:"Fresh tender coconut water", price:30, icon:"🥥", veg:true, img:"https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400&q=80"},
-    // Water 500ml - small plastic water bottle
-    {id:33, en:"Water Bottle (500ml)", ta:"தண்ணீர் (500ml)", desc:"Packaged drinking water 500ml", price:15, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1532983022536-3cf74e23b3c4?w=400&q=80"},
-    // Water 1L - 1 litre water bottle
-    {id:34, en:"Water Bottle (1L)", ta:"தண்ணீர் (1 லிட்டர்)", desc:"Packaged drinking water 1 Litre", price:20, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1592417817038-d13fd7342605?w=400&q=80"},
-    // Water 2L - big 2 litre water bottle
-    {id:35, en:"Water Bottle (2L)", ta:"தண்ணீர் (2 லிட்டர்)", desc:"Packaged drinking water 2 Litres", price:35, icon:"💧", veg:true, img:"https://images.unsplash.com/photo-1616118132534-381148898bb4?w=400&q=80"},
+    {id:23, en:"Tea",                    ta:"தேநீர்",                   desc:"Hot fresh tea",                           price:15,  icon:"🍵", veg:true,  bg:"bg-tea",        label:"Hot Tea"},
+    {id:24, en:"Coffee",                 ta:"காபி",                     desc:"South Indian filter coffee",              price:20,  icon:"☕", veg:true,  bg:"bg-coffee",     label:"Filter Coffee"},
+    {id:25, en:"Boost",                  ta:"பூஸ்ட்",                   desc:"Boost energy drink",                      price:30,  icon:"🥛", veg:true,  bg:"bg-boost",      label:"Boost"},
+    {id:26, en:"Horlicks",               ta:"ஹார்லிக்ஸ்",               desc:"Horlicks health drink",                   price:30,  icon:"🥛", veg:true,  bg:"bg-horlicks",   label:"Horlicks"},
+    {id:27, en:"Mango Juice",            ta:"மாம்பழ ஜூஸ்",             desc:"Fresh mango juice",                       price:40,  icon:"🥭", veg:true,  bg:"bg-mango",      label:"Mango"},
+    {id:28, en:"Lemon Juice",            ta:"எலுமிச்சை ஜூஸ்",          desc:"Fresh lemon juice with salt or sugar",    price:30,  icon:"🍋", veg:true,  bg:"bg-lemon",      label:"Lemon"},
+    {id:29, en:"Watermelon Juice",       ta:"தர்பூசணி ஜூஸ்",           desc:"Chilled fresh watermelon juice",          price:40,  icon:"🍉", veg:true,  bg:"bg-watermelon", label:"Watermelon"},
+    {id:30, en:"Pineapple Juice",        ta:"அன்னாசி ஜூஸ்",            desc:"Sweet fresh pineapple juice",             price:40,  icon:"🍍", veg:true,  bg:"bg-pineapple",  label:"Pineapple"},
+    {id:31, en:"Grape Juice",            ta:"திராட்சை ஜூஸ்",           desc:"Fresh grape juice, chilled",              price:40,  icon:"🍇", veg:true,  bg:"bg-grape",      label:"Grape"},
+    {id:32, en:"Coconut Water",          ta:"இளநீர்",                   desc:"Fresh tender coconut water",              price:30,  icon:"🥥", veg:true,  bg:"bg-coconut",    label:"Coconut"},
+    {id:33, en:"Water Bottle (500ml)",   ta:"தண்ணீர் (500ml)",          desc:"Packaged drinking water 500ml",           price:15,  icon:"💧", veg:true,  bg:"bg-water",      label:"500 ml"},
+    {id:34, en:"Water Bottle (1L)",      ta:"தண்ணீர் (1 லிட்டர்)",     desc:"Packaged drinking water 1 Litre",         price:20,  icon:"💧", veg:true,  bg:"bg-water",      label:"1 Litre"},
+    {id:35, en:"Water Bottle (2L)",      ta:"தண்ணீர் (2 லிட்டர்)",     desc:"Packaged drinking water 2 Litres",        price:35,  icon:"💧", veg:true,  bg:"bg-water",      label:"2 Litres"},
   ]},
   snacks:{items:[
-    // Pani Puri - crispy puris on plate with chutneys
-    {id:36, en:"Pani Puri", ta:"பானி பூரி", desc:"Crispy puri with spiced water", price:50, icon:"🫙", veg:true, img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"},
-    // Bread Omelette - egg between bread slices
-    {id:37, en:"Bread Omelette", ta:"பிரட் ஆம்லெட்", desc:"Egg omelette with bread", price:60, icon:"🥪", veg:false, img:"https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=80"},
-    // Cheese Bread Omelette - cheesy egg bread
-    {id:38, en:"Cheese Bread Omelette", ta:"சீஸ் பிரட் ஆம்லெட்", desc:"Cheese omelette with bread", price:80, icon:"🧀", veg:false, img:"https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&q=80"},
-    // Chicken Bread Omelette - chicken stuffed bread omelette
-    {id:39, en:"Chicken Bread Omelette", ta:"சிக்கன் பிரட் ஆம்லெட்", desc:"Chicken omelette with bread", price:100, icon:"🥪", veg:false, img:"https://images.unsplash.com/photo-1607690424560-35d967d6ad7b?w=400&q=80"},
+    {id:36, en:"Pani Puri",              ta:"பானி பூரி",                desc:"Crispy puri with spiced water",           price:50,  icon:"🫙", veg:true,  bg:"bg-panipuri",   label:"Pani Puri"},
+    {id:37, en:"Bread Omelette",         ta:"பிரட் ஆம்லெட்",           desc:"Egg omelette with bread",                 price:60,  icon:"🥪", veg:false, bg:"bg-breadom",    label:"Bread Omelette"},
+    {id:38, en:"Cheese Bread Omelette",  ta:"சீஸ் பிரட் ஆம்லெட்",     desc:"Cheese omelette with bread",              price:80,  icon:"🧀", veg:false, bg:"bg-cheesebom",  label:"Cheese"},
+    {id:39, en:"Chicken Bread Omelette", ta:"சிக்கன் பிரட் ஆம்லெட்",  desc:"Chicken omelette with bread",             price:100, icon:"🥪", veg:false, bg:"bg-chickenbom", label:"Chicken"},
   ]}
 };
 
@@ -605,66 +569,66 @@ let cart = {};
 let currentCat = 'nonveg';
 
 function allItems(){return Object.values(menuData).flatMap(c=>c.items);}
-allItems().forEach(i=>{ stock[i.id] = true; });
+allItems().forEach(i=>{stock[i.id]=true;});
 
 function buildStockGrid(){
   const grid = document.getElementById('stockGrid');
   grid.innerHTML = '';
-  allItems().forEach(item => {
+  allItems().forEach(item=>{
     const div = document.createElement('div');
     div.className = 'stock-item';
     div.innerHTML = `
       <span class="stock-name">${item.en}</span>
       <label class="stock-toggle">
-        <input type="checkbox" ${stock[item.id]?'checked':''} onchange="toggleStock(${item.id}, this)">
+        <input type="checkbox" ${stock[item.id]?'checked':''} onchange="toggleStock(${item.id},this)">
         <span class="toggle-slider"></span>
       </label>
-      <span class="stock-label ${stock[item.id]?'avail':'out'}" id="slbl-${item.id}">${stock[item.id]?'✓ In Stock':'✕ Out'}</span>
-    `;
+      <span class="stock-label ${stock[item.id]?'avail':'out'}" id="slbl-${item.id}">${stock[item.id]?'✓ In Stock':'✕ Out'}</span>`;
     grid.appendChild(div);
   });
 }
 
-function toggleStock(id, el){
-  stock[id] = el.checked;
-  const lbl = document.getElementById('slbl-'+id);
-  if(lbl){ lbl.textContent = stock[id]?'✓ In Stock':'✕ Out'; lbl.className='stock-label'+(stock[id]?' avail':' out'); }
+function toggleStock(id,el){
+  stock[id]=el.checked;
+  const lbl=document.getElementById('slbl-'+id);
+  if(lbl){lbl.textContent=stock[id]?'✓ In Stock':'✕ Out'; lbl.className='stock-label'+(stock[id]?' avail':' out');}
   renderMenu();
 }
 
-let adminVisible = false;
+let adminVisible=false;
 function toggleAdmin(){
-  adminVisible = !adminVisible;
-  document.getElementById('adminPanel').classList.toggle('show', adminVisible);
+  adminVisible=!adminVisible;
+  document.getElementById('adminPanel').classList.toggle('show',adminVisible);
   if(adminVisible) buildStockGrid();
 }
 
-function filterMenu(cat, el){
-  currentCat = cat;
+function filterMenu(cat,el){
+  currentCat=cat;
   document.querySelectorAll('.mtab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
   renderMenu();
 }
 
 function renderMenu(){
-  const grid = document.getElementById('menuGrid');
-  grid.innerHTML = '';
-  menuData[currentCat].items.forEach(item => {
-    const qty = cart[item.id]||0;
-    const inStock = stock[item.id];
-    const div = document.createElement('div');
-    div.className = 'mcard' + (inStock?'':' out-of-stock');
-    div.innerHTML = `
+  const grid=document.getElementById('menuGrid');
+  grid.innerHTML='';
+  menuData[currentCat].items.forEach(item=>{
+    const qty=cart[item.id]||0;
+    const inStock=stock[item.id];
+    const div=document.createElement('div');
+    div.className='mcard'+(inStock?'':' out-of-stock');
+    div.innerHTML=`
       <div class="oos-overlay">
         <div class="oos-icon">🚫</div>
-        <div class="oos-text">Not Available</div>
+        <div class="oos-title">Not Available</div>
         <div class="oos-sub">இப்போது கிடைக்கவில்லை</div>
+        <div class="oos-note">Check back soon</div>
       </div>
-      <div class="mcard-img">
-        <img src="${item.img}" alt="${item.en}" loading="lazy" onerror="this.style.display='none'">
-        <div class="fallback">${item.icon}</div>
+      <div class="mcard-img ${item.bg}">
+        <span class="dish-emoji">${item.icon}</span>
+        <span class="dish-label">${item.label}</span>
         <div class="veg-badge ${item.veg?'v':'nv'}">
-          <span class="vdot ${item.veg?'v':'nv'}"></span>
+          <span class="vdot ${item.veg?'v':'nv'}"></span>${item.veg?'Veg':'Non-Veg'}
         </div>
       </div>
       <div class="mcard-body">
@@ -675,35 +639,30 @@ function renderMenu(){
       <div class="mcard-bottom">
         <div class="mprice">₹${item.price}</div>
         ${!inStock
-          ? `<button class="madd" disabled title="Not Available">✕</button>`
-          : qty===0
-            ? `<button class="madd" onclick="addItem(${item.id})">+</button>`
-            : `<div class="min-cart">
+          ?`<button class="madd" disabled>✕</button>`
+          :qty===0
+            ?`<button class="madd" onclick="addItem(${item.id})">+</button>`
+            :`<div class="min-cart">
                 <button onclick="removeItem(${item.id})">−</button>
                 <span>${qty}</span>
                 <button onclick="addItem(${item.id})">+</button>
-               </div>`
+              </div>`
         }
       </div>`;
     grid.appendChild(div);
   });
 }
 
-function addItem(id){
-  if(!stock[id]) return;
-  cart[id]=(cart[id]||0)+1; refresh();
-}
-function removeItem(id){
-  if(cart[id]) cart[id]--;
-  if(cart[id]<=0) delete cart[id]; refresh();
-}
+function addItem(id){if(!stock[id])return; cart[id]=(cart[id]||0)+1; refresh();}
+function removeItem(id){if(cart[id])cart[id]--; if(cart[id]<=0)delete cart[id]; refresh();}
+
 function refresh(){
   renderMenu();
-  let count = Object.values(cart).reduce((a,b)=>a+b,0);
-  document.getElementById('cartCount').textContent = count;
-  const ids = Object.keys(cart);
-  const el = document.getElementById('cdItems');
-  const foot = document.getElementById('cdFoot');
+  const count=Object.values(cart).reduce((a,b)=>a+b,0);
+  document.getElementById('cartCount').textContent=count;
+  const ids=Object.keys(cart);
+  const el=document.getElementById('cdItems');
+  const foot=document.getElementById('cdFoot');
   if(!ids.length){
     el.innerHTML='<div class="cd-empty"><span class="e-ico">🍽️</span>Cart is empty.<br>சாப்பாடு சேர்க்கவும்!</div>';
     foot.style.display='none'; return;
@@ -736,16 +695,14 @@ function toggleCart(){
 
 function sendOrder(){
   const ids=Object.keys(cart);
-  if(!ids.length){alert('Please add items to cart first!');return;}
+  if(!ids.length){alert('Please add items to your cart first!');return;}
   const name=document.getElementById('custName').value.trim();
   const phone=document.getElementById('custPhone').value.trim();
   const addr=document.getElementById('custAddress').value.trim();
   const pay=document.getElementById('payMethod').value;
   if(!name||!phone||!addr){alert('Please fill in your name, phone, and address.');return;}
-  let msg=`🍽️ *New Order — கலக்கல் கிச்சன் ஹோட்டல்*\n`;
-  msg+=`📍 Kozhipuliyur X Road, Near Suraj School\n\n`;
-  msg+=`👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📍 *Delivery Address:* ${addr}\n💳 *Payment:* ${pay}\n\n`;
-  msg+=`*Order Details:*\n`;
+  let msg=`🍽️ *New Order — கலக்கல் கிச்சன் ஹோட்டல்*\n📍 Kozhipuliyur X Road, Near Suraj School\n\n`;
+  msg+=`👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📍 *Delivery Address:* ${addr}\n💳 *Payment:* ${pay}\n\n*Order Details:*\n`;
   let total=0;
   ids.forEach(id=>{
     const item=allItems().find(i=>i.id==id); if(!item)return;
