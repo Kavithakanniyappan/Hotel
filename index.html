@@ -2,449 +2,634 @@
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>கலக்கல் கிச்சன் ஹோட்டல் | Kozhipuliyur</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>KK Kitchen Hotel | Kozhipuliyur</title>
+<meta name="description" content="கலக்கல் கிச்சன் ஹோட்டல் - Fresh Veg & Non-Veg. Kozhipuliyur. Order Online.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 :root{
-  --cream:#FDF6EE;--cream2:#FAF0E4;--warm:#FFFDF9;
-  --rust:#C0392B;--rust2:#A93226;--rust-light:#FDECEA;
-  --saffron:#E67E22;--saffron-light:#FEF3E8;
-  --gold:#C9A84C;--gold-light:#FBF5E4;
-  --text:#1C1009;--text2:#4A2F1A;--muted:#7B5533;
-  --border:#EDD5BE;--border2:#E8C9A8;--green:#1E6B35;
-  --shadow:rgba(90,40,10,.10);--shadow2:rgba(90,40,10,.20);
+  --cream:#FDF8F2;--warm:#FAF3EA;--orange:#C84B11;--ol:#FFF0E8;--om:#FFCCAA;
+  --gold:#B8860B;--gl:#FFF9E6;--green:#2D6A2D;--brown:#3E1F08;
+  --text:#1E0E04;--muted:#7A4A25;--border:#EDD5B0;--white:#fff;
+  --sh:rgba(180,80,20,.10);--red:#8B1A1A;--teal:#0D7377;
 }
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);}
-::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--cream2);}::-webkit-scrollbar-thumb{background:var(--rust);border-radius:4px;}
-nav{background:var(--warm);border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 20px var(--shadow);}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;}
-.nav-brand{text-decoration:none;}
-.nav-brand strong{display:block;font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--rust);line-height:1.2;}
-.nav-brand span{display:block;font-family:'Noto Serif Tamil',serif;font-size:.67rem;color:var(--muted);}
-.nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links a{text-decoration:none;color:var(--text2);font-size:.85rem;font-weight:600;position:relative;padding-bottom:3px;transition:.2s;}
-.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--rust);transition:.2s;}
-.nav-links a:hover{color:var(--rust);}
-.nav-links a:hover::after{width:100%;}
-.nav-right{display:flex;align-items:center;gap:10px;}
-.admin-btn{background:var(--gold-light);color:var(--gold);border:1.5px solid var(--gold);padding:8px 14px;font-size:.76rem;font-weight:700;cursor:pointer;border-radius:4px;transition:.15s;}
-.admin-btn:hover{background:var(--gold);color:#fff;}
-.nav-cart{background:var(--rust);color:#fff;border:none;padding:10px 18px;font-weight:700;font-size:.84rem;cursor:pointer;display:flex;align-items:center;gap:8px;border-radius:4px;transition:.2s;box-shadow:0 2px 8px rgba(192,57,43,.25);}
-.nav-cart:hover{background:var(--rust2);}
-.cart-badge{background:var(--saffron);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;}
-.hero{background:linear-gradient(135deg,var(--cream) 0%,var(--cream2) 40%,var(--saffron-light) 100%);border-bottom:2px solid var(--border);padding:80px 5% 70px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(230,126,34,.08) 0%,transparent 70%);border-radius:50%;}
-.hero-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:60px;flex-wrap:wrap;position:relative;z-index:1;}
-.hero-left{flex:1.2;min-width:300px;}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--rust-light);border:1px solid rgba(192,57,43,.25);color:var(--rust);padding:6px 16px;font-size:.73rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;border-radius:20px;}
-.hero-tamil{font-family:'Noto Serif Tamil',serif;font-size:1.1rem;color:var(--muted);margin-bottom:10px;}
-.hero-left h1{font-family:'Playfair Display',serif;font-size:3rem;line-height:1.12;color:var(--text);margin-bottom:16px;}
-.hero-left h1 em{font-style:italic;color:var(--rust);}
-.hero-sub{font-family:'Noto Serif Tamil',serif;font-size:.83rem;color:var(--muted);margin-bottom:28px;line-height:1.9;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-red{background:var(--rust);color:#fff;border:2px solid var(--rust);padding:14px 30px;font-weight:700;font-size:.9rem;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;border-radius:5px;box-shadow:0 4px 14px rgba(192,57,43,.25);}
-.btn-red:hover{background:var(--rust2);transform:translateY(-1px);}
-.btn-outline{background:transparent;color:var(--rust);border:2px solid var(--rust);padding:14px 30px;font-weight:700;font-size:.9rem;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;border-radius:5px;}
-.btn-outline:hover{background:var(--rust-light);}
-.hero-stats{display:flex;gap:28px;margin-top:32px;flex-wrap:wrap;}
-.hstat .num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--rust);line-height:1;}
-.hstat .lbl{font-size:.7rem;color:var(--muted);font-weight:600;margin-top:3px;}
-.hstat-div{width:1px;height:40px;background:var(--border2);align-self:center;}
-.hero-right{flex:1;min-width:260px;display:flex;justify-content:center;}
-.hero-plate{width:280px;height:280px;background:linear-gradient(135deg,#FF8C42,#C0392B);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:7rem;box-shadow:0 20px 60px rgba(192,57,43,.3),0 0 0 16px rgba(192,57,43,.08);}
-.info-band{background:var(--rust);color:#fff;padding:16px 5%;}
-.info-band-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:14px;}
-.ib-item{display:flex;align-items:center;gap:12px;font-size:.82rem;}
-.ib-item .ico{font-size:1.3rem;}
-.ib-item strong{display:block;font-size:.9rem;font-weight:700;}
-.ib-item span{color:rgba(255,255,255,.7);font-size:.72rem;margin-top:1px;}
-.ib-div{width:1px;height:36px;background:rgba(255,255,255,.2);}
-.pay-banner{background:var(--green);color:#fff;padding:12px 5%;text-align:center;font-size:.82rem;}
-.pay-banner strong{color:#90EE90;}
-.section{padding:76px 5%;}
-.section-inner{max-width:1200px;margin:0 auto;}
-.sec-head{margin-bottom:46px;}
-.sec-head.center{text-align:center;}
-.sec-head.center p{margin:0 auto;}
-.sec-head .eyebrow{font-size:.72rem;letter-spacing:2.5px;color:var(--saffron);text-transform:uppercase;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-.sec-head .eyebrow::before{content:'';flex:none;width:24px;height:2px;background:var(--saffron);}
-.sec-head.center .eyebrow{justify-content:center;}
-.sec-head h2{font-family:'Playfair Display',serif;font-size:2.3rem;color:var(--text);margin-bottom:10px;line-height:1.2;}
-.sec-head h2 em{font-style:italic;color:var(--rust);}
-.sec-head p{font-size:.87rem;color:var(--muted);max-width:520px;line-height:1.85;}
-.admin-panel{display:none;background:var(--gold-light);border-bottom:2px solid var(--gold);padding:18px 5%;position:sticky;top:68px;z-index:90;}
-.admin-panel.show{display:block;}
-.admin-inner{max-width:1200px;margin:0 auto;}
-.admin-inner h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--text2);margin-bottom:6px;}
-.admin-inner p{font-size:.76rem;color:var(--muted);margin-bottom:14px;}
-.stock-grid{display:flex;flex-wrap:wrap;gap:8px;}
-.stock-item{background:var(--warm);border:1.5px solid var(--border2);padding:7px 14px;display:flex;align-items:center;gap:10px;font-size:.77rem;border-radius:6px;}
-.stock-toggle{position:relative;width:42px;height:22px;cursor:pointer;flex-shrink:0;}
-.stock-toggle input{opacity:0;width:0;height:0;}
-.toggle-slider{position:absolute;inset:0;background:#CCC0B0;transition:.3s;border-radius:22px;}
-.toggle-slider:before{content:'';position:absolute;height:16px;width:16px;left:3px;bottom:3px;background:#fff;transition:.3s;border-radius:50%;}
-.stock-toggle input:checked + .toggle-slider{background:var(--green);}
-.stock-toggle input:checked + .toggle-slider:before{transform:translateX(20px);}
-.stock-name{flex:1;font-weight:600;color:var(--text);}
-.stock-label{font-size:.67rem;font-weight:700;min-width:58px;text-align:right;}
-.stock-label.avail{color:var(--green);}
-.stock-label.out{color:var(--rust);}
-.menu-section{background:var(--cream2);}
-.menu-tabs{display:flex;gap:10px;margin-bottom:34px;flex-wrap:wrap;}
-.mtab{flex:1;min-width:120px;background:var(--warm);border:2px solid var(--border2);padding:13px 10px;font-weight:600;font-size:.82rem;cursor:pointer;transition:.2s;color:var(--muted);text-align:center;border-radius:8px;}
-.mtab .mtab-icon{font-size:1.4rem;display:block;margin-bottom:5px;}
-.mtab.active,.mtab:hover{background:var(--rust);color:#fff;border-color:var(--rust);box-shadow:0 4px 14px rgba(192,57,43,.2);}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;}
-.mcard{background:var(--warm);border:1.5px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .22s,box-shadow .22s;position:relative;}
-.mcard:hover{transform:translateY(-5px);box-shadow:0 14px 40px var(--shadow2);}
-.oos-overlay{display:none;position:absolute;inset:0;background:rgba(255,252,248,.9);z-index:10;flex-direction:column;align-items:center;justify-content:center;gap:6px;backdrop-filter:blur(3px);border-radius:12px;}
-.mcard.out-of-stock .oos-overlay{display:flex;}
-.mcard.out-of-stock{pointer-events:none;}
-.oos-icon{font-size:2.4rem;}
-.oos-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--rust);}
-.oos-sub{font-family:'Noto Serif Tamil',serif;font-size:.73rem;color:var(--muted);}
-.oos-note{font-size:.7rem;color:var(--muted);font-style:italic;}
-.mcard-img{height:160px;overflow:hidden;position:relative;background:var(--cream2);}
-.mcard-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .35s;}
-.mcard:hover .mcard-img img{transform:scale(1.07);}
-.mcard-img .emoji-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;}
-.veg-badge{position:absolute;top:9px;left:9px;background:rgba(255,255,255,.92);border:1.5px solid;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px;font-size:.6rem;font-weight:700;backdrop-filter:blur(4px);}
-.vdot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0;}
-.vdot.v{background:var(--green);}
-.vdot.nv{background:var(--rust);}
-.veg-badge.v{border-color:var(--green);color:var(--green);}
-.veg-badge.nv{border-color:var(--rust);color:var(--rust);}
-.mcard-body{padding:13px 15px 9px;}
-.mcard-body h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--text);margin-bottom:2px;}
-.mcard-body .mtamil{font-family:'Noto Serif Tamil',serif;font-size:.71rem;color:var(--muted);margin-bottom:5px;}
-.mcard-body .desc{font-size:.74rem;color:var(--muted);line-height:1.6;font-style:italic;margin-bottom:8px;min-height:24px;}
-.mcard-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding:10px 15px;}
-.mprice{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--rust);}
-.madd{background:var(--rust);color:#fff;border:none;width:36px;height:36px;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:6px;transition:.15s;}
-.madd:hover{background:var(--rust2);}
-.madd:disabled{background:#C8B8A8;cursor:not-allowed;}
-.min-cart{display:flex;align-items:center;gap:6px;}
-.min-cart button{background:var(--rust-light);border:1.5px solid rgba(192,57,43,.3);color:var(--rust);width:30px;height:30px;font-size:1rem;font-weight:700;cursor:pointer;border-radius:4px;transition:.1s;}
-.min-cart button:hover{background:var(--rust);color:#fff;}
-.min-cart span{font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;min-width:18px;text-align:center;}
-.specials{background:var(--warm);border-top:2px solid var(--border);border-bottom:2px solid var(--border);padding:44px 5%;}
-.specials-inner{max-width:1200px;margin:0 auto;}
-.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;}
-.spec-item{padding:24px 20px;text-align:center;border-right:1px solid var(--border);}
-.spec-item:last-child{border-right:none;}
-.spec-ico{font-size:2rem;margin-bottom:10px;}
-.spec-item h3{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--rust);margin-bottom:5px;}
-.spec-item p{font-size:.77rem;color:var(--muted);line-height:1.7;}
-.about-section{background:var(--warm);}
-.about-grid{display:flex;gap:60px;align-items:center;flex-wrap:wrap;}
-.about-visual{flex:1;min-width:240px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.av-box{border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;text-align:center;gap:6px;}
-.av-box:first-child{grid-column:1/-1;background:linear-gradient(135deg,var(--rust),var(--rust2));color:#fff;padding:30px;}
-.av-box:first-child .av-big{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:800;color:#FFE082;}
-.av-box:first-child .av-lbl{font-size:.72rem;letter-spacing:2px;color:#FFCDD2;text-transform:uppercase;}
-.av-box.small{background:var(--cream2);border:1.5px solid var(--border);}
-.av-box.small .av-ico{font-size:1.8rem;}
-.av-box.small strong{font-family:'Playfair Display',serif;font-size:.85rem;color:var(--rust);}
-.av-box.small span{font-size:.7rem;color:var(--muted);}
-.about-text{flex:1.2;min-width:280px;}
-.about-text .eyebrow{font-size:.72rem;letter-spacing:2.5px;color:var(--saffron);text-transform:uppercase;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
-.about-text .eyebrow::before{content:'';width:24px;height:2px;background:var(--saffron);}
-.about-text h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--text);margin-bottom:14px;}
-.about-text p{font-size:.86rem;color:var(--muted);line-height:1.95;margin-bottom:12px;}
-.about-tamil{font-family:'Noto Serif Tamil',serif;font-size:.83rem;color:var(--text2);background:var(--cream2);border-left:4px solid var(--rust);padding:13px 17px;margin:16px 0;line-height:1.9;border-radius:0 6px 6px 0;}
-.hours-box{display:flex;border:1.5px solid var(--border2);border-radius:8px;overflow:hidden;margin-top:18px;}
-.hbox{flex:1;padding:14px;text-align:center;border-right:1px solid var(--border);}
-.hbox:last-child{border-right:none;}
-.hbox .hico{font-size:1.2rem;margin-bottom:5px;}
-.hbox strong{display:block;font-family:'Playfair Display',serif;font-size:.9rem;color:var(--rust);margin-bottom:2px;}
-.hbox span{font-size:.7rem;color:var(--muted);line-height:1.6;}
-.pay-section{background:linear-gradient(135deg,#1E6B35 0%,#145226 100%);color:#fff;padding:58px 5%;text-align:center;}
-.pay-section h2{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:10px;}
-.pay-section>p{font-family:'Noto Serif Tamil',serif;font-size:.87rem;color:#A8D8B5;margin-bottom:34px;}
-.pay-methods{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;max-width:520px;margin:0 auto 24px;}
-.pay-card{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.22);padding:22px 28px;text-align:center;flex:1;min-width:170px;border-radius:10px;}
-.pay-card .pico{font-size:2.4rem;margin-bottom:8px;}
-.pay-card strong{display:block;font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:4px;}
-.pay-card span{font-size:.74rem;color:#A8D8B5;}
-.pay-gpay{font-size:.82rem;color:#A8D8B5;margin-top:6px;}
-.call-strip{background:var(--saffron);padding:48px 5%;text-align:center;color:#fff;}
-.call-strip h2{font-family:'Playfair Display',serif;font-size:1.85rem;margin-bottom:8px;}
-.call-strip p{font-family:'Noto Serif Tamil',serif;font-size:.84rem;color:rgba(255,255,255,.8);margin-bottom:22px;}
-.call-btn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--saffron);text-decoration:none;padding:15px 38px;font-weight:700;font-size:.98rem;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.15);transition:.2s;}
-.call-btn:hover{background:var(--saffron-light);}
-.contact-section{background:var(--cream2);}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;max-width:980px;margin:0 auto;}
-.ccard{background:var(--warm);border:1.5px solid var(--border);padding:26px 18px;text-align:center;transition:.2s;border-radius:8px;}
-.ccard:hover{border-color:var(--rust);box-shadow:0 6px 22px var(--shadow);}
-.ccard .cico{font-size:1.8rem;margin-bottom:10px;}
-.ccard h3{font-family:'Playfair Display',serif;font-size:.92rem;color:var(--rust);margin-bottom:7px;}
-.ccard p{font-size:.79rem;color:var(--muted);line-height:1.8;}
-.ccard a{color:var(--rust);text-decoration:none;font-weight:700;}
-.ccard a:hover{text-decoration:underline;}
-footer{background:#1C1009;color:#C8A882;padding:34px 5%;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;}
-.footer-brand strong{display:block;font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gold);margin-bottom:3px;}
-.footer-brand span{font-family:'Noto Serif Tamil',serif;font-size:.72rem;color:#8A6C50;}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
-.footer-links a{color:#C8A882;text-decoration:none;font-size:.77rem;}
-.footer-links a:hover{color:var(--gold);}
-.footer-copy{font-size:.71rem;color:#5A3D22;font-style:italic;}
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;opacity:0;pointer-events:none;transition:.25s;}
+body{font-family:'Poppins',sans-serif;background:var(--cream);color:var(--text);}
+
+/* ── MARQUEE STRIP ── */
+.marquee-strip{background:var(--orange);color:#fff;padding:8px 0;overflow:hidden;white-space:nowrap;}
+.marquee-inner{display:inline-block;animation:scroll 28s linear infinite;}
+@keyframes scroll{0%{transform:translateX(100vw);}100%{transform:translateX(-100%);}}
+.marquee-inner span{margin:0 40px;font-size:.8rem;font-weight:500;}
+.marquee-inner span::before{content:"🍽️ ";}
+
+/* ── NAV ── */
+nav{background:var(--white);border-bottom:3px solid var(--orange);position:sticky;top:0;z-index:100;box-shadow:0 2px 18px var(--sh);}
+.ni{max-width:1260px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:66px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.lp{width:46px;height:46px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:1.1rem;border:2px solid var(--gold);border-radius:4px;}
+.lt strong{display:block;font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--orange);}
+.lt em{display:block;font-family:'Noto Serif Tamil',serif;font-size:.7rem;color:var(--muted);font-style:normal;}
+.nl{display:flex;gap:22px;}
+.nl a{text-decoration:none;color:var(--text);font-size:.82rem;font-weight:500;border-bottom:2px solid transparent;padding-bottom:2px;transition:.2s;}
+.nl a:hover{color:var(--orange);border-bottom-color:var(--orange);}
+.nr{display:flex;gap:8px;align-items:center;}
+.admin-opener{background:var(--gl);color:var(--gold);border:1.5px solid var(--gold);padding:7px 13px;border-radius:5px;font-size:.74rem;font-weight:700;cursor:pointer;transition:.2s;}
+.admin-opener:hover{background:var(--gold);color:#fff;}
+.cart-btn{background:var(--orange);color:#fff;border:none;padding:9px 18px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.82rem;cursor:pointer;display:flex;align-items:center;gap:6px;border-radius:5px;transition:.2s;}
+.cart-btn:hover{background:#a33a08;}
+.cbadge{background:var(--gold);color:#fff;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;}
+
+/* ── ADMIN MODAL ── */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:500;align-items:center;justify-content:center;}
+.modal-bg.show{display:flex;}
+.modal{background:#fff;width:340px;max-width:94vw;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);}
+.mh{background:var(--orange);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;}
+.mh h3{font-family:'Playfair Display',serif;font-size:1.05rem;}
+.mh button{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;}
+.mb{padding:22px;}
+.mb label{display:block;font-size:.7rem;font-weight:700;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px;}
+.mb input{width:100%;padding:11px 13px;border:1.5px solid var(--border);border-radius:7px;font-size:.86rem;margin-bottom:13px;font-family:'Poppins',sans-serif;background:var(--cream);}
+.mb input:focus{outline:none;border-color:var(--orange);}
+.login-btn{width:100%;background:var(--orange);color:#fff;border:none;padding:13px;border-radius:7px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;}
+.login-btn:hover{background:#a33a08;}
+.lerr{color:var(--red);font-size:.76rem;margin-top:8px;text-align:center;display:none;}
+
+/* ── ADMIN PANEL ── */
+.admin-bar{display:none;background:linear-gradient(135deg,#FFF9E6,#FFFBF0);border-bottom:2px solid var(--gold);padding:14px 5%;position:sticky;top:66px;z-index:90;}
+.admin-bar.show{display:block;}
+.ab{max-width:1260px;margin:0 auto;}
+.ab-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
+.ab-top h3{font-size:.84rem;font-weight:700;color:var(--brown);}
+.ab-actions{display:flex;gap:8px;}
+.logout-btn{background:var(--red);color:#fff;border:none;padding:6px 13px;border-radius:5px;font-size:.72rem;font-weight:700;cursor:pointer;}
+.save-note{font-size:.7rem;color:var(--gold);font-style:italic;}
+.sg{display:flex;flex-wrap:wrap;gap:7px;}
+.si{background:#fff;border:1.5px solid var(--border);padding:7px 11px;border-radius:7px;display:flex;align-items:center;gap:8px;font-size:.74rem;}
+.si-n{font-weight:600;color:var(--text);min-width:110px;}
+.tog{position:relative;width:40px;height:20px;cursor:pointer;flex-shrink:0;}
+.tog input{opacity:0;width:0;height:0;}
+.tsl{position:absolute;inset:0;background:#ddd;border-radius:20px;transition:.25s;}
+.tsl:before{content:'';position:absolute;height:14px;width:14px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.25s;}
+.tog input:checked+.tsl{background:var(--green);}
+.tog input:checked+.tsl:before{transform:translateX(20px);}
+.slbl{font-size:.66rem;font-weight:700;min-width:52px;}
+.slbl.in{color:var(--green);}
+.slbl.out{color:var(--red);}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(150deg,#FDF5EE 0%,#FFF0E4 50%,#FFFBF0 100%);padding:72px 5% 60px;border-bottom:2px solid var(--border);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(200,75,17,.08) 0%,transparent 70%);border-radius:50%;}
+.hero::after{content:'';position:absolute;bottom:-40px;left:5%;width:200px;height:200px;background:radial-gradient(circle,rgba(184,134,11,.06) 0%,transparent 70%);border-radius:50%;}
+.hi{max-width:1260px;margin:0 auto;display:flex;align-items:center;gap:56px;flex-wrap:wrap;position:relative;z-index:1;}
+.hl{flex:1.1;min-width:300px;}
+.hpill{display:inline-flex;align-items:center;gap:6px;background:var(--ol);border:1.5px solid var(--om);color:var(--orange);padding:5px 14px;border-radius:30px;font-size:.72rem;font-weight:600;letter-spacing:.5px;margin-bottom:16px;}
+.htamil{font-family:'Noto Serif Tamil',serif;font-size:1.35rem;color:var(--orange);font-weight:700;margin-bottom:8px;}
+.hl h1{font-family:'Playfair Display',serif;font-size:2.9rem;line-height:1.15;color:var(--text);margin-bottom:12px;}
+.hl h1 span{color:var(--orange);font-style:italic;}
+.hdesc{font-size:.86rem;color:var(--muted);line-height:1.85;margin-bottom:24px;}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap;}
+.bf{background:var(--orange);color:#fff;border:2px solid var(--orange);padding:13px 28px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.86rem;cursor:pointer;border-radius:6px;transition:.2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
+.bf:hover{background:#a33a08;transform:translateY(-2px);box-shadow:0 6px 18px rgba(200,75,17,.3);}
+.bg{background:transparent;color:var(--orange);border:2px solid var(--orange);padding:13px 28px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.86rem;cursor:pointer;border-radius:6px;transition:.2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
+.bg:hover{background:var(--ol);}
+.hbadges{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;}
+.hbadge{background:#fff;border:1.5px solid var(--border);color:var(--muted);padding:5px 13px;border-radius:30px;font-size:.72rem;font-weight:500;box-shadow:0 1px 4px var(--sh);}
+.hr{flex:1;min-width:260px;display:flex;flex-direction:column;gap:14px;}
+
+/* Signboard */
+.hsb{background:var(--orange);padding:24px 18px;text-align:center;border:4px solid var(--gold);box-shadow:7px 7px 0 var(--gold),12px 12px 0 rgba(180,80,10,.14);border-radius:4px;}
+.sbn{font-family:'Noto Serif Tamil',serif;font-size:1.35rem;font-weight:700;color:#FFE082;margin-bottom:4px;}
+.sbs{font-family:'Noto Serif Tamil',serif;font-size:.68rem;color:#FFCDD2;margin-bottom:14px;}
+.sbh{font-family:'Playfair Display',serif;font-size:2.9rem;font-weight:800;color:#fff;letter-spacing:3px;text-shadow:2px 2px 0 rgba(0,0,0,.22);}
+.sbtagline{font-family:'Poppins',sans-serif;font-size:.68rem;color:#FFE082;letter-spacing:3px;text-transform:uppercase;margin-top:8px;}
+.hstats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:6px;overflow:hidden;box-shadow:0 2px 10px var(--sh);}
+.hstat{background:#fff;padding:13px 8px;text-align:center;}
+.hstat strong{display:block;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--orange);}
+.hstat span{font-size:.65rem;color:var(--muted);margin-top:2px;display:block;}
+
+/* ── INFO BAND ── */
+.iband{background:var(--orange);color:#fff;padding:14px 5%;}
+.ibi2{max-width:1260px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;}
+.ibitem{display:flex;align-items:center;gap:9px;font-size:.78rem;}
+.ibitem .ico{font-size:1.1rem;}
+.ibitem strong{display:block;font-size:.84rem;}
+.ibitem small{color:rgba(255,255,255,.72);font-size:.68rem;}
+.ibdiv{width:1px;height:28px;background:rgba(255,255,255,.2);}
+
+/* ── PAY STRIP ── */
+.pstrip{background:var(--green);color:#fff;padding:10px 5%;text-align:center;font-size:.78rem;}
+.pstrip strong{color:#A5D6A7;}
+
+/* ── FEATURE CARDS ── */
+.features{padding:44px 5%;background:var(--white);}
+.fc-inner{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;}
+.feat{background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:22px 16px;text-align:center;transition:.2s;}
+.feat:hover{border-color:var(--orange);box-shadow:0 6px 20px var(--sh);transform:translateY(-3px);}
+.feat .fi{font-size:2rem;margin-bottom:10px;}
+.feat h3{font-family:'Playfair Display',serif;font-size:.92rem;color:var(--orange);margin-bottom:5px;}
+.feat p{font-size:.74rem;color:var(--muted);line-height:1.6;}
+
+/* ── MENU ── */
+.msec{padding:66px 5%;background:var(--warm);}
+.si2{max-width:1260px;margin:0 auto;}
+.sh{text-align:center;margin-bottom:40px;}
+.sh .etag{display:inline-block;background:var(--ol);color:var(--orange);border:1px solid var(--om);padding:4px 14px;border-radius:30px;font-size:.7rem;font-weight:600;letter-spacing:.5px;margin-bottom:10px;}
+.sh h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--text);}
+.sh h2 em{color:var(--orange);font-style:italic;}
+.sh p{font-size:.82rem;color:var(--muted);margin-top:7px;font-family:'Noto Serif Tamil',serif;}
+.tabs{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;justify-content:center;}
+.tab{background:#fff;border:2px solid var(--border);color:var(--muted);padding:9px 20px;border-radius:30px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.78rem;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:6px;}
+.tab:hover,.tab.active{background:var(--orange);color:#fff;border-color:var(--orange);box-shadow:0 4px 12px rgba(200,75,17,.25);}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px;}
+
+/* CARD */
+.mcard{background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid var(--border);transition:transform .22s,box-shadow .22s;position:relative;}
+.mcard:hover{transform:translateY(-6px);box-shadow:0 14px 36px var(--sh);}
+.mcard.oos{opacity:.52;}
+.oos-tag{display:none;position:absolute;top:10px;right:10px;background:var(--red);color:#fff;font-size:.6rem;font-weight:700;padding:3px 9px;border-radius:20px;z-index:2;letter-spacing:.5px;text-transform:uppercase;}
+.mcard.oos .oos-tag{display:block;}
+.mimg{height:150px;overflow:hidden;position:relative;background:var(--ol);}
+.mimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s;}
+.mcard:hover .mimg img{transform:scale(1.08);}
+.vd{position:absolute;top:10px;left:10px;width:13px;height:13px;border-radius:3px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);}
+.vd.v{background:var(--green);}
+.vd.nv{background:var(--red);}
+.mbody{padding:12px 13px 0;}
+.mbody h3{font-family:'Playfair Display',serif;font-size:.94rem;color:var(--text);margin-bottom:2px;line-height:1.3;}
+.mbody .mta{font-family:'Noto Serif Tamil',serif;font-size:.68rem;color:var(--muted);margin-bottom:4px;}
+.mbody .md{font-size:.7rem;color:#bbb;font-style:italic;line-height:1.5;min-height:24px;}
+.mfoot{display:flex;align-items:center;justify-content:space-between;padding:9px 13px 12px;border-top:1px solid var(--border);margin-top:9px;}
+.mpr{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--orange);}
+.madd{background:var(--orange);color:#fff;border:none;width:32px;height:32px;border-radius:50%;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;}
+.madd:hover{background:#a33a08;transform:rotate(90deg) scale(1.1);}
+.madd:disabled{background:#ccc;cursor:not-allowed;transform:none;}
+.qc{display:flex;align-items:center;gap:5px;}
+.qc button{background:var(--ol);border:1.5px solid var(--om);color:var(--orange);width:27px;height:27px;border-radius:50%;font-size:.95rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qc button:hover{background:var(--orange);color:#fff;}
+.qc span{font-family:'Playfair Display',serif;font-weight:700;font-size:.88rem;min-width:14px;text-align:center;}
+
+/* ── TESTIMONIALS ── */
+.tsec{padding:50px 5%;background:var(--orange);color:#fff;}
+.tsec .sh h2{color:#fff;}
+.tsec .sh h2 em{color:#FFE082;}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1260px;margin:0 auto;}
+.tcard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:20px;}
+.tstars{color:#FFE082;font-size:1rem;margin-bottom:8px;}
+.ttext{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:10px;}
+.tname{font-size:.74rem;font-weight:700;color:#FFE082;}
+
+/* ── ABOUT ── */
+.asec{padding:66px 5%;background:var(--white);}
+.ag{max-width:1260px;margin:0 auto;display:flex;gap:56px;align-items:center;flex-wrap:wrap;}
+.av{flex:1;min-width:250px;background:var(--orange);padding:40px 28px;text-align:center;border-radius:14px;border:3px solid var(--gold);box-shadow:8px 8px 0 var(--gold);}
+.avy{font-family:'Playfair Display',serif;font-size:4.5rem;color:var(--gold);font-weight:800;line-height:1;}
+.ave{font-size:.7rem;letter-spacing:4px;color:rgba(255,255,255,.68);text-transform:uppercase;margin-top:4px;}
+.avd{width:44px;height:3px;background:var(--gold);margin:12px auto;}
+.avt{font-family:'Noto Serif Tamil',serif;font-size:.8rem;color:#FFE082;line-height:1.7;}
+.at2{flex:1.3;min-width:280px;}
+.at2 .etag2{font-size:.7rem;letter-spacing:2px;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:9px;}
+.at2 h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--text);margin-bottom:13px;line-height:1.25;}
+.at2 p{font-size:.84rem;color:var(--muted);line-height:1.9;margin-bottom:11px;}
+.atbox{font-family:'Noto Serif Tamil',serif;font-size:.8rem;color:var(--muted);background:var(--ol);border-left:4px solid var(--orange);padding:11px 15px;border-radius:0 8px 8px 0;line-height:1.8;margin:14px 0;}
+.ibs2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:8px;overflow:hidden;margin-top:16px;}
+.ib2{background:#fff;padding:13px;text-align:center;}
+.ib2 .ico2{font-size:1.1rem;margin-bottom:4px;}
+.ib2 strong{display:block;font-size:.82rem;font-weight:700;color:var(--orange);}
+.ib2 span{font-size:.66rem;color:var(--muted);}
+
+/* ── PAYMENT ── */
+.psec{background:var(--green);padding:46px 5%;color:#fff;text-align:center;}
+.psec h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin-bottom:8px;}
+.psec .sub{font-family:'Noto Serif Tamil',serif;font-size:.82rem;color:#A5D6A7;margin-bottom:24px;}
+.pcards{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;max-width:600px;margin:0 auto 18px;}
+.pc{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);border-radius:12px;padding:22px 28px;flex:1;min-width:170px;text-align:center;}
+.pc .pi{font-size:2rem;margin-bottom:7px;}
+.pc strong{display:block;font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:4px;}
+.pc span{font-size:.72rem;color:#C8E6C9;}
+.gpay-n{font-size:.78rem;color:#A5D6A7;}
+
+/* ── CALL ── */
+.callsec{background:var(--brown);padding:44px 5%;text-align:center;color:#fff;}
+.callsec h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:7px;}
+.callsec p{font-family:'Noto Serif Tamil',serif;font-size:.8rem;color:#DEB887;margin-bottom:18px;}
+.clink{display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--brown);text-decoration:none;padding:13px 34px;border-radius:8px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.95rem;transition:.2s;box-shadow:0 4px 16px rgba(0,0,0,.2);}
+.clink:hover{background:var(--ol);color:var(--orange);}
+
+/* ── CONTACT ── */
+.ctsec{padding:66px 5%;background:var(--warm);}
+.ctg{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;max-width:1100px;margin:0 auto;}
+.cc{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:22px 16px;text-align:center;transition:.2s;}
+.cc:hover{border-color:var(--orange);box-shadow:0 6px 18px var(--sh);transform:translateY(-3px);}
+.cc .ci{font-size:1.7rem;margin-bottom:9px;}
+.cc h3{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--orange);margin-bottom:5px;}
+.cc p{font-size:.76rem;color:var(--muted);line-height:1.7;}
+.cc a{color:var(--orange);text-decoration:none;font-weight:600;}
+.cc a:hover{text-decoration:underline;}
+
+/* ── MAP PLACEHOLDER ── */
+.map-sec{padding:0 5% 50px;background:var(--warm);}
+.map-box{max-width:1100px;margin:0 auto;background:linear-gradient(135deg,#e8f4e8,#f0ffe0);border:2px solid var(--border);border-radius:12px;padding:30px;text-align:center;}
+.map-box h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--green);margin-bottom:8px;}
+.map-box p{font-size:.8rem;color:var(--muted);margin-bottom:14px;}
+.map-btn{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:#fff;text-decoration:none;padding:10px 24px;border-radius:6px;font-size:.82rem;font-weight:600;transition:.2s;}
+.map-btn:hover{background:#1e4d1e;}
+
+/* ── FOOTER ── */
+footer{background:var(--text);color:#DEB887;padding:30px 5%;}
+.finner{max-width:1260px;margin:0 auto;}
+.ftop{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;padding-bottom:20px;border-bottom:1px solid rgba(222,184,135,.2);margin-bottom:16px;}
+.fb2 strong{display:block;font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gold);margin-bottom:4px;}
+.fb2 span{font-family:'Noto Serif Tamil',serif;font-size:.7rem;}
+.fb2 p{font-size:.74rem;color:#aaa;margin-top:6px;line-height:1.6;}
+.flinks h4{font-size:.76rem;font-weight:700;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+.flinks a{display:block;color:#DEB887;text-decoration:none;font-size:.74rem;margin-bottom:5px;}
+.flinks a:hover{color:var(--gold);}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.68rem;color:#888;font-style:italic;}
+.fbot strong{color:var(--gold);}
+
+/* ── CART ── */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:200;opacity:0;pointer-events:none;transition:.25s;}
 .overlay.open{opacity:1;pointer-events:auto;}
-.cart-drawer{position:fixed;top:0;right:-440px;width:400px;max-width:95vw;height:100%;background:var(--warm);z-index:201;box-shadow:-8px 0 36px rgba(0,0,0,.2);transition:.3s ease;display:flex;flex-direction:column;border-left:3px solid var(--rust);}
-.cart-drawer.open{right:0;}
-.cdh{background:var(--rust);color:#fff;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;}
-.cdh h3{font-family:'Playfair Display',serif;font-size:1.05rem;}
-.cdh button{background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;line-height:1;}
-.cd-items{flex:1;overflow-y:auto;padding:14px 16px;}
-.cd-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--border);}
-.cd-row .icon{font-size:1.5rem;min-width:32px;text-align:center;}
-.cd-info{flex:1;}
-.cd-info h4{font-weight:700;font-size:.84rem;color:var(--text);margin-bottom:4px;}
-.cd-qty{display:flex;align-items:center;gap:5px;}
-.cd-qty button{width:25px;height:25px;border:1.5px solid var(--border2);background:var(--rust-light);color:var(--rust);cursor:pointer;font-weight:700;border-radius:4px;}
-.cd-qty span{font-family:'Playfair Display',serif;font-weight:700;font-size:.9rem;min-width:16px;text-align:center;}
-.cd-price{font-family:'Playfair Display',serif;font-weight:700;color:var(--rust);font-size:.92rem;}
-.cd-empty{text-align:center;padding:56px 20px;color:var(--muted);font-style:italic;font-size:.87rem;line-height:2;}
-.cd-empty .e-ico{font-size:3rem;display:block;margin-bottom:10px;}
-.cd-foot{padding:14px 16px;border-top:2px solid var(--rust);}
-.cd-total{display:flex;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:var(--rust);margin-bottom:12px;}
-.cf label{display:block;font-size:.68rem;color:var(--muted);font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px;}
-.cf input,.cf textarea,.cf select{width:100%;padding:10px 12px;margin-bottom:9px;border:1.5px solid var(--border2);font-size:.82rem;background:var(--cream);color:var(--text);border-radius:5px;}
-.cf input:focus,.cf textarea:focus,.cf select:focus{outline:none;border-color:var(--rust);}
-.wa-btn{width:100%;background:#25D366;color:#fff;border:none;padding:13px;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:5px;transition:.15s;}
-.wa-btn:hover{background:#1da851;}
-@media(max-width:900px){.nav-links,.ib-div{display:none;} .spec-grid{grid-template-columns:1fr 1fr;} .spec-item:nth-child(2){border-right:none;} .spec-item{border-bottom:1px solid var(--border);} .about-grid{flex-direction:column;}}
-@media(max-width:600px){.hero{padding:48px 5% 40px;} .hero-left h1{font-size:2.1rem;} .hero-plate{width:200px;height:200px;font-size:5rem;} .section{padding:48px 5%;} .sec-head h2{font-size:1.75rem;} .pay-methods{flex-direction:column;} .footer-inner{flex-direction:column;text-align:center;} .spec-grid{grid-template-columns:1fr;} .spec-item{border-right:none;}}
+.drawer{position:fixed;top:0;right:-420px;width:390px;max-width:96vw;height:100%;background:#fff;z-index:201;box-shadow:-8px 0 30px rgba(0,0,0,.14);transition:.32s ease;display:flex;flex-direction:column;border-left:3px solid var(--orange);}
+.drawer.open{right:0;}
+.dh{background:var(--orange);color:#fff;padding:17px 19px;display:flex;justify-content:space-between;align-items:center;}
+.dh h3{font-family:'Playfair Display',serif;font-size:1rem;}
+.dh button{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;}
+.di{flex:1;overflow-y:auto;padding:13px 15px;}
+.dr{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
+.dr img{width:50px;height:40px;object-fit:cover;border-radius:7px;flex-shrink:0;}
+.dri{flex:1;}
+.dri h4{font-size:.8rem;font-weight:600;color:var(--text);margin-bottom:3px;}
+.drq{display:flex;align-items:center;gap:5px;}
+.drq button{width:22px;height:22px;border:1px solid var(--border);background:var(--ol);color:var(--orange);cursor:pointer;border-radius:4px;font-weight:700;font-size:.8rem;}
+.drq span{font-weight:700;font-size:.8rem;min-width:14px;text-align:center;}
+.drp{font-family:'Playfair Display',serif;font-weight:700;color:var(--orange);font-size:.88rem;}
+.de{text-align:center;padding:46px 18px;color:var(--muted);font-size:.82rem;font-style:italic;}
+.df{padding:13px 15px;border-top:2px solid var(--orange);}
+.dt{display:flex;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--orange);margin-bottom:11px;}
+.cf label{display:block;font-size:.68rem;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px;}
+.cf input,.cf textarea,.cf select{width:100%;padding:10px 11px;margin-bottom:9px;border:1.5px solid var(--border);border-radius:6px;font-family:'Poppins',sans-serif;font-size:.8rem;background:var(--cream);color:var(--text);}
+.cf input:focus,.cf textarea:focus,.cf select:focus{outline:none;border-color:var(--orange);}
+.wabtn{width:100%;background:#25D366;color:#fff;border:none;padding:13px;border-radius:7px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.88rem;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;}
+.wabtn:hover{background:#1da851;}
+
+/* ── FLOATING WA BTN ── */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:150;background:#25D366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 18px rgba(37,211,102,.45);transition:.2s;}
+.wa-float:hover{transform:scale(1.1);background:#1da851;}
+
+@media(max-width:900px){.nl,.ibdiv{display:none;}.ag{flex-direction:column;}}
+@media(max-width:600px){
+  .hero{padding:40px 5%;}.hl h1{font-size:2rem;}.mgrid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;}
+  .mimg{height:120px;}.pcards{flex-direction:column;}.ftop{flex-direction:column;}
+  .hstats{grid-template-columns:repeat(2,1fr);}
+}
 </style>
 </head>
-<body>'''
+<body>
 
-body = '''
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>Biryani ₹120</span><span>Chicken Fried Rice ₹120</span><span>Masala Dosa ₹60</span>
+    <span>Kothu Parotta ₹100</span><span>Mango Juice ₹50</span><span>Filter Coffee ₹20</span>
+    <span>Fresh Daily Food</span><span>Cash & GPay Accepted</span><span>Home Delivery Available</span>
+    <span>Open 1PM–11PM Daily</span><span>+91 63790 42970</span>
+  </div>
+</div>
+
+<!-- ADMIN MODAL -->
+<div class="modal-bg" id="adminModal">
+  <div class="modal">
+    <div class="mh"><h3>🔐 Admin Login</h3><button onclick="closeAdminModal()">✕</button></div>
+    <div class="mb">
+      <label>Username</label>
+      <input type="text" id="aUser" placeholder="Enter username" autocomplete="off">
+      <label>Password</label>
+      <input type="password" id="aPass" placeholder="Enter password">
+      <button class="login-btn" onclick="doLogin()">Login →</button>
+      <div class="lerr" id="lerr">❌ Wrong username or password. Try again.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN STOCK PANEL -->
+<div class="admin-bar" id="adminBar">
+  <div class="ab">
+    <div class="ab-top">
+      <h3>🔧 Stock Manager — Mark items Available or Out of Stock daily</h3>
+      <div class="ab-actions">
+        <span class="save-note">Changes apply instantly on menu</span>
+        <button class="logout-btn" onclick="doLogout()">🚪 Logout</button>
+      </div>
+    </div>
+    <div class="sg" id="stockGrid"></div>
+  </div>
+</div>
+
+<!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-brand">
-      <strong>Kalakkal Kitchen Hotel</strong>
-      <span>கலக்கல் கிச்சன் ஹோட்டல் · Kozhipuliyur</span>
+  <div class="ni">
+    <a href="#" class="logo">
+      <div class="lp">KK</div>
+      <div class="lt"><strong>Kalakkal Kitchen</strong><em>கலக்கல் கிச்சன் ஹோட்டல்</em></div>
     </a>
-    <div class="nav-links">
+    <div class="nl">
       <a href="#menu">Menu</a><a href="#about">About</a>
       <a href="#payment">Payment</a><a href="#contact">Contact</a>
-      <a href="tel:+916379042970">&#128222; Call</a>
+      <a href="tel:+916379042970">📞 Call</a>
     </div>
-    <div class="nav-right">
-      <button class="admin-btn" onclick="toggleAdmin()">&#128274; Admin</button>
-      <button class="nav-cart" onclick="toggleCart()">&#128722; Cart <span class="cart-badge" id="cartCount">0</span></button>
+    <div class="nr">
+      <button class="admin-opener" onclick="openAdminModal()">🔐 Admin</button>
+      <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span class="cbadge" id="cartCount">0</span></button>
     </div>
   </div>
 </nav>
-<div class="admin-panel" id="adminPanel">
-  <div class="admin-inner">
-    <h3>&#128295; Stock Manager</h3>
-    <p>Toggle items Available / Out of Stock. Customers will see a clear "Not Available" message on unavailable dishes.</p>
-    <div class="stock-grid" id="stockGrid"></div>
-  </div>
-</div>
+
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-badge">&#11088; Kozhipuliyur's Favourite Hotel</div>
-      <div class="hero-tamil">&#2965;&#2994;&#2965;&#3021;&#2965;&#2994;&#3021; &#2965;&#3007;&#2970;&#3021;&#2970;&#2985;&#3021; &#3000;&#3006;&#2975;&#3021&#2975;&#2994;&#3021;</div>
-      <h1>Fresh <em>Homestyle</em><br>Food, Daily</h1>
-      <p class="hero-sub">&#2909;&#2991;&#2992;&#3021; &#2980;&#2992; &#2970;&#3016;&#2997;&#2990;&#3021; &amp; &#2985;&#3021;&#2970;&#3007;&#2994;&#3021;; &#2980;&#3007;&#2985;&#2990;&#3021;&#2969;&#3021; &#2986;&#3009;&#2980;&#3007;&#2980;&#3006;&#2965; &#2970;&#2990;&#3016;&#2980;&#3021;&#2980;<br>Vandavasi to Chetpet Road, Kozhipuliyur X Road</p>
-      <div class="hero-btns">
-        <button class="btn-red" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">&#127869;&#65039; Order Now</button>
-        <a href="tel:+916379042970" class="btn-outline">&#128222; Call to Order</a>
+  <div class="hi">
+    <div class="hl">
+      <div class="hpill">⭐ Kozhipuliyur's Favourite Hotel · Since 2024</div>
+      <div class="htamil">கலக்கல் கிச்சன் ஹோட்டல்</div>
+      <h1>Fresh <span>Veg & Non-Veg</span><br>Food Every Day</h1>
+      <p class="hdesc">உயர் தர சைவம் & அசைவம் · தினமும் புதிதாக சமைத்த சுவையான உணவு<br>📍 Vandavasi–Chetpet Road, Kozhipuliyur X Road, Near Suraj School</p>
+      <div class="hbtns">
+        <button class="bf" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">🍽️ Order Now</button>
+        <a href="tel:+916379042970" class="bg">📞 Call to Order</a>
       </div>
-      <div class="hero-stats">
-        <div class="hstat"><div class="num">30+</div><div class="lbl">Menu Items</div></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><div class="num">1PM</div><div class="lbl">Opens Daily</div></div>
-        <div class="hstat-div"></div>
-        <div class="hstat"><div class="num">11PM</div><div class="lbl">Last Order</div></div>
+      <div class="hbadges">
+        <span class="hbadge">🥦 Veg Options</span>
+        <span class="hbadge">🍗 Non-Veg</span>
+        <span class="hbadge">🕑 1PM–11PM</span>
+        <span class="hbadge">💵 Cash & GPay</span>
+        <span class="hbadge">📦 Home Delivery</span>
+        <span class="hbadge">🚀 Quick Service</span>
       </div>
     </div>
-    <div class="hero-right"><div class="hero-plate">&#127859;</div></div>
+    <div class="hr">
+      <div class="hsb">
+        <div class="sbn">கலக்கல் கிச்சன்</div>
+        <div class="sbs">உயர் தர சைவம் & அசைவம்</div>
+        <div class="sbh">HOTEL</div>
+        <div class="sbtagline">Good Food • Good Mood</div>
+      </div>
+      <div class="hstats">
+        <div class="hstat"><strong>35+</strong><span>Menu Items</span></div>
+        <div class="hstat"><strong>Daily</strong><span>Fresh Cook</span></div>
+        <div class="hstat"><strong>Fast</strong><span>Delivery</span></div>
+        <div class="hstat"><strong>2024</strong><span>Est.</span></div>
+      </div>
+    </div>
   </div>
 </section>
-<div class="info-band">
-  <div class="info-band-inner">
-    <div class="ib-item"><span class="ico">&#128205;</span><div><strong>Kozhipuliyur X Road</strong><span>Near Suraj School, 604502</span></div></div>
-    <div class="ib-div"></div>
-    <div class="ib-item"><span class="ico">&#128222;</span><div><strong>+91 63790 42970</strong><span>Call or WhatsApp</span></div></div>
-    <div class="ib-div"></div>
-    <div class="ib-item"><span class="ico">&#128337;</span><div><strong>1:00 PM - 11:00 PM</strong><span>Open daily</span></div></div>
-    <div class="ib-div"></div>
-    <div class="ib-item"><span class="ico">&#128179;</span><div><strong>Cash &amp; GPay</strong><span>Both accepted</span></div></div>
+
+<!-- INFO BAND -->
+<div class="iband">
+  <div class="ibi2">
+    <div class="ibitem"><span class="ico">📍</span><div><strong>Kozhipuliyur X Road</strong><small>Near Suraj School, 604502</small></div></div>
+    <div class="ibdiv"></div>
+    <div class="ibitem"><span class="ico">📞</span><div><strong>+91 63790 42970</strong><small>Call or WhatsApp</small></div></div>
+    <div class="ibdiv"></div>
+    <div class="ibitem"><span class="ico">🕑</span><div><strong>1:00 PM – 11:00 PM</strong><small>Open every day</small></div></div>
+    <div class="ibdiv"></div>
+    <div class="ibitem"><span class="ico">💳</span><div><strong>Cash & GPay</strong><small>Both accepted</small></div></div>
   </div>
 </div>
-<div class="pay-banner">&#9989; We accept <strong>&#128181; Cash on Delivery</strong> &amp; <strong>&#128242; GPay &middot; +91 63790 42970</strong></div>
-<div class="specials">
-  <div class="specials-inner">
-    <div class="spec-grid">
-      <div class="spec-item"><div class="spec-ico">&#127859;</div><h3>Fresh Daily</h3><p>Cooked fresh every afternoon with quality ingredients</p></div>
-      <div class="spec-item"><div class="spec-ico">&#127968;</div><h3>Home Delivery</h3><p>Order by phone or WhatsApp, we deliver to your door</p></div>
-      <div class="spec-item"><div class="spec-ico">&#128179;</div><h3>Easy Payment</h3><p>Pay by Cash or GPay - no hassle either way</p></div>
-      <div class="spec-item"><div class="spec-ico">&#127798;&#65039;</div><h3>Traditional Taste</h3><p>Classic Tamil recipes with authentic spices &amp; masalas</p></div>
-    </div>
+<div class="pstrip">💵 <strong>Cash on Delivery</strong> &amp; 📲 <strong>GPay · +91 63790 42970</strong> — Pay any way you like!</div>
+
+<!-- WHY US FEATURES -->
+<section class="features">
+  <div class="fc-inner">
+    <div class="feat"><div class="fi">🌿</div><h3>100% Fresh Daily</h3><p>All food cooked fresh every afternoon. No old food, no compromise.</p></div>
+    <div class="feat"><div class="fi">⚡</div><h3>Quick Service</h3><p>Fast order preparation. Ready before you arrive!</p></div>
+    <div class="feat"><div class="fi">📦</div><h3>Home Delivery</h3><p>Order online & get food delivered to your doorstep.</p></div>
+    <div class="feat"><div class="fi">💳</div><h3>Easy Payment</h3><p>Pay by Cash or GPay. Simple, no hassle.</p></div>
+    <div class="feat"><div class="fi">🥗</div><h3>Veg & Non-Veg</h3><p>Wide range for all preferences. Everyone is welcome!</p></div>
+    <div class="feat"><div class="fi">❤️</div><h3>Family Favourite</h3><p>Trusted by hundreds of families in Kozhipuliyur.</p></div>
   </div>
-</div>
-<section class="section menu-section" id="menu">
-  <div class="section-inner">
-    <div class="sec-head center">
-      <div class="eyebrow">Fresh Every Day</div>
+</section>
+
+<!-- MENU -->
+<section class="msec" id="menu">
+  <div class="si2">
+    <div class="sh">
+      <div class="etag">Fresh Every Day</div>
       <h2>Our <em>Full Menu</em></h2>
-      <p>Real prices, real food from KK Kitchen - tasted fresh daily</p>
+      <p>சுவையான உணவு தினமும் புதிதாக — Real prices, real food from KK Kitchen</p>
     </div>
-    <div class="menu-tabs">
-      <button class="mtab active" onclick="filterMenu('nonveg',this)"><span class="mtab-icon">&#127831;</span>Non-Veg</button>
-      <button class="mtab" onclick="filterMenu('veg',this)"><span class="mtab-icon">&#129382;</span>Veg</button>
-      <button class="mtab" onclick="filterMenu('drinks',this)"><span class="mtab-icon">&#129379;</span>Drinks</button>
-      <button class="mtab" onclick="filterMenu('snacks',this)"><span class="mtab-icon">&#129386;</span>Snacks</button>
+    <div class="tabs">
+      <button class="tab active" onclick="filterMenu('nonveg',this)">🍗 Non-Veg அசைவம்</button>
+      <button class="tab" onclick="filterMenu('veg',this)">🥦 Veg சைவம்</button>
+      <button class="tab" onclick="filterMenu('drinks',this)">🥤 Drinks பானம்</button>
+      <button class="tab" onclick="filterMenu('snacks',this)">🥪 Snacks ஸ்நாக்ஸ்</button>
     </div>
-    <div class="menu-grid" id="menuGrid"></div>
+    <div class="mgrid" id="menuGrid"></div>
   </div>
 </section>
-<section class="section about-section" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-visual">
-        <div class="av-box"><div class="av-big">2024</div><div class="av-lbl">Established</div></div>
-        <div class="av-box small"><div class="av-ico">&#127869;&#65039;</div><strong>Fresh Food</strong><span>Daily cooking</span></div>
-        <div class="av-box small"><div class="av-ico">&#128205;</div><strong>Kozhipuliyur</strong><span>X Road</span></div>
+
+<!-- TESTIMONIALS -->
+<section class="tsec">
+  <div class="sh" style="margin-bottom:28px;">
+    <h2>What <em>Customers Say</em></h2>
+  </div>
+  <div class="tgrid">
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttext">"Best biryani on the Vandavasi highway! Fresh, hot and very tasty. We stop here every time we travel."</p><div class="tname">— Ravi Kumar, Vandavasi</div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttext">"The kothu parotta is amazing! Very crispy and full of flavour. Kids love it too. Great service!"</p><div class="tname">— Priya Devi, Kozhipuliyur</div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttext">"தினமும் காலையில் இட்லி சாம்பார் சாப்பிடுவேன். மிகவும் சுவையாக இருக்கும். விலையும் சரியாக இருக்கும்."</p><div class="tname">— Murugan, Chetpet</div></div>
+    <div class="tcard"><div class="tstars">★★★★★</div><p class="ttext">"Ordered via WhatsApp and delivery was super fast! The masala dosa was crispy and perfect. Will order again."</p><div class="tname">— Divya, Tiruvannamalai Road</div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="asec" id="about">
+  <div class="ag">
+    <div class="av">
+      <div class="avy">2024</div>
+      <div class="ave">Established</div>
+      <div class="avd"></div>
+      <div class="avt">நம்பகமான தர உணவகம்<br>Kozhipuliyur X Road<br>Good Food • Good Mood</div>
+    </div>
+    <div class="at2">
+      <div class="etag2">Our Story</div>
+      <h2>Good Food, Made Fresh Every Day</h2>
+      <p>Kalakkal Kitchen Hotel is your trusted family hotel on Vandavasi to Chetpet Road, Kozhipuliyur X Road — right near Suraj School. We are known for quality food, generous portions, and a warm welcome.</p>
+      <p>From crispy dosas and biriyani to kothu parotta and fresh juices — everything is made fresh daily with traditional Tamil recipes. We believe good food brings good mood!</p>
+      <div class="atbox">கலக்கல் கிச்சன் ஹோட்டல் — தரமான சமையல், புத்தம் புதிய உணவு. Kozhipuliyur X Road, Suraj School அருகில். தினமும் மதியம் 1 மணி முதல் இரவு 11 மணி வரை.</div>
+      <div class="ibs2">
+        <div class="ib2"><div class="ico2">🕑</div><strong>1:00 PM</strong><span>Opens</span></div>
+        <div class="ib2"><div class="ico2">🌙</div><strong>11:00 PM</strong><span>Closes</span></div>
+        <div class="ib2"><div class="ico2">📅</div><strong>Daily</strong><span>All Days</span></div>
       </div>
-      <div class="about-text">
-        <div class="eyebrow">Our Story</div>
-        <h2>Good Food, Made Fresh <em>Every Day</em></h2>
-        <p>Kalakkal Kitchen Hotel - Vandavasi to Chetpet Road, Kozhipuliyur X Road, Near Suraj School. Quality food, fresh every afternoon. Open daily 1 PM to 11 PM.</p>
-        <p>From crispy dosas and biriyani to kothu parotta and fresh juices - everything made fresh daily with traditional recipes and the best quality ingredients.</p>
-        <div class="about-tamil">&#2965;&#2994;&#2965;&#3021;&#2965;&#2994;&#3021; &#2965;&#3007;&#2970;&#3021;&#2970;&#2985;&#3021; &#3000;&#3006;&#2975;&#3021;&#2975;&#2994;&#3021; - &#2980;&#2992;&#2990;&#3006;&#2985; &#2970;&#2990;&#3016;&#2991;&#2994;&#3021;, &#2986;&#3009;&#2980;&#3021;&#2980;&#2990;&#3021; &#2986;&#3009;&#2980;&#3007;&#2991; &#2909;&#2979;&#2997;&#3009;. Kozhipuliyur X Road, Suraj School &#2985;&#3009;&#2965;&#2984;&#3007;&#2994;&#3021;.</div>
-        <div class="hours-box">
-          <div class="hbox"><div class="hico">&#128337;</div><strong>1:00 PM</strong><span>Opens Every Afternoon</span></div>
-          <div class="hbox"><div class="hico">&#127769;</div><strong>11:00 PM</strong><span>Closes Every Night</span></div>
-          <div class="hbox"><div class="hico">&#128197;</div><strong>Daily</strong><span>Open All Days</span></div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
-<section class="pay-section" id="payment">
-  <h2>&#128179; We Accept Both Payments</h2>
-  <p>Pay however is easy for you!</p>
-  <div class="pay-methods">
-    <div class="pay-card"><div class="pico">&#128181;</div><strong>Cash on Delivery</strong><span>Pay when your order arrives</span></div>
-    <div class="pay-card"><div class="pico">&#128242;</div><strong>GPay / UPI</strong><span>Pay instantly online</span></div>
+
+<!-- PAYMENT -->
+<section class="psec" id="payment">
+  <h2>💳 Easy Payment Options</h2>
+  <p class="sub">பணம் கட்ட எந்த முறையும் சரி — Choose what's easy for you!</p>
+  <div class="pcards">
+    <div class="pc"><div class="pi">💵</div><strong>Cash on Delivery</strong><span>Pay cash when your order arrives</span></div>
+    <div class="pc"><div class="pi">📲</div><strong>GPay / UPI</strong><span>Send online before or after delivery</span></div>
   </div>
-  <div class="pay-gpay">GPay Number: <strong>+91 63790 42970</strong></div>
+  <div class="gpay-n">GPay Number: <strong style="color:#fff;font-size:1rem;">+91 63790 42970</strong></div>
 </section>
-<div class="call-strip">
-  <h2>Prefer to order by phone?</h2>
-  <p>Call us anytime between 1PM and 11PM!</p>
-  <a href="tel:+916379042970" class="call-btn">&#128241; +91 63790 42970 - Call Now</a>
+
+<!-- CALL -->
+<div class="callsec">
+  <h2>Want to order by phone?</h2>
+  <p>தொலைபேசியில் ஆர்டர் செய்யலாம் — எங்களை அழையுங்கள்!</p>
+  <a href="tel:+916379042970" class="clink">📱 +91 63790 42970 — Call Now</a>
 </div>
-<section class="section contact-section" id="contact">
-  <div class="section-inner">
-    <div class="sec-head center">
-      <div class="eyebrow">Find Us</div>
-      <h2>Visit <em>Kalakkal Kitchen</em></h2>
+
+<!-- CONTACT -->
+<section class="ctsec" id="contact">
+  <div class="si2">
+    <div class="sh">
+      <div class="etag">Find Us</div>
+      <h2>Visit <em>KK Kitchen</em></h2>
     </div>
-    <div class="contact-grid">
-      <div class="ccard"><div class="cico">&#128205;</div><h3>Address</h3><p>Vandavasi to Chetpet Road<br>Kozhipuliyur X Road<br>Near Suraj School, Pin: 604502</p></div>
-      <div class="ccard"><div class="cico">&#128222;</div><h3>Call / WhatsApp</h3><p><a href="tel:+916379042970">+91 63790 42970</a><br><a href="https://wa.me/916379042970" target="_blank">Chat on WhatsApp</a></p></div>
-      <div class="ccard"><div class="cico">&#128337;</div><h3>Opening Hours</h3><p>1:00 PM - 11:00 PM<br>Open all days</p></div>
-      <div class="ccard"><div class="cico">&#128179;</div><h3>Payment</h3><p>Cash on Delivery<br>GPay: <a href="tel:+916379042970">+91 63790 42970</a></p></div>
-      <div class="ccard"><div class="cico">&#128230;</div><h3>Delivery</h3><p>Home delivery available<br>Call to confirm your area</p></div>
+    <div class="ctg">
+      <div class="cc"><div class="ci">📍</div><h3>Address</h3><p>Vandavasi–Chetpet Road<br>Kozhipuliyur X Road<br>Near Suraj School<br>Pin: 604502</p></div>
+      <div class="cc"><div class="ci">📞</div><h3>Call / WhatsApp</h3><p><a href="tel:+916379042970">+91 63790 42970</a><br><a href="https://wa.me/916379042970" target="_blank">💬 Chat on WhatsApp</a></p></div>
+      <div class="cc"><div class="ci">🕑</div><h3>Opening Hours</h3><p>1:00 PM – 11:00 PM<br>Open every day<br>No holidays!</p></div>
+      <div class="cc"><div class="ci">💳</div><h3>Payment</h3><p>Cash on Delivery<br>GPay: <a href="tel:+916379042970">+91 63790 42970</a></p></div>
+      <div class="cc"><div class="ci">📦</div><h3>Delivery</h3><p>Home delivery available<br>Call to confirm your area<br>Fast & fresh!</p></div>
     </div>
   </div>
 </section>
+
+<!-- MAP -->
+<div class="map-sec">
+  <div class="map-box">
+    <h3>📍 Find Us on Google Maps</h3>
+    <p>Kozhipuliyur X Road, Vandavasi–Chetpet Road, Near Suraj School, Pin: 604502</p>
+    <a href="https://maps.google.com/?q=Kozhipuliyur+X+Road+Near+Suraj+School+604502" target="_blank" class="map-btn">🗺️ Open in Google Maps</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand"><strong>Kalakkal Kitchen Hotel</strong><span>Kozhipuliyur X Road, Pin 604502</span></div>
-    <div class="footer-links"><a href="#menu">Menu</a><a href="#about">About</a><a href="#payment">Payment</a><a href="#contact">Contact</a><a href="https://wa.me/916379042970">WhatsApp</a></div>
-    <div class="footer-copy">&copy; 2026 Kalakkal Kitchen Hotel. All rights reserved.</div>
+  <div class="finner">
+    <div class="ftop">
+      <div class="fb2">
+        <strong>Kalakkal Kitchen Hotel</strong>
+        <span>கலக்கல் கிச்சன் ஹோட்டல்</span>
+        <p>Kozhipuliyur X Road, Near Suraj School<br>Vandavasi–Chetpet Road, Pin: 604502<br>📞 +91 63790 42970</p>
+      </div>
+      <div class="flinks">
+        <h4>Quick Links</h4>
+        <a href="#menu">Menu</a><a href="#about">About Us</a>
+        <a href="#payment">Payment</a><a href="#contact">Contact</a>
+        <a href="https://wa.me/916379042970">📲 WhatsApp Order</a>
+        <a href="tel:+916379042970">📞 Call Now</a>
+      </div>
+      <div class="flinks">
+        <h4>Our Menu</h4>
+        <a href="#menu">Non-Veg Items</a><a href="#menu">Veg Items</a>
+        <a href="#menu">Fresh Juices</a><a href="#menu">Snacks</a>
+        <a href="#menu">Hot Drinks</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 <strong>Kalakkal Kitchen Hotel</strong> · Kozhipuliyur</span>
+      <span>Good Food • Good Mood</span>
+    </div>
   </div>
 </footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/916379042970?text=Hi%2C%20I%20want%20to%20order%20food%20from%20KK%20Kitchen!" target="_blank" class="wa-float" title="Order on WhatsApp">💬</a>
+
+<!-- OVERLAY & CART -->
 <div class="overlay" id="overlay" onclick="toggleCart()"></div>
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cdh"><h3>Your Order</h3><button onclick="toggleCart()">&#10005;</button></div>
-  <div class="cd-items" id="cdItems"><div class="cd-empty"><span class="e-ico">&#127869;&#65039;</span>Cart is empty.<br>Add items to get started!</div></div>
-  <div class="cd-foot" id="cdFoot" style="display:none;">
-    <div class="cd-total"><span>Total</span><span id="cdTotal">&#8377;0</span></div>
-    <div class="cf">
-      <label>Your Name</label><input type="text" id="custName" placeholder="Your name...">
-      <label>Phone</label><input type="tel" id="custPhone" placeholder="+91 ...">
-      <label>Delivery Address</label><textarea id="custAddress" rows="2" placeholder="Home address or Pickup at hotel"></textarea>
-      <label>Payment Method</label>
+<div class="drawer" id="cartDrawer">
+  <div class="dh"><h3>🛒 Your Order / உங்கள் ஆர்டர்</h3><button onclick="toggleCart()">✕</button></div>
+  <div class="di" id="diItems"><div class="de">Cart is empty.<br>சாப்பாடு சேர்க்கவும்! 🍽️</div></div>
+  <div class="df" id="diFooter" style="display:none;">
+    <div class="dt"><span>Total / மொத்தம்</span><span id="diTotal">₹0</span></div>
+    <form class="cf" id="checkoutForm">
+      <label>Your Name / பெயர்</label>
+      <input type="text" id="custName" placeholder="உங்கள் பெயர்..." required>
+      <label>Phone / தொலைபேசி</label>
+      <input type="tel" id="custPhone" placeholder="+91 ..." required>
+      <label>Address / முகவரி</label>
+      <textarea id="custAddress" rows="2" placeholder="வீட்டு முகவரி அல்லது 'Pickup at hotel'" required></textarea>
+      <label>Payment / பணம்</label>
       <select id="payMethod">
-        <option value="Cash on Delivery">Cash on Delivery</option>
-        <option value="GPay">GPay (+91 63790 42970)</option>
+        <option value="Cash on Delivery">💵 Cash on Delivery</option>
+        <option value="GPay +91 63790 42970">📲 GPay (+91 63790 42970)</option>
       </select>
-      <button class="wa-btn" onclick="sendOrder()">Send Order via WhatsApp</button>
-    </div>
+      <button type="submit" class="wabtn">📲 Send Order via WhatsApp</button>
+    </form>
   </div>
-</div>'''
+</div>
 
-# Now build the JS with real images injected
-imgs_json = json.dumps(imgs)
-
-script = '''<script>
+<script>
+const ADMIN_USER="kkkitchen", ADMIN_PASS="kk@2024";
 const WA="916379042970";
-const IMGS=''' + imgs_json + ''';
+let loggedIn=false;
+
+function openAdminModal(){document.getElementById('adminModal').classList.add('show');setTimeout(()=>document.getElementById('aUser').focus(),100);}
+function closeAdminModal(){document.getElementById('adminModal').classList.remove('show');document.getElementById('lerr').style.display='none';document.getElementById('aUser').value='';document.getElementById('aPass').value='';}
+function doLogin(){
+  const u=document.getElementById('aUser').value.trim(), p=document.getElementById('aPass').value.trim();
+  if(u===ADMIN_USER && p===ADMIN_PASS){
+    loggedIn=true; closeAdminModal();
+    document.getElementById('adminBar').classList.add('show'); buildStockGrid();
+  } else { document.getElementById('lerr').style.display='block'; }
+}
+function doLogout(){loggedIn=false; document.getElementById('adminBar').classList.remove('show');}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&document.getElementById('adminModal').classList.contains('show'))doLogin();});
 
 const menuData={
   nonveg:{items:[
-    {id:1,  en:"Biriyani",               ta:"பிரியாணி",                     desc:"Flavourful chicken biriyani",              price:120, icon:"🍖", veg:false, imgKey:"biriyani"},
-    {id:2,  en:"Chicken Fried Rice",     ta:"சிக்கன் ஃப்ரைட் ரைஸ்",        desc:"Spiced chicken fried rice",               price:120, icon:"🍚", veg:false, imgKey:"chicken_fried_rice"},
-    {id:3,  en:"Chilli Chicken",         ta:"சில்லி சிக்கன்",                desc:"Crispy chilli chicken tossed in sauce",   price:110, icon:"🍗", veg:false, imgKey:"chilli_chicken"},
-    {id:4,  en:"Pepper Chicken",         ta:"பெப்பர் சிக்கன்",               desc:"Aromatic pepper chicken dry",             price:110, icon:"🍗", veg:false, imgKey:"pepper_chicken"},
-    {id:5,  en:"Chicken Chettinad",      ta:"சிக்கன் சேத்திநாடு",            desc:"Traditional Chettinad spiced chicken",    price:120, icon:"🥘", veg:false, imgKey:"chicken_chettinad"},
-    {id:6,  en:"Egg Fried Rice",         ta:"முட்டை ஃப்ரைட் ரைஸ்",          desc:"Egg fried rice with veggies",             price:110, icon:"🍳", veg:false, imgKey:"egg_fried_rice"},
-    {id:7,  en:"Omelette",               ta:"ஆம்லெட்",                       desc:"Fresh egg omelette",                      price:25,  icon:"🍳", veg:false, imgKey:"omelette"},
-    {id:8,  en:"Egg Podimas",            ta:"முட்டை போடிமாஸ்",               desc:"Scrambled spiced egg",                    price:50,  icon:"🥚", veg:false, imgKey:"egg_podimas"},
-    {id:9,  en:"Kalaki",                 ta:"கலகி",                          desc:"Special egg kalaki",                      price:25,  icon:"🥚", veg:false, imgKey:"half_boil_egg"},
-    {id:10, en:"Egg Full Boil",          ta:"முட்டை பூல் போயில்",            desc:"Full boiled egg",                         price:25,  icon:"🥚", veg:false, imgKey:"full_boil_egg"},
-    {id:11, en:"Parotta + Curry",        ta:"பரோட்டா + கறி (அசைவம்)",       desc:"Soft parotta with non-veg curry",         price:45,  icon:"🫓", veg:false, imgKey:"parotta_nonveg"},
-    {id:12, en:"Kothu Parotta",          ta:"கோத்து பரோட்டா",                desc:"Minced parotta with egg & masala",        price:100, icon:"🍛", veg:false, imgKey:"kothu_parotta"},
+    {id:1, en:"Biryani",             ta:"பிரியாணி",               price:120,img:"biryani",           veg:false,desc:"Flavourful chicken biryani"},
+    {id:2, en:"Chicken Fried Rice",  ta:"சிக்கன் ஃப்ரைட் ரைஸ்", price:120,img:"chicken_fried_rice", veg:false,desc:"Spiced chicken fried rice"},
+    {id:3, en:"Chilli Chicken",      ta:"சில்லி சிக்கன்",         price:110,img:"chilli_chicken",    veg:false,desc:"Crispy chilli chicken"},
+    {id:4, en:"Pepper Chicken",      ta:"பெப்பர் சிக்கன்",        price:110,img:"pepper_chicken",    veg:false,desc:"Aromatic pepper chicken"},
+    {id:5, en:"Chicken Chettinad",   ta:"சிக்கன் சேத்திநாடு",    price:120,img:"chicken_chettinad", veg:false,desc:"Traditional Chettinad chicken"},
+    {id:6, en:"Egg Fried Rice",      ta:"முட்டை ஃப்ரைட் ரைஸ்",  price:110,img:"egg_fried_rice",    veg:false,desc:"Egg fried rice with veggies"},
+    {id:7, en:"Omelette",            ta:"ஆம்லெட்",                price:25, img:"omelette",          veg:false,desc:"Fresh egg omelette"},
+    {id:8, en:"Egg Podimas",         ta:"முட்டை போடிமாஸ்",       price:50, img:"egg_podimas",        veg:false,desc:"Scrambled spiced egg"},
+    {id:9, en:"Half Boil Egg",       ta:"ஹாஃப் போயில் முட்டை",  price:25, img:"half_boil_egg",     veg:false,desc:"Half boiled egg"},
+    {id:10,en:"Full Boil Egg",       ta:"பூல் போயில் முட்டை",   price:25, img:"full_boil_egg",     veg:false,desc:"Full boiled egg"},
+    {id:11,en:"Parotta + Curry (NV)",ta:"பரோட்டா + கறி (அசைவம்)",price:45,img:"parotta_nonveg",    veg:false,desc:"Soft parotta with non-veg curry"},
+    {id:12,en:"Kothu Parotta",       ta:"கோத்து பரோட்டா",        price:100,img:"kothu_parotta",     veg:false,desc:"Minced parotta with egg & masala"},
   ]},
   veg:{items:[
-    {id:13, en:"Parotta Set (Veg)",      ta:"பரோட்டா செட் (சைவம்)",         desc:"Soft parotta with veg curry",             price:45,  icon:"🫓", veg:true,  imgKey:"parotta_veg"},
-    {id:14, en:"Idly (4 pcs)",           ta:"இட்லி (4 இட்லி)",               desc:"Soft steamed idly with sambar & chutney", price:40,  icon:"🍲", veg:true,  imgKey:"idly"},
-    {id:15, en:"Veg Fried Rice",         ta:"வெஜ் ஃப்ரைட் ரைஸ்",            desc:"Mixed vegetable fried rice",              price:100, icon:"🍚", veg:true,  imgKey:"veg_fried_rice"},
-    {id:16, en:"Chapathi (2 set)",       ta:"சப்பாத்தி (2 செட்)",             desc:"Soft chapathi with veg kurma",            price:50,  icon:"🫓", veg:true,  imgKey:"chapathi"},
-    {id:17, en:"Gobi Chilli",            ta:"கோபி சில்லி",                   desc:"Crispy cauliflower chilli",               price:110, icon:"🥦", veg:true,  imgKey:"gobi_chilli"},
-    {id:18, en:"Plain Dosa (Set)",       ta:"பேளன் தோசை",                    desc:"Crispy plain dosa with chutney",          price:40,  icon:"🥞", veg:true,  imgKey:"plain_dosa"},
-    {id:19, en:"Onion Dosa (Set)",       ta:"வெங்காய தோசை",                  desc:"Dosa with onion topping",                 price:40,  icon:"🥞", veg:true,  imgKey:"onion_dosa"},
-    {id:20, en:"Masala Dosa (Set)",      ta:"மசாலா தோசை",                    desc:"Crispy dosa with potato masala",          price:60,  icon:"🥞", veg:true,  imgKey:"masala_dosa"},
-    {id:21, en:"Podi Dosa (Set)",        ta:"பொடி தோசை",                     desc:"Dosa with podi & pure ghee",              price:60,  icon:"🥞", veg:true,  imgKey:"podi_dosa"},
-    {id:22, en:"Ghee Dosa (Set)",        ta:"கீ தோசை",                       desc:"Crispy dosa with pure ghee",              price:70,  icon:"🥞", veg:true,  imgKey:"ghee_dosa"},
+    {id:13,en:"Idly (4 pcs)",        ta:"இட்லி (4 இட்லி)",       price:40, img:"idly",              veg:true, desc:"Soft idly with sambar & chutney"},
+    {id:14,en:"Parotta Set (Veg)",   ta:"பரோட்டா செட் (சைவம்)", price:45, img:"parotta_set",       veg:true, desc:"Soft parotta with veg curry"},
+    {id:15,en:"Veg Fried Rice",      ta:"வெஜ் ஃப்ரைட் ரைஸ்",   price:100,img:"veg_fried_rice",    veg:true, desc:"Mixed vegetable fried rice"},
+    {id:16,en:"Chapathi (2 set)",    ta:"சப்பாத்தி (2 செட்)",    price:50, img:"chapathi",          veg:true, desc:"Soft chapathi with kurma"},
+    {id:17,en:"Gobi Chilli",         ta:"கோபி சில்லி",           price:110,img:"gobi_chilli",       veg:true, desc:"Crispy cauliflower chilli"},
+    {id:18,en:"Plain Dosa",          ta:"பேளன் தோசை",            price:40, img:"plain_dosa",        veg:true, desc:"Crispy plain dosa with chutney"},
+    {id:19,en:"Onion Dosa",          ta:"வெங்காய தோசை",          price:40, img:"onion_dosa",        veg:true, desc:"Dosa with onion topping"},
+    {id:20,en:"Masala Dosa",         ta:"மசாலா தோசை",            price:60, img:"masala_dosa",       veg:true, desc:"Crispy dosa with potato masala"},
+    {id:21,en:"Podi Dosa",           ta:"பொடி தோசை",             price:60, img:"podi_dosa",         veg:true, desc:"Dosa with gun powder chutney"},
+    {id:22,en:"Ghee Dosa",           ta:"கீ தோசை",               price:70, img:"ghee_dosa",         veg:true, desc:"Crispy dosa with pure ghee"},
   ]},
   drinks:{items:[
-    {id:23, en:"Tea",                    ta:"தேநீர்",                        desc:"Hot fresh tea",                           price:15,  icon:"🍵", veg:true,  imgKey:"tea"},
-    {id:24, en:"Coffee",                 ta:"காபி",                          desc:"South Indian filter coffee",              price:20,  icon:"☕", veg:true,  imgKey:"coffee"},
-    {id:25, en:"Boost",                  ta:"பூஸ்ட்",                        desc:"Boost energy drink",                      price:30,  icon:"🥛", veg:true,  imgKey:"boost"},
-    {id:26, en:"Horlicks",               ta:"ஹார்லிக்ஸ்",                    desc:"Horlicks health drink",                   price:30,  icon:"🥛", veg:true,  imgKey:"horlicks"},
-    {id:27, en:"Lime Juice",             ta:"எலுமிச்சை ஜூஸ்",               desc:"Fresh lime juice",                        price:30,  icon:"🍋", veg:true,  imgKey:"lime_juice"},
-    {id:28, en:"Lemon Soda",             ta:"லெமன் சோடா",                    desc:"Refreshing lemon soda",                   price:30,  icon:"🥤", veg:true,  imgKey:"lemon_soda"},
-    {id:29, en:"Masala Lime",            ta:"மசாலா லைம்",                    desc:"Spicy masala lime drink",                 price:35,  icon:"🍋", veg:true,  imgKey:"masala_lime"},
-    {id:30, en:"Watermelon Juice",       ta:"தர்பூசணி ஜூஸ்",                desc:"Chilled fresh watermelon juice",          price:40,  icon:"🍉", veg:true,  imgKey:"watermelon_juice"},
-    {id:31, en:"Pineapple Juice",        ta:"அன்னாசி ஜூஸ்",                 desc:"Sweet fresh pineapple juice",             price:40,  icon:"🍍", veg:true,  imgKey:"pineapple_juice"},
-    {id:32, en:"Orange Juice",           ta:"ஆரஞ்சு ஜூஸ்",                  desc:"Fresh orange juice",                      price:40,  icon:"🍊", veg:true,  imgKey:"orange_juice"},
-    {id:33, en:"Mosambi Juice",          ta:"மோசம்பி ஜூஸ்",                 desc:"Sweet mosambi juice",                     price:40,  icon:"🍊", veg:true,  imgKey:"mosambi_juice"},
-    {id:34, en:"Mango Juice",            ta:"மாம்பழ ஜூஸ்",                  desc:"Rich mango juice",                        price:40,  icon:"🥭", veg:true,  imgKey:"mango_juice"},
-    {id:35, en:"Coke",                   ta:"கோக்",                          desc:"Chilled Coca-Cola",                       price:40,  icon:"🥤", veg:true,  imgKey:"coke"},
-    {id:36, en:"Sprite",                 ta:"ஸ்பிரைட்",                      desc:"Fresh lemon-lime soda",                   price:40,  icon:"🥤", veg:true,  imgKey:"sprite"},
-    {id:37, en:"Water Bottle (500ml)",   ta:"தண்ணீர் (500ml)",               desc:"Packaged drinking water 500ml",           price:15,  icon:"💧", veg:true,  imgKey:"water_bottle"},
-    {id:38, en:"Water Bottle (1L)",      ta:"தண்ணீர் (1 லிட்டர்)",           desc:"Packaged drinking water 1 Litre",         price:20,  icon:"💧", veg:true,  imgKey:"water_bottle"},
-    {id:39, en:"Water Bottle (2L)",      ta:"தண்ணீர் (2 லிட்டர்)",           desc:"Packaged drinking water 2 Litres",        price:35,  icon:"💧", veg:true,  imgKey:"water_bottle"},
+    {id:23,en:"Tea",             ta:"தேநீர்",           price:15, img:"tea",              veg:true,desc:"Hot fresh tea"},
+    {id:24,en:"Coffee",          ta:"காபி",             price:20, img:"coffee",           veg:true,desc:"Filter coffee"},
+    {id:25,en:"Boost",           ta:"பூஸ்ட்",           price:30, img:"boost",            veg:true,desc:"Boost energy drink"},
+    {id:26,en:"Horlicks",        ta:"ஹார்லிக்ஸ்",      price:30, img:"horlicks",         veg:true,desc:"Horlicks health drink"},
+    {id:27,en:"Lemon Soda",      ta:"லெமன் சோடா",      price:30, img:"lemon_soda",       veg:true,desc:"Fresh lemon soda"},
+    {id:28,en:"Lime Juice",      ta:"எலுமிச்சை ஜூஸ்",  price:30, img:"lime_juice",       veg:true,desc:"Fresh lime juice"},
+    {id:29,en:"Sprite",          ta:"ஸ்பிரைட்",        price:30, img:"sprite",           veg:true,desc:"Chilled Sprite"},
+    {id:30,en:"Coke",            ta:"கோக்",             price:30, img:"coke",             veg:true,desc:"Chilled Coca-Cola"},
+    {id:31,en:"Mango Juice",     ta:"மாம்பழ ஜூஸ்",    price:50, img:"mango_juice",      veg:true,desc:"Fresh mango juice"},
+    {id:32,en:"Watermelon Juice",ta:"தர்பூசணி ஜூஸ்",  price:50, img:"watermelon_juice", veg:true,desc:"Fresh watermelon juice"},
+    {id:33,en:"Orange Juice",    ta:"ஆரஞ்சு ஜூஸ்",    price:50, img:"orange_juice",     veg:true,desc:"Fresh orange juice"},
+    {id:34,en:"Water Bottle",    ta:"தண்ணீர் பாட்டில்",price:20, img:"water_bottle",     veg:true,desc:"500ml water bottle"},
   ]},
   snacks:{items:[
-    {id:40, en:"Pani Puri",              ta:"பானி பூரி",                     desc:"Crispy puri with spiced water",           price:50,  icon:"🫙", veg:true,  imgKey:"pani_puri"},
-    {id:41, en:"Bread Omelette",         ta:"பிரட் ஆம்லெட்",                 desc:"Egg omelette with bread",                 price:60,  icon:"🥪", veg:false, imgKey:"bread_omelette"},
-    {id:42, en:"Cheese Bread Omelette",  ta:"சீஸ் பிரட் ஆம்லெட்",           desc:"Cheesy omelette with bread",              price:80,  icon:"🧀", veg:false, imgKey:"cheese_bread_omelette"},
-    {id:43, en:"Chicken Bread Omelette", ta:"சிக்கன் பிரட் ஆம்லெட்",        desc:"Chicken omelette with bread",             price:100, icon:"🥪", veg:false, imgKey:"chicken_bread_omelette"},
+    {id:35,en:"Pani Puri",              ta:"பானி பூரி",              price:50, img:"pani_puri",             veg:true, desc:"Crispy puri with spiced water"},
+    {id:36,en:"Bread Omelette",         ta:"பிரட் ஆம்லெட்",         price:60, img:"bread_omelette",        veg:false,desc:"Egg omelette with bread"},
+    {id:37,en:"Cheese Bread Omelette",  ta:"சீஸ் பிரட் ஆம்லெட்",   price:80, img:"cheese_bread_omelette", veg:false,desc:"Cheese omelette with bread"},
+    {id:38,en:"Chicken Bread Omelette", ta:"சிக்கன் பிரட் ஆம்லெட்",price:100,img:"chicken_bread_omelette",veg:false,desc:"Chicken omelette with bread"},
   ]}
 };
 
@@ -455,82 +640,106 @@ allItems().forEach(i=>{stock[i.id]=true;});
 function buildStockGrid(){
   const g=document.getElementById('stockGrid');g.innerHTML='';
   allItems().forEach(item=>{
-    const d=document.createElement('div');d.className='stock-item';
-    d.innerHTML='<span class="stock-name">'+item.en+'</span><label class="stock-toggle"><input type="checkbox" '+(stock[item.id]?'checked':'')+" onchange='toggleStock("+item.id+",this)'><span class='toggle-slider'></span></label><span class='stock-label "+(stock[item.id]?'avail':'out')+"' id='slbl-"+item.id+"'>"+(stock[item.id]?'✓ In Stock':'✕ Out')+'</span>';
+    const d=document.createElement('div');d.className='si';
+    d.innerHTML=`<span class="si-n">${item.en}</span>
+      <label class="tog"><input type="checkbox" ${stock[item.id]?'checked':''} onchange="toggleStock(${item.id},this)"><span class="tsl"></span></label>
+      <span class="slbl ${stock[item.id]?'in':'out'}" id="sl-${item.id}">${stock[item.id]?'✅ In':'❌ Out'}</span>`;
     g.appendChild(d);
   });
 }
+
 function toggleStock(id,el){
   stock[id]=el.checked;
-  const l=document.getElementById('slbl-'+id);
-  if(l){l.textContent=stock[id]?'✓ In Stock':'✕ Out';l.className='stock-label '+(stock[id]?'avail':'out');}
+  const l=document.getElementById('sl-'+id);
+  if(l){l.textContent=stock[id]?'✅ In':'❌ Out';l.className='slbl '+(stock[id]?'in':'out');}
   renderMenu();
 }
-let adminVisible=false;
-function toggleAdmin(){
-  adminVisible=!adminVisible;
-  document.getElementById('adminPanel').classList.toggle('show',adminVisible);
-  if(adminVisible)buildStockGrid();
-}
+
 function filterMenu(cat,el){
   currentCat=cat;
-  document.querySelectorAll('.mtab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');renderMenu();
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  renderMenu();
 }
+
 function renderMenu(){
-  const grid=document.getElementById('menuGrid');grid.innerHTML='';
+  const g=document.getElementById('menuGrid');g.innerHTML='';
   menuData[currentCat].items.forEach(item=>{
     const qty=cart[item.id]||0,inStock=stock[item.id];
-    const src=IMGS[item.imgKey]||'';
-    const imgHtml=src
-      ?'<img src="'+src+'" alt="'+item.en+'" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .35s;">'
-      :'<div class="emoji-fb">'+item.icon+'</div>';
-    const d=document.createElement('div');d.className='mcard'+(inStock?'':' out-of-stock');
-    d.innerHTML=
-      '<div class="oos-overlay"><div class="oos-icon">🚫</div><div class="oos-title">Not Available</div><div class="oos-sub">இப்போது கிடைக்கவில்லை</div><div class="oos-note">Check back soon</div></div>'+
-      '<div class="mcard-img" style="position:relative;height:160px;overflow:hidden;background:var(--cream2);">'+imgHtml+
-      '<div class="veg-badge '+(item.veg?'v':'nv')+'" style="position:absolute;top:9px;left:9px;"><span class="vdot '+(item.veg?'v':'nv')+'"></span>'+(item.veg?'Veg':'Non-Veg')+'</div></div>'+
-      '<div class="mcard-body"><h3>'+item.en+'</h3><div class="mtamil">'+item.ta+'</div><p class="desc">'+item.desc+'</p></div>'+
-      '<div class="mcard-bottom"><div class="mprice">₹'+item.price+'</div>'+
-      (!inStock
-        ?'<button class="madd" disabled>✕</button>'
-        :qty===0
-          ?'<button class="madd" onclick="addItem('+item.id+')">+</button>'
-          :'<div class="min-cart"><button onclick="removeItem('+item.id+')">−</button><span>'+qty+'</span><button onclick="addItem('+item.id+')">+</button></div>'
-      )+'</div>';
-    grid.appendChild(d);
+    const imgSrc=(typeof DISH_IMAGES!=='undefined'&&DISH_IMAGES[item.img])?DISH_IMAGES[item.img]:'';
+    const d=document.createElement('div');d.className='mcard'+(inStock?'':' oos');
+    d.innerHTML=`
+      <div class="oos-tag">OUT OF STOCK</div>
+      <div class="mimg">
+        <img src="${imgSrc}" alt="${item.en}" loading="lazy" onerror="this.style.opacity=0">
+        <div class="vd ${item.veg?'v':'nv'}"></div>
+      </div>
+      <div class="mbody">
+        <h3>${item.en}</h3>
+        <div class="mta">${item.ta}</div>
+        <p class="md">${item.desc}</p>
+      </div>
+      <div class="mfoot">
+        <div class="mpr">₹${item.price}</div>
+        ${!inStock?'<span style="font-size:.68rem;color:#ccc">Not available</span>'
+          :qty===0?`<button class="madd" onclick="addItem(${item.id})">+</button>`
+          :`<div class="qc"><button onclick="removeItem(${item.id})">−</button><span>${qty}</span><button onclick="addItem(${item.id})">+</button></div>`}
+      </div>`;
+    g.appendChild(d);
   });
 }
+
 function addItem(id){if(!stock[id])return;cart[id]=(cart[id]||0)+1;refresh();}
 function removeItem(id){if(cart[id])cart[id]--;if(cart[id]<=0)delete cart[id];refresh();}
+
 function refresh(){
   renderMenu();
-  document.getElementById('cartCount').textContent=Object.values(cart).reduce((a,b)=>a+b,0);
-  const ids=Object.keys(cart),el=document.getElementById('cdItems'),foot=document.getElementById('cdFoot');
-  if(!ids.length){el.innerHTML='<div class="cd-empty"><span class="e-ico">🍽️</span>Cart is empty.<br>Add items to get started!</div>';foot.style.display='none';return;}
+  const count=Object.values(cart).reduce((a,b)=>a+b,0);
+  document.getElementById('cartCount').textContent=count;
+  const ids=Object.keys(cart),el=document.getElementById('diItems'),foot=document.getElementById('diFooter');
+  if(!ids.length){el.innerHTML='<div class="de">Cart is empty.<br>சாப்பாடு சேர்க்கவும்! 🍽️</div>';foot.style.display='none';return;}
   el.innerHTML='';let total=0;
   ids.forEach(id=>{
     const item=allItems().find(i=>i.id==id);if(!item)return;
     const qty=cart[id];total+=item.price*qty;
-    const row=document.createElement('div');row.className='cd-row';
-    row.innerHTML='<div class="icon">'+item.icon+'</div><div class="cd-info"><h4>'+item.en+'</h4><div class="cd-qty"><button onclick="removeItem('+id+')">−</button><span>'+qty+'</span><button onclick="addItem('+id+')">+</button></div></div><div class="cd-price">₹'+(item.price*qty)+'</div>';
+    const imgSrc=(typeof DISH_IMAGES!=='undefined'&&DISH_IMAGES[item.img])?DISH_IMAGES[item.img]:'';
+    const row=document.createElement('div');row.className='dr';
+    row.innerHTML=`<img src="${imgSrc}" alt="${item.en}">
+      <div class="dri"><h4>${item.en}</h4>
+        <div class="drq"><button onclick="removeItem(${id})">−</button><span>${qty}</span><button onclick="addItem(${id})">+</button></div>
+      </div><div class="drp">₹${item.price*qty}</div>`;
     el.appendChild(row);
   });
-  document.getElementById('cdTotal').textContent='₹'+total;foot.style.display='block';
+  document.getElementById('diTotal').textContent='₹'+total;
+  foot.style.display='block';
 }
-function toggleCart(){document.getElementById('cartDrawer').classList.toggle('open');document.getElementById('overlay').classList.toggle('open');}
-function sendOrder(){
-  const ids=Object.keys(cart);if(!ids.length){alert('Please add items first!');return;}
-  const name=document.getElementById('custName').value.trim(),phone=document.getElementById('custPhone').value.trim(),addr=document.getElementById('custAddress').value.trim(),pay=document.getElementById('payMethod').value;
-  if(!name||!phone||!addr){alert('Please fill in name, phone and address.');return;}
-  let msg='🍽️ *New Order - Kalakkal Kitchen Hotel*\\n📍 Kozhipuliyur X Road\\n\\n👤 *Name:* '+name+'\\n📞 *Phone:* '+phone+'\\n📍 *Address:* '+addr+'\\n💳 *Payment:* '+pay+'\\n\\n*Order:*\\n';
+
+function toggleCart(){
+  document.getElementById('cartDrawer').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+
+document.getElementById('checkoutForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const ids=Object.keys(cart);if(!ids.length)return;
+  const name=document.getElementById('custName').value;
+  const phone=document.getElementById('custPhone').value;
+  const addr=document.getElementById('custAddress').value;
+  const pay=document.getElementById('payMethod').value;
+  let msg=`🍽️ *New Order — கலக்கல் கிச்சன் ஹோட்டல்*\n📍 Kozhipuliyur X Road, Near Suraj School\n\n`;
+  msg+=`👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📍 *Address:* ${addr}\n💳 *Payment:* ${pay}\n\n*Order Details:*\n`;
   let total=0;
-  ids.forEach(id=>{const item=allItems().find(i=>i.id==id);if(!item)return;const qty=cart[id];total+=item.price*qty;msg+=item.icon+' '+item.en+' x'+qty+' = ₹'+(item.price*qty)+'\\n';});
-  msg+='\\n💰 *Total: ₹'+total+'*';
-  if(pay==='GPay')msg+='\\n📲 *GPay to: +91 63790 42970*';
-  msg+='\\n\\nPlease confirm. Thank you! 🙏';
-  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
-}
+  ids.forEach(id=>{
+    const item=allItems().find(i=>i.id==id);if(!item)return;
+    const qty=cart[id];total+=item.price*qty;
+    msg+=`• ${item.en} x${qty} = ₹${item.price*qty}\n`;
+  });
+  msg+=`\n💰 *Total: ₹${total}*`;
+  if(pay.includes('GPay'))msg+=`\n📲 Please send GPay to +91 63790 42970`;
+  msg+=`\n\nPlease confirm my order. நன்றி! 🙏`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
+});
+
 renderMenu();
 </script>
 </body>
