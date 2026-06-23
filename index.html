@@ -115,6 +115,64 @@ nav{background:var(--white);border-bottom:3px solid var(--or);position:sticky;to
 .paystrip{background:var(--green);color:#fff;padding:10px 5%;text-align:center;font-size:.78rem;}
 .paystrip strong{color:#A5D6A7;}
 
+/* ── ORDERS BOARD (Admin) ── */
+.orders-section{margin-top:16px;padding-top:14px;border-top:2px solid var(--gold);}
+.orders-section h3{font-size:.84rem;font-weight:700;color:var(--brown);margin-bottom:10px;}
+.orders-empty{font-size:.78rem;color:var(--muted);font-style:italic;padding:10px;}
+.order-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:8px;}
+.order-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:6px;}
+.order-id{font-family:'Playfair Display',serif;font-weight:700;font-size:.85rem;color:var(--or);}
+.order-time{font-size:.66rem;color:#aaa;}
+.order-cust{font-size:.76rem;color:var(--text);margin-bottom:4px;}
+.order-cust strong{color:var(--or);}
+.order-items-mini{font-size:.7rem;color:var(--muted);margin-bottom:8px;line-height:1.6;}
+.order-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.order-status-select{padding:6px 10px;border:1.5px solid var(--border);border-radius:5px;font-size:.72rem;font-family:'Poppins',sans-serif;background:var(--cream);}
+.order-boy-select{padding:6px 10px;border:1.5px solid var(--border);border-radius:5px;font-size:.72rem;font-family:'Poppins',sans-serif;background:var(--cream);}
+.status-badge{font-size:.66rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.3px;}
+.status-badge.new{background:#FFF3E0;color:#E65100;}
+.status-badge.assigned{background:#E3F2FD;color:#1565C0;}
+.status-badge.pickedup{background:#FFF9E6;color:#B8860B;}
+.status-badge.delivered{background:#E8F5E9;color:#2D6A2D;}
+
+/* ── DISTANCE SELECTOR ── */
+.dist-box{background:var(--orl);border:1.5px solid var(--orm);border-radius:8px;padding:12px;margin-bottom:12px;}
+.dist-box label{display:block;font-size:.7rem;font-weight:700;color:var(--or);letter-spacing:.5px;text-transform:uppercase;margin-bottom:7px;}
+.dist-select{width:100%;padding:10px 11px;border:1.5px solid var(--orm);border-radius:6px;font-family:'Poppins',sans-serif;font-size:.82rem;background:#fff;color:var(--text);font-weight:600;}
+.dist-select:focus{outline:none;border-color:var(--or);}
+.dist-note{font-size:.68rem;color:var(--muted);margin-top:6px;line-height:1.5;}
+
+/* ── BILL BREAKDOWN ── */
+.bill-box{background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:12px;}
+.bill-row{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);padding:4px 0;}
+.bill-row.total{border-top:1.5px dashed var(--border);margin-top:6px;padding-top:8px;font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--or);}
+.min-warn{background:#FFEBEE;border:1.5px solid #EF9A9A;border-radius:6px;padding:9px 11px;font-size:.72rem;color:var(--red);margin-bottom:12px;font-weight:600;display:none;}
+.min-warn.show{display:block;}
+.wabtn:disabled{background:#ccc;cursor:not-allowed;}
+
+/* ── CONFIRMATION SCREEN ── */
+.confirm-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:600;align-items:center;justify-content:center;padding:20px;}
+.confirm-bg.show{display:flex;}
+.confirm-box{background:#fff;width:420px;max-width:100%;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);max-height:90vh;display:flex;flex-direction:column;}
+.confirm-head{background:var(--green);color:#fff;padding:24px 22px;text-align:center;}
+.confirm-head .cico{font-size:2.4rem;margin-bottom:6px;}
+.confirm-head h3{font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:4px;}
+.confirm-head p{font-size:.78rem;color:#C8E6C9;}
+.confirm-body{padding:18px 22px;overflow-y:auto;flex:1;}
+.confirm-body h4{font-size:.74rem;font-weight:700;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:9px;}
+.confirm-item{display:flex;justify-content:space-between;font-size:.82rem;color:var(--text);padding:5px 0;}
+.confirm-divider{border-top:1px solid var(--border);margin:10px 0;}
+.confirm-bill-row{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);padding:4px 0;}
+.confirm-bill-row.total{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:var(--or);border-top:1.5px dashed var(--border);margin-top:6px;padding-top:9px;}
+.confirm-info{background:var(--cream);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:.78rem;line-height:1.8;color:var(--muted);}
+.confirm-info strong{color:var(--text);}
+.confirm-foot{padding:16px 22px;border-top:1.5px solid var(--border);display:flex;gap:10px;}
+.confirm-foot button{flex:1;padding:13px;border-radius:7px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;border:none;}
+.cf-edit{background:var(--orl);color:var(--or);border:1.5px solid var(--orm) !important;}
+.cf-edit:hover{background:var(--orm);}
+.cf-send{background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;gap:7px;}
+.cf-send:hover{background:#1da851;}
+
 /* ── DELIVERY ZONE BANNER ── */
 .delzone{background:linear-gradient(135deg,var(--green) 0%,#1f4d1f 100%);color:#fff;padding:30px 5%;text-align:center;}
 .delzone-inner{max-width:800px;margin:0 auto;}
@@ -253,12 +311,12 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
 /* ── CART DRAWER ── */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:200;opacity:0;pointer-events:none;transition:.25s;}
 .overlay.open{opacity:1;pointer-events:auto;}
-.drawer{position:fixed;top:0;right:-420px;width:390px;max-width:95vw;height:100%;background:#fff;z-index:201;box-shadow:-8px 0 28px rgba(0,0,0,.14);transition:.3s ease;display:flex;flex-direction:column;border-left:3px solid var(--or);}
+.drawer{position:fixed;top:0;right:-420px;width:390px;max-width:95vw;height:100%;background:#fff;z-index:201;box-shadow:-8px 0 28px rgba(0,0,0,.14);transition:.3s ease;display:flex;flex-direction:column;border-left:3px solid var(--or);overflow:hidden;}
 .drawer.open{right:0;}
 .dh{background:var(--or);color:#fff;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;}
 .dh h3{font-family:'Playfair Display',serif;font-size:.98rem;}
 .dh button{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;}
-.di{flex:1;overflow-y:auto;padding:12px 14px;}
+.di{flex:1;overflow-y:auto;padding:12px 14px;min-height:0;}
 .dr{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
 .dr img{width:48px;height:38px;object-fit:cover;border-radius:6px;flex-shrink:0;}
 .dri{flex:1;}
@@ -268,7 +326,7 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
 .drq span{font-weight:700;font-size:.8rem;min-width:14px;text-align:center;}
 .drp{font-family:'Playfair Display',serif;font-weight:700;color:var(--or);font-size:.86rem;}
 .de{text-align:center;padding:44px 16px;color:var(--muted);font-size:.82rem;font-style:italic;}
-.df{padding:12px 14px;border-top:2px solid var(--or);}
+.df{padding:12px 14px;border-top:2px solid var(--or);overflow-y:auto;flex-shrink:0;max-height:62vh;}
 .dt{display:flex;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--or);margin-bottom:10px;}
 .cf label{display:block;font-size:.66rem;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px;}
 .cf input,.cf textarea,.cf select{width:100%;padding:9px 11px;margin-bottom:8px;border:1.5px solid var(--border);border-radius:6px;font-family:'Poppins',sans-serif;font-size:.78rem;background:var(--cream);color:var(--text);}
@@ -322,6 +380,10 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
       </div>
     </div>
     <div class="sg" id="stockGrid"></div>
+    <div class="orders-section">
+      <h3>📋 Live Orders — Assign Delivery Boy & Update Status</h3>
+      <div id="ordersBoard"><div class="orders-empty">No orders yet. New orders placed by customers will appear here.</div></div>
+    </div>
   </div>
 </div>
 
@@ -397,8 +459,9 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
     <div class="dzicon">📦🛵</div>
     <h2>We Deliver Within 8 KM of KK Kitchen!</h2>
     <p>எங்கள் ஹோட்டலில் இருந்து 8 கி.மீ. சுற்றளவில் இருப்பவர்கள் மட்டும் ஆன்லைனில் ஆர்டர் செய்யலாம்</p>
-    <p class="dzsub">Order online below — just add your address at checkout and we'll confirm by call</p>
+    <p class="dzsub">Order online below — pick your distance at checkout, delivery fee shown automatically</p>
     <div class="dzbadge">📍 Centered at Kozhipuliyur X Road, Near Suraj School</div>
+    <div class="dzbadge" style="margin-left:8px;">💰 Min order ₹100 for delivery</div>
   </div>
 </div>
 
@@ -532,9 +595,17 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
   <div class="df" id="diFooter" style="display:none;">
     <div class="dt"><span>Total / மொத்தம்</span><span id="diTotal">₹0</span></div>
     <form class="cf" id="checkoutForm">
-      <div style="background:var(--orl);border:1px solid var(--orm);border-radius:6px;padding:8px 10px;margin-bottom:12px;font-size:.7rem;color:var(--or);line-height:1.5;">
-        📦 We deliver within <strong>8 km</strong> of KK Kitchen. Please check your distance before ordering — we'll confirm by call.
+      <div class="dist-box">
+        <label>📍 Your Distance from Hotel</label>
+        <select class="dist-select" id="distSelect" onchange="updateBill()">
+          <option value="0">0 – 2 km (Nearby)</option>
+          <option value="2">2 – 4 km</option>
+          <option value="4">4 – 6 km</option>
+          <option value="6">6 – 8 km (Max delivery range)</option>
+        </select>
+        <div class="dist-note">📦 We deliver within <strong>8 km</strong> of KK Kitchen only. Delivery fee depends on distance.</div>
       </div>
+
       <label>Your Name / பெயர்</label>
       <input type="text" id="custName" placeholder="உங்கள் பெயர்..." required>
       <label>Phone / தொலைபேசி</label>
@@ -546,8 +617,45 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
         <option value="Cash on Delivery">💵 Cash on Delivery</option>
         <option value="GPay +91 63790 42970">📲 GPay (+91 63790 42970)</option>
       </select>
-      <button type="submit" class="wabtn">📲 Send Order via WhatsApp</button>
+
+      <div class="bill-box">
+        <div class="bill-row"><span>Item Total</span><span id="billItems">₹0</span></div>
+        <div class="bill-row"><span>Delivery Fee</span><span id="billDelivery">₹0</span></div>
+        <div class="bill-row total"><span>Grand Total</span><span id="billGrand">₹0</span></div>
+      </div>
+      <div class="min-warn" id="minWarn">⚠️ Minimum order for delivery is ₹100. Please add more items.</div>
+
+      <button type="submit" class="wabtn" id="placeOrderBtn">✅ Place Order</button>
     </form>
+  </div>
+</div>
+
+<!-- ORDER CONFIRMATION SCREEN -->
+<div class="confirm-bg" id="confirmBg">
+  <div class="confirm-box">
+    <div class="confirm-head">
+      <div class="cico">✅</div>
+      <h3>Confirm Your Order</h3>
+      <p>உங்கள் ஆர்டரை உறுதிப்படுத்தவும்</p>
+    </div>
+    <div class="confirm-body">
+      <h4>Order Items</h4>
+      <div id="confirmItems"></div>
+      <div class="confirm-divider"></div>
+      <div class="confirm-bill-row"><span>Item Total</span><span id="cfItemTotal">₹0</span></div>
+      <div class="confirm-bill-row"><span>Delivery Fee (<span id="cfDistLabel">0–2km</span>)</span><span id="cfDeliveryFee">₹0</span></div>
+      <div class="confirm-bill-row total"><span>Grand Total</span><span id="cfGrandTotal">₹0</span></div>
+      <div class="confirm-info">
+        👤 <strong id="cfName"></strong><br>
+        📞 <span id="cfPhone"></span><br>
+        📍 <span id="cfAddress"></span><br>
+        💳 <span id="cfPayment"></span>
+      </div>
+    </div>
+    <div class="confirm-foot">
+      <button class="cf-edit" onclick="closeConfirm()">← Edit Order</button>
+      <button class="cf-send" onclick="sendToWhatsApp()">📲 Send to WhatsApp</button>
+    </div>
   </div>
 </div>
 
@@ -616,6 +724,7 @@ function doLogin(){
     loggedIn=true; closeAdmin();
     document.getElementById('adminBar').classList.add('show');
     buildStockGrid();
+    renderOrdersBoard();
   } else {
     document.getElementById('loginErr').style.display='block';
   }
@@ -676,7 +785,7 @@ const menuData = {
     {id:38, en:"Samosa (2 pcs)",         ta:"சமோசா (2 பீஸ்)",          price:30,  img:"samosa",                veg:true,  desc:"Crispy fried samosa with chutney"},
     {id:39, en:"Puffs (Veg)",            ta:"வெஜ் பஃப்ஸ்",             price:25,  img:"puffs",                 veg:true,  desc:"Flaky pastry puff with veg filling"},
     {id:40, en:"Egg Puffs",              ta:"முட்டை பஃப்ஸ்",           price:30,  img:"veg_egg",               veg:false, desc:"Flaky pastry puff with egg filling"},
-    {id:41, en:"Paneer Snack",           ta:"பனீர் ஸ்நாக்",            price:50,  img:"paneer",                veg:true,  desc:"Crispy paneer bites with sauce"},
+    {id:41, en:"Paneer Snack",           ta:"பனீர் ஸ்நாக்",            price:80,  img:"paneer",                veg:true,  desc:"Crispy paneer bites with sauce"},
   ]}
 };
 
@@ -747,6 +856,48 @@ function renderMenu(){
 function addItem(id){ if(!stock[id])return; cart[id]=(cart[id]||0)+1; refresh(); }
 function removeItem(id){ if(cart[id])cart[id]--; if(cart[id]<=0)delete cart[id]; refresh(); }
 
+// ══════════ DELIVERY FEE CONFIG ══════════
+const DELIVERY_FEES = { "0": 0, "2": 15, "4": 25, "6": 35 };
+const MIN_ORDER = 100;
+const DIST_LABELS = { "0": "0–2 km", "2": "2–4 km", "4": "4–6 km", "6": "6–8 km" };
+// ════════════════════════════════════════
+
+function getItemTotal(){
+  let total=0;
+  Object.keys(cart).forEach(id=>{
+    const item=allItems().find(i=>i.id==id); if(!item)return;
+    total += item.price * cart[id];
+  });
+  return total;
+}
+
+function updateBill(){
+  const itemTotal = getItemTotal();
+  const dist = document.getElementById('distSelect') ? document.getElementById('distSelect').value : "0";
+  const deliveryFee = itemTotal > 0 ? DELIVERY_FEES[dist] : 0;
+  const grand = itemTotal + deliveryFee;
+
+  const billItems = document.getElementById('billItems');
+  const billDelivery = document.getElementById('billDelivery');
+  const billGrand = document.getElementById('billGrand');
+  const minWarn = document.getElementById('minWarn');
+  const placeBtn = document.getElementById('placeOrderBtn');
+
+  if(billItems){
+    billItems.textContent = '₹'+itemTotal;
+    billDelivery.textContent = deliveryFee===0 ? 'Free' : '₹'+deliveryFee;
+    billGrand.textContent = '₹'+grand;
+
+    if(itemTotal > 0 && itemTotal < MIN_ORDER){
+      minWarn.classList.add('show');
+      placeBtn.disabled = true;
+    } else {
+      minWarn.classList.remove('show');
+      placeBtn.disabled = false;
+    }
+  }
+}
+
 function refresh(){
   renderMenu();
   const count=Object.values(cart).reduce((a,b)=>a+b,0);
@@ -754,10 +905,10 @@ function refresh(){
   const ids=Object.keys(cart);
   const el=document.getElementById('diItems'), foot=document.getElementById('diFooter');
   if(!ids.length){ el.innerHTML='<div class="de">Cart is empty.<br>சாப்பாடு சேர்க்கவும்! 🍽️</div>'; foot.style.display='none'; return; }
-  el.innerHTML=''; let total=0;
+  el.innerHTML='';
   ids.forEach(id=>{
     const item=allItems().find(i=>i.id==id); if(!item)return;
-    const qty=cart[id]; total+=item.price*qty;
+    const qty=cart[id];
     const imgSrc=(typeof DISH_IMAGES!=='undefined'&&DISH_IMAGES[item.img])?DISH_IMAGES[item.img]:'';
     const row=document.createElement('div'); row.className='dr';
     row.innerHTML=`<img src="${imgSrc}" alt="${item.en}" onerror="this.style.display='none'">
@@ -766,8 +917,8 @@ function refresh(){
       </div><div class="drp">₹${item.price*qty}</div>`;
     el.appendChild(row);
   });
-  document.getElementById('diTotal').textContent='₹'+total;
   foot.style.display='block';
+  updateBill();
 }
 
 function toggleCart(){
@@ -775,26 +926,124 @@ function toggleCart(){
   document.getElementById('overlay').classList.toggle('open');
 }
 
+// ══════════ ORDER TRACKING SYSTEM ══════════
+let orders = [];
+let orderCounter = 1;
+const DELIVERY_BOYS = ["Not Assigned", "Boy 1 - Murugan", "Boy 2 - Selvam", "Boy 3 - Karthik"];
+let pendingOrder = null;
+
 document.getElementById('checkoutForm').addEventListener('submit',function(e){
   e.preventDefault();
   const ids=Object.keys(cart); if(!ids.length)return;
+  const itemTotal = getItemTotal();
+  if(itemTotal < MIN_ORDER){ return; }
+
   const name=document.getElementById('custName').value;
   const phone=document.getElementById('custPhone').value;
   const addr=document.getElementById('custAddress').value;
   const pay=document.getElementById('payMethod').value;
-  let msg=`🍽️ *New Order — கலக்கல் கிச்சன் ஹோட்டல்*\n📍 Kozhipuliyur X Road, Near Suraj School\n\n`;
-  msg+=`👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📍 *Address:* ${addr}\n💳 *Payment:* ${pay}\n\n*Order:*\n`;
-  let total=0;
-  ids.forEach(id=>{
-    const item=allItems().find(i=>i.id==id); if(!item)return;
-    const qty=cart[id]; total+=item.price*qty;
-    msg+=`• ${item.en} x${qty} = ₹${item.price*qty}\n`;
+  const dist=document.getElementById('distSelect').value;
+  const deliveryFee=DELIVERY_FEES[dist];
+  const grand=itemTotal+deliveryFee;
+
+  // Build order object
+  const items = ids.map(id=>{
+    const item=allItems().find(i=>i.id==id);
+    return {name:item.en, qty:cart[id], price:item.price};
   });
-  msg+=`\n💰 *Total: ₹${total}*`;
-  if(pay.includes('GPay')) msg+=`\n📲 Please send GPay to +91 63790 42970`;
-  msg+=`\n\nPlease confirm my order. நன்றி! 🙏`;
-  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
+
+  pendingOrder = {name, phone, addr, pay, dist, deliveryFee, itemTotal, grand, items};
+
+  // Populate confirmation screen
+  document.getElementById('cfName').textContent = name;
+  document.getElementById('cfPhone').textContent = phone;
+  document.getElementById('cfAddress').textContent = addr;
+  document.getElementById('cfPayment').textContent = pay;
+  document.getElementById('cfDistLabel').textContent = DIST_LABELS[dist];
+  document.getElementById('cfItemTotal').textContent = '₹'+itemTotal;
+  document.getElementById('cfDeliveryFee').textContent = deliveryFee===0?'Free':'₹'+deliveryFee;
+  document.getElementById('cfGrandTotal').textContent = '₹'+grand;
+
+  const cfItemsEl = document.getElementById('confirmItems');
+  cfItemsEl.innerHTML = items.map(it=>`<div class="confirm-item"><span>${it.name} x${it.qty}</span><span>₹${it.price*it.qty}</span></div>`).join('');
+
+  document.getElementById('confirmBg').classList.add('show');
 });
+
+function closeConfirm(){
+  document.getElementById('confirmBg').classList.remove('show');
+}
+
+function sendToWhatsApp(){
+  if(!pendingOrder) return;
+  const o = pendingOrder;
+
+  // Save order to order board
+  const orderId = 'KK'+String(orderCounter).padStart(3,'0');
+  orderCounter++;
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  orders.unshift({
+    id: orderId, time: timeStr, name:o.name, phone:o.phone, addr:o.addr,
+    pay:o.pay, dist:DIST_LABELS[o.dist], grand:o.grand, items:o.items,
+    status:'new', boy:'Not Assigned'
+  });
+  renderOrdersBoard();
+
+  // Build WhatsApp message
+  let msg=`🍽️ *New Order — கலக்கல் கிச்சன் ஹோட்டல்*\n📦 Order ID: *${orderId}*\n📍 Kozhipuliyur X Road, Near Suraj School\n\n`;
+  msg+=`👤 *Name:* ${o.name}\n📞 *Phone:* ${o.phone}\n📍 *Address:* ${o.addr}\n📏 *Distance:* ${DIST_LABELS[o.dist]}\n💳 *Payment:* ${o.pay}\n\n*Order:*\n`;
+  o.items.forEach(it=>{ msg+=`• ${it.name} x${it.qty} = ₹${it.price*it.qty}\n`; });
+  msg+=`\n💰 *Item Total: ₹${o.itemTotal}*\n🛵 *Delivery Fee: ${o.deliveryFee===0?'Free':'₹'+o.deliveryFee}*\n💵 *Grand Total: ₹${o.grand}*`;
+  if(o.pay.includes('GPay')) msg+=`\n📲 Please send GPay to +91 63790 42970`;
+  msg+=`\n\nPlease confirm my order. நன்றி! 🙏`;
+
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
+
+  // Reset
+  closeConfirm();
+  cart={}; refresh(); toggleCart();
+  document.getElementById('checkoutForm').reset();
+}
+
+function renderOrdersBoard(){
+  const board = document.getElementById('ordersBoard');
+  if(!orders.length){ board.innerHTML='<div class="orders-empty">No orders yet. New orders placed by customers will appear here.</div>'; return; }
+  board.innerHTML = orders.map(o=>`
+    <div class="order-card">
+      <div class="order-top">
+        <span class="order-id">${o.id}</span>
+        <span class="status-badge ${o.status}">${ {new:'🆕 New',assigned:'🛵 Assigned',pickedup:'📦 Picked Up',delivered:'✅ Delivered'}[o.status] }</span>
+        <span class="order-time">${o.time}</span>
+      </div>
+      <div class="order-cust">👤 <strong>${o.name}</strong> · 📞 ${o.phone} · 📏 ${o.dist}</div>
+      <div class="order-cust">📍 ${o.addr}</div>
+      <div class="order-items-mini">${o.items.map(it=>`${it.name} x${it.qty}`).join(', ')}<br>💰 Total: ₹${o.grand} (${o.pay.includes('GPay')?'GPay':'Cash'})</div>
+      <div class="order-controls">
+        <select class="order-status-select" onchange="updateOrderStatus('${o.id}',this.value)">
+          <option value="new" ${o.status==='new'?'selected':''}>🆕 New</option>
+          <option value="assigned" ${o.status==='assigned'?'selected':''}>🛵 Assigned</option>
+          <option value="pickedup" ${o.status==='pickedup'?'selected':''}>📦 Picked Up</option>
+          <option value="delivered" ${o.status==='delivered'?'selected':''}>✅ Delivered</option>
+        </select>
+        <select class="order-boy-select" onchange="updateOrderBoy('${o.id}',this.value)">
+          ${DELIVERY_BOYS.map(b=>`<option ${o.boy===b?'selected':''}>${b}</option>`).join('')}
+        </select>
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateOrderStatus(id, status){
+  const o = orders.find(x=>x.id===id);
+  if(o) o.status = status;
+  renderOrdersBoard();
+}
+function updateOrderBoy(id, boy){
+  const o = orders.find(x=>x.id===id);
+  if(o) o.boy = boy;
+  renderOrdersBoard();
+}
 
 renderMenu();
 </script>
