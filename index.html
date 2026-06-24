@@ -4,28 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>KK Kitchen Hotel | Kozhipuliyur | Order Online</title>
-<meta name="description" content="கலக்கல் கிச்சன் ஹோட்டல் - Fresh Veg & Non-Veg. Kozhipuliyur. Order online, Cash & GPay.">
+<meta name="description" content="கலக்கல் கிச்சன் ஹோட்டல் - Fresh Veg & Non-Veg. Order online. Cash & GPay.">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 :root{
-  --cream:#FDF8F2;--warm:#FAF0E4;--white:#fff;
-  --or:#C84B11;--orl:#FFF0E6;--orm:#FFCCAA;--or2:#a33a08;
+  --or:#C84B11;--or2:#a33a08;--orl:#FFF0E6;--orm:#FFCCAA;
   --gold:#B8860B;--gl:#FFF9E6;
-  --green:#2D6A2D;--gl2:#EDF7ED;
+  --green:#2E7D32;--gl2:#E8F5E9;
+  --cream:#FDF8F2;--warm:#FAF0E4;--white:#fff;
   --brown:#4A2810;--text:#1E0E04;--muted:#7A4A25;
-  --border:#EDD5B0;--sh:rgba(180,80,20,.10);--red:#8B1A1A;
+  --border:#EDD5B0;--sh:rgba(180,80,20,.10);--red:#B71C1C;
+  --blue:#1565C0;--purple:#6A1B9A;
 }
 body{font-family:'Poppins',sans-serif;background:var(--cream);color:var(--text);}
 
-/* ── ANNOUNCEMENT BAR ── */
-.ann{background:var(--brown);color:#FFE082;text-align:center;padding:8px 5%;font-size:.75rem;font-family:'Noto Serif Tamil',serif;letter-spacing:.3px;}
-.ann a{color:#FFE082;text-decoration:underline;}
+/* ━━━ ANNOUNCEMENT BAR ━━━ */
+.ann{background:var(--brown);color:#FFE082;text-align:center;padding:8px 5%;font-size:.74rem;}
+.ann a{color:#FFE082;}
 
-/* ── NAV ── */
-nav{background:var(--white);border-bottom:3px solid var(--or);position:sticky;top:0;z-index:100;box-shadow:0 2px 18px var(--sh);}
-.ni{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:66px;}
+/* ━━━ NAV ━━━ */
+nav{background:#fff;border-bottom:3px solid var(--or);position:sticky;top:0;z-index:100;box-shadow:0 2px 18px var(--sh);}
+.ni{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .lp{width:44px;height:44px;background:var(--or);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:1rem;border:2px solid var(--gold);}
 .lt strong{display:block;font-family:'Playfair Display',serif;font-size:1rem;color:var(--or);}
@@ -34,76 +35,114 @@ nav{background:var(--white);border-bottom:3px solid var(--or);position:sticky;to
 .nl a{text-decoration:none;color:var(--text);font-size:.8rem;font-weight:500;border-bottom:2px solid transparent;padding-bottom:2px;transition:.2s;}
 .nl a:hover{color:var(--or);border-bottom-color:var(--or);}
 .nr{display:flex;gap:8px;align-items:center;}
-.admin-btn{background:var(--gl);color:var(--gold);border:1.5px solid var(--gold);padding:7px 12px;border-radius:5px;font-size:.72rem;font-weight:600;cursor:pointer;transition:.2s;}
+.admin-btn{background:var(--gl);color:var(--gold);border:1.5px solid var(--gold);padding:7px 12px;border-radius:5px;font-size:.72rem;font-weight:600;cursor:pointer;}
 .admin-btn:hover{background:var(--gold);color:#fff;}
-.cart-btn{background:var(--or);color:#fff;border:none;padding:9px 16px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.8rem;cursor:pointer;display:flex;align-items:center;gap:6px;border-radius:5px;transition:.2s;}
+.cart-btn{background:var(--or);color:#fff;border:none;padding:9px 16px;font-weight:600;font-size:.8rem;cursor:pointer;display:flex;align-items:center;gap:6px;border-radius:5px;transition:.2s;}
 .cart-btn:hover{background:var(--or2);}
-.cbadge{background:var(--gold);color:#fff;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;}
+.cbadge{background:var(--gold);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.66rem;font-weight:700;}
+.track-btn{background:var(--blue);color:#fff;border:none;padding:9px 14px;font-weight:600;font-size:.78rem;cursor:pointer;border-radius:5px;display:flex;align-items:center;gap:5px;}
 
-/* ── ADMIN MODAL ── */
+/* ━━━ ADMIN MODAL ━━━ */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:500;align-items:center;justify-content:center;}
 .modal-bg.show{display:flex;}
-.modal{background:#fff;width:360px;max-width:94vw;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3);}
+.modal{background:#fff;width:370px;max-width:95vw;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3);}
 .mh{background:var(--or);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;}
 .mh h3{font-family:'Playfair Display',serif;font-size:1.05rem;}
 .mh button{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;}
-.mb{padding:24px;}
-.mb p{font-size:.78rem;color:var(--muted);margin-bottom:16px;background:var(--orl);border-radius:6px;padding:10px 12px;border-left:3px solid var(--or);}
+.mb{padding:22px;}
 .mb label{display:block;font-size:.68rem;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px;}
-.mb input{width:100%;padding:11px 13px;border:1.5px solid var(--border);border-radius:7px;font-size:.86rem;margin-bottom:13px;font-family:'Poppins',sans-serif;background:var(--cream);}
+.mb input{width:100%;padding:11px 13px;border:1.5px solid var(--border);border-radius:7px;font-size:.85rem;margin-bottom:12px;font-family:'Poppins',sans-serif;background:var(--cream);}
 .mb input:focus{outline:none;border-color:var(--or);}
-.login-btn{width:100%;background:var(--or);color:#fff;border:none;padding:13px;border-radius:7px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.88rem;cursor:pointer;}
-.login-btn:hover{background:var(--or2);}
-.login-err{color:var(--red);font-size:.76rem;margin-top:8px;display:none;text-align:center;}
+.login-btn{width:100%;background:var(--or);color:#fff;border:none;padding:13px;border-radius:7px;font-weight:700;font-size:.88rem;cursor:pointer;}
+.login-err{color:var(--red);font-size:.74rem;margin-top:7px;display:none;text-align:center;}
 
-/* ── ADMIN BAR ── */
-.admin-bar{display:none;background:var(--gl);border-bottom:2px solid var(--gold);padding:14px 5%;position:sticky;top:66px;z-index:90;}
+/* ━━━ ADMIN PANEL ━━━ */
+.admin-bar{display:none;background:var(--gl);border-bottom:2px solid var(--gold);padding:14px 5%;position:sticky;top:64px;z-index:90;}
 .admin-bar.show{display:block;}
 .ab-inner{max-width:1200px;margin:0 auto;}
 .ab-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
 .ab-top h3{font-size:.84rem;font-weight:700;color:var(--brown);}
-.ab-btns{display:flex;gap:8px;}
-.logout-btn{background:var(--red);color:#fff;border:none;padding:6px 14px;border-radius:5px;font-size:.72rem;font-weight:600;cursor:pointer;}
-.sg{display:flex;flex-wrap:wrap;gap:7px;}
+.ab-btns{display:flex;gap:8px;flex-wrap:wrap;}
+.ab-btns button{padding:6px 12px;border:none;border-radius:5px;font-size:.72rem;font-weight:600;cursor:pointer;}
+.btn-green{background:var(--green);color:#fff;}
+.btn-red{background:var(--red);color:#fff;}
+.btn-logout{background:#555;color:#fff;}
+.sg{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px;}
 .si{background:#fff;border:1.5px solid var(--border);padding:6px 11px;border-radius:7px;display:flex;align-items:center;gap:8px;font-size:.73rem;}
-.si-n{font-weight:600;color:var(--text);min-width:115px;}
+.si-n{font-weight:600;color:var(--text);min-width:110px;}
 .tog{position:relative;width:38px;height:20px;cursor:pointer;flex-shrink:0;}
 .tog input{opacity:0;width:0;height:0;}
 .tsl{position:absolute;inset:0;background:#ddd;border-radius:20px;transition:.25s;}
 .tsl:before{content:'';position:absolute;height:14px;width:14px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.25s;}
 .tog input:checked+.tsl{background:var(--green);}
 .tog input:checked+.tsl:before{transform:translateX(18px);}
-.slbl{font-size:.65rem;font-weight:700;min-width:52px;}
+.slbl{font-size:.65rem;font-weight:700;min-width:48px;}
 .slbl.in{color:var(--green);}
 .slbl.out{color:var(--red);}
 
-/* ── HERO ── */
-.hero{background:linear-gradient(135deg,#FDF8F2 0%,#FFF0E6 45%,#FFFBF0 100%);padding:72px 5% 62px;border-bottom:2px solid var(--border);}
+/* ━━━ ORDER BOARD ━━━ */
+.ob-title{font-size:.86rem;font-weight:700;color:var(--brown);margin-bottom:10px;padding-top:14px;border-top:2px dashed var(--gold);}
+.ob-tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
+.ob-tab{padding:5px 14px;border-radius:20px;font-size:.72rem;font-weight:600;border:1.5px solid var(--border);background:#fff;cursor:pointer;}
+.ob-tab.active{background:var(--or);color:#fff;border-color:var(--or);}
+.ob-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;}
+.ob-card{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:13px;position:relative;}
+.ob-card.status-new{border-left:4px solid var(--or);}
+.ob-card.status-preparing{border-left:4px solid var(--gold);}
+.ob-card.status-outfordelivery{border-left:4px solid var(--blue);}
+.ob-card.status-delivered{border-left:4px solid var(--green);}
+.ob-card.status-cancelled{border-left:4px solid #999;opacity:.6;}
+.ob-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:4px;}
+.ob-id{font-family:'Playfair Display',serif;font-weight:700;font-size:.88rem;color:var(--or);}
+.ob-time{font-size:.64rem;color:#aaa;}
+.ob-badge{font-size:.62rem;font-weight:700;padding:3px 9px;border-radius:20px;}
+.ob-badge.new{background:#FFF3E0;color:#E65100;}
+.ob-badge.preparing{background:#FFF9E6;color:var(--gold);}
+.ob-badge.outfordelivery{background:#E3F2FD;color:var(--blue);}
+.ob-badge.delivered{background:var(--gl2);color:var(--green);}
+.ob-badge.cancelled{background:#f5f5f5;color:#999;}
+.ob-cust{font-size:.75rem;color:var(--text);margin-bottom:3px;}
+.ob-addr{font-size:.7rem;color:var(--muted);margin-bottom:5px;}
+.ob-items{font-size:.7rem;color:var(--muted);margin-bottom:8px;line-height:1.6;}
+.ob-total{font-family:'Playfair Display',serif;font-weight:700;font-size:.9rem;color:var(--or);margin-bottom:8px;}
+.ob-controls{display:flex;gap:6px;flex-wrap:wrap;}
+.ob-select{padding:6px 8px;border:1.5px solid var(--border);border-radius:5px;font-size:.7rem;font-family:'Poppins',sans-serif;background:var(--cream);flex:1;}
+.ob-empty{font-size:.8rem;color:var(--muted);font-style:italic;padding:20px 0;}
+
+/* ━━━ HERO ━━━ */
+.hero{background:linear-gradient(135deg,#FDF8F2 0%,#FFF0E6 45%,#FFFBF0 100%);padding:70px 5% 60px;border-bottom:2px solid var(--border);}
 .hi{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:56px;flex-wrap:wrap;}
 .hl{flex:1.1;min-width:300px;}
 .hpill{display:inline-flex;align-items:center;gap:6px;background:var(--orl);border:1.5px solid var(--orm);color:var(--or);padding:5px 14px;border-radius:30px;font-size:.7rem;font-weight:600;letter-spacing:.5px;margin-bottom:16px;}
-.htamil{font-family:'Noto Serif Tamil',serif;font-size:1.3rem;color:var(--or);font-weight:700;margin-bottom:7px;}
+.htamil{font-family:'Noto Serif Tamil',serif;font-size:1.35rem;color:var(--or);font-weight:700;margin-bottom:7px;}
 .hl h1{font-family:'Playfair Display',serif;font-size:2.8rem;line-height:1.15;color:var(--text);margin-bottom:12px;}
 .hl h1 span{color:var(--or);font-style:italic;}
 .hdesc{font-size:.86rem;color:var(--muted);line-height:1.8;margin-bottom:22px;}
 .hbtns{display:flex;gap:12px;flex-wrap:wrap;}
-.bf{background:var(--or);color:#fff;border:2px solid var(--or);padding:13px 28px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.86rem;cursor:pointer;border-radius:6px;transition:.2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
-.bf:hover{background:var(--or2);border-color:var(--or2);}
-.bg{background:transparent;color:var(--or);border:2px solid var(--or);padding:13px 28px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.86rem;cursor:pointer;border-radius:6px;transition:.2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
-.bg:hover{background:var(--orl);}
+.bf{background:var(--or);color:#fff;border:2px solid var(--or);padding:13px 28px;font-weight:600;font-size:.86rem;cursor:pointer;border-radius:6px;transition:.2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
+.bf:hover{background:var(--or2);}
+.bg2{background:transparent;color:var(--or);border:2px solid var(--or);padding:13px 28px;font-weight:600;font-size:.86rem;cursor:pointer;border-radius:6px;transition:.2s;text-decoration:none;display:inline-flex;align-items:center;gap:7px;}
+.bg2:hover{background:var(--orl);}
 .hbadges{display:flex;gap:7px;margin-top:18px;flex-wrap:wrap;}
 .hbadge{background:#fff;border:1.5px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:30px;font-size:.7rem;font-weight:500;}
 .hr{flex:1;min-width:260px;display:flex;flex-direction:column;gap:14px;}
-.hsb{background:var(--or);padding:22px 18px;text-align:center;border:4px solid var(--gold);box-shadow:6px 6px 0 var(--gold),10px 10px 0 rgba(180,80,10,.14);}
+.hsb{background:var(--or);padding:22px 18px;text-align:center;border:4px solid var(--gold);box-shadow:6px 6px 0 var(--gold);}
 .sbn{font-family:'Noto Serif Tamil',serif;font-size:1.3rem;font-weight:700;color:#FFE082;margin-bottom:4px;}
 .sbs{font-family:'Noto Serif Tamil',serif;font-size:.66rem;color:#FFCDD2;margin-bottom:12px;}
 .sbh{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:800;color:#fff;letter-spacing:3px;text-shadow:2px 2px 0 rgba(0,0,0,.2);}
 .hstats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
 .hstat{background:#fff;padding:13px;text-align:center;}
 .hstat strong{display:block;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--or);}
-.hstat span{font-size:.66rem;color:var(--muted);margin-top:2px;display:block;}
+.hstat span{font-size:.66rem;color:var(--muted);display:block;margin-top:2px;}
 
-/* ── INFO BAND ── */
+/* ━━━ DELIVERY ZONE ━━━ */
+.delzone{background:linear-gradient(135deg,var(--green) 0%,#1b5e20 100%);color:#fff;padding:28px 5%;text-align:center;}
+.delzone h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:6px;}
+.delzone p{font-family:'Noto Serif Tamil',serif;font-size:.82rem;color:#C8E6C9;margin-bottom:12px;}
+.dz-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+.dz-badge{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);padding:6px 16px;border-radius:30px;font-size:.75rem;font-weight:600;}
+
+/* ━━━ INFO BAND ━━━ */
 .iband{background:var(--or);color:#fff;padding:14px 5%;}
 .ibi2{max-width:1200px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:10px;}
 .ibitem{display:flex;align-items:center;gap:8px;font-size:.78rem;}
@@ -111,122 +150,52 @@ nav{background:var(--white);border-bottom:3px solid var(--or);position:sticky;to
 .ibitem small{color:rgba(255,255,255,.75);font-size:.68rem;}
 .ibdiv{width:1px;height:28px;background:rgba(255,255,255,.2);}
 
-/* ── PAY STRIP ── */
+/* ━━━ PAY STRIP ━━━ */
 .paystrip{background:var(--green);color:#fff;padding:10px 5%;text-align:center;font-size:.78rem;}
 .paystrip strong{color:#A5D6A7;}
 
-/* ── ORDERS BOARD (Admin) ── */
-.orders-section{margin-top:16px;padding-top:14px;border-top:2px solid var(--gold);}
-.orders-section h3{font-size:.84rem;font-weight:700;color:var(--brown);margin-bottom:10px;}
-.orders-empty{font-size:.78rem;color:var(--muted);font-style:italic;padding:10px;}
-.order-card{background:#fff;border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:8px;}
-.order-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;flex-wrap:wrap;gap:6px;}
-.order-id{font-family:'Playfair Display',serif;font-weight:700;font-size:.85rem;color:var(--or);}
-.order-time{font-size:.66rem;color:#aaa;}
-.order-cust{font-size:.76rem;color:var(--text);margin-bottom:4px;}
-.order-cust strong{color:var(--or);}
-.order-items-mini{font-size:.7rem;color:var(--muted);margin-bottom:8px;line-height:1.6;}
-.order-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
-.order-status-select{padding:6px 10px;border:1.5px solid var(--border);border-radius:5px;font-size:.72rem;font-family:'Poppins',sans-serif;background:var(--cream);}
-.order-boy-select{padding:6px 10px;border:1.5px solid var(--border);border-radius:5px;font-size:.72rem;font-family:'Poppins',sans-serif;background:var(--cream);}
-.status-badge{font-size:.66rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.3px;}
-.status-badge.new{background:#FFF3E0;color:#E65100;}
-.status-badge.assigned{background:#E3F2FD;color:#1565C0;}
-.status-badge.pickedup{background:#FFF9E6;color:#B8860B;}
-.status-badge.delivered{background:#E8F5E9;color:#2D6A2D;}
-
-/* ── DISTANCE SELECTOR ── */
-.dist-box{background:var(--orl);border:1.5px solid var(--orm);border-radius:8px;padding:12px;margin-bottom:12px;}
-.dist-box label{display:block;font-size:.7rem;font-weight:700;color:var(--or);letter-spacing:.5px;text-transform:uppercase;margin-bottom:7px;}
-.dist-select{width:100%;padding:10px 11px;border:1.5px solid var(--orm);border-radius:6px;font-family:'Poppins',sans-serif;font-size:.82rem;background:#fff;color:var(--text);font-weight:600;}
-.dist-select:focus{outline:none;border-color:var(--or);}
-.dist-note{font-size:.68rem;color:var(--muted);margin-top:6px;line-height:1.5;}
-
-/* ── BILL BREAKDOWN ── */
-.bill-box{background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:12px;}
-.bill-row{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);padding:4px 0;}
-.bill-row.total{border-top:1.5px dashed var(--border);margin-top:6px;padding-top:8px;font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--or);}
-.min-warn{background:#FFEBEE;border:1.5px solid #EF9A9A;border-radius:6px;padding:9px 11px;font-size:.72rem;color:var(--red);margin-bottom:12px;font-weight:600;display:none;}
-.min-warn.show{display:block;}
-.wabtn:disabled{background:#ccc;cursor:not-allowed;}
-
-/* ── CONFIRMATION SCREEN ── */
-.confirm-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:600;align-items:center;justify-content:center;padding:20px;}
-.confirm-bg.show{display:flex;}
-.confirm-box{background:#fff;width:420px;max-width:100%;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);max-height:90vh;display:flex;flex-direction:column;}
-.confirm-head{background:var(--green);color:#fff;padding:24px 22px;text-align:center;}
-.confirm-head .cico{font-size:2.4rem;margin-bottom:6px;}
-.confirm-head h3{font-family:'Playfair Display',serif;font-size:1.25rem;margin-bottom:4px;}
-.confirm-head p{font-size:.78rem;color:#C8E6C9;}
-.confirm-body{padding:18px 22px;overflow-y:auto;flex:1;}
-.confirm-body h4{font-size:.74rem;font-weight:700;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:9px;}
-.confirm-item{display:flex;justify-content:space-between;font-size:.82rem;color:var(--text);padding:5px 0;}
-.confirm-divider{border-top:1px solid var(--border);margin:10px 0;}
-.confirm-bill-row{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);padding:4px 0;}
-.confirm-bill-row.total{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:var(--or);border-top:1.5px dashed var(--border);margin-top:6px;padding-top:9px;}
-.confirm-info{background:var(--cream);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:.78rem;line-height:1.8;color:var(--muted);}
-.confirm-info strong{color:var(--text);}
-.confirm-foot{padding:16px 22px;border-top:1.5px solid var(--border);display:flex;gap:10px;}
-.confirm-foot button{flex:1;padding:13px;border-radius:7px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;border:none;}
-.cf-edit{background:var(--orl);color:var(--or);border:1.5px solid var(--orm) !important;}
-.cf-edit:hover{background:var(--orm);}
-.cf-send{background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;gap:7px;}
-.cf-send:hover{background:#1da851;}
-
-/* ── DELIVERY ZONE BANNER ── */
-.delzone{background:linear-gradient(135deg,var(--green) 0%,#1f4d1f 100%);color:#fff;padding:30px 5%;text-align:center;}
-.delzone-inner{max-width:800px;margin:0 auto;}
-.delzone .dzicon{font-size:2.4rem;margin-bottom:8px;}
-.delzone h2{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:6px;}
-.delzone p{font-family:'Noto Serif Tamil',serif;font-size:.84rem;color:#C8E6C9;margin-bottom:4px;}
-.delzone .dzsub{font-family:'Poppins',sans-serif;font-size:.78rem;color:#A5D6A7;font-style:italic;}
-.delzone .dzbadge{display:inline-block;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);padding:6px 18px;border-radius:30px;margin-top:14px;font-size:.78rem;font-weight:600;}
-
-/* ── WHY CHOOSE US ── */
+/* ━━━ WHY US ━━━ */
 .why{padding:56px 5%;background:#fff;}
-.why-inner{max-width:1200px;margin:0 auto;}
-.sec-head{text-align:center;margin-bottom:40px;}
+.wi{max-width:1200px;margin:0 auto;}
+.sec-head{text-align:center;margin-bottom:38px;}
 .etag{display:inline-block;background:var(--orl);color:var(--or);border:1px solid var(--orm);padding:4px 13px;border-radius:30px;font-size:.7rem;font-weight:600;letter-spacing:.5px;margin-bottom:9px;}
 .sec-head h2{font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--text);}
 .sec-head h2 em{color:var(--or);font-style:italic;}
-.sec-head p{font-size:.82rem;color:var(--muted);margin-top:6px;font-family:'Noto Serif Tamil',serif;}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
-.why-card{background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:24px 18px;text-align:center;transition:.2s;}
-.why-card:hover{border-color:var(--or);box-shadow:0 6px 18px var(--sh);transform:translateY(-3px);}
-.why-card .wico{font-size:2.2rem;margin-bottom:12px;}
-.why-card h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--or);margin-bottom:6px;}
-.why-card p{font-size:.76rem;color:var(--muted);line-height:1.7;}
+.sec-head p{font-size:.82rem;color:var(--muted);margin-top:6px;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;}
+.wc{background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:22px 16px;text-align:center;transition:.2s;}
+.wc:hover{border-color:var(--or);box-shadow:0 6px 18px var(--sh);transform:translateY(-3px);}
+.wc .wi2{font-size:2rem;margin-bottom:10px;}
+.wc h3{font-family:'Playfair Display',serif;font-size:.96rem;color:var(--or);margin-bottom:5px;}
+.wc p{font-size:.74rem;color:var(--muted);line-height:1.7;}
 
-/* ── MENU ── */
-.msec{padding:66px 5%;background:var(--warm);}
+/* ━━━ MENU ━━━ */
+.msec{padding:60px 5%;background:var(--warm);}
 .si2{max-width:1200px;margin:0 auto;}
-.tabs{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;justify-content:center;}
-.tab{background:#fff;border:2px solid var(--border);color:var(--muted);padding:9px 18px;border-radius:30px;font-family:'Poppins',sans-serif;font-weight:600;font-size:.78rem;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:6px;}
+.tabs{display:flex;gap:10px;margin-bottom:26px;flex-wrap:wrap;justify-content:center;}
+.tab{background:#fff;border:2px solid var(--border);color:var(--muted);padding:9px 18px;border-radius:30px;font-weight:600;font-size:.78rem;cursor:pointer;transition:.2s;display:flex;align-items:center;gap:6px;}
 .tab:hover,.tab.active{background:var(--or);color:#fff;border-color:var(--or);}
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
-
-/* ── MENU CARD ── */
 .mcard{background:#fff;border-radius:12px;overflow:hidden;border:1.5px solid var(--border);transition:transform .22s,box-shadow .22s;position:relative;}
 .mcard:hover{transform:translateY(-5px);box-shadow:0 12px 30px var(--sh);}
 .mcard.oos{opacity:.5;}
-.oos-tag{display:none;position:absolute;top:9px;right:9px;background:var(--red);color:#fff;font-size:.58rem;font-weight:700;padding:3px 8px;border-radius:20px;z-index:2;letter-spacing:.5px;text-transform:uppercase;}
+.oos-tag{display:none;position:absolute;top:9px;right:9px;background:var(--red);color:#fff;font-size:.58rem;font-weight:700;padding:3px 8px;border-radius:20px;z-index:2;text-transform:uppercase;}
 .mcard.oos .oos-tag{display:block;}
-.mimg{height:144px;overflow:hidden;position:relative;background:var(--orl);}
+.best-tag{display:none;position:absolute;top:9px;left:9px;background:var(--gold);color:#fff;font-size:.58rem;font-weight:700;padding:3px 8px;border-radius:20px;z-index:2;}
+.mcard.bestseller .best-tag{display:block;}
+.mimg{height:145px;overflow:hidden;position:relative;background:var(--orl);}
 .mimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
 .mcard:hover .mimg img{transform:scale(1.07);}
-.vd{position:absolute;top:9px;left:9px;width:12px;height:12px;border-radius:3px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+.vd{position:absolute;bottom:9px;left:9px;width:13px;height:13px;border-radius:3px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2);}
 .vd.v{background:var(--green);}
 .vd.nv{background:var(--red);}
-/* BESTSELLER RIBBON */
-.best{display:none;position:absolute;top:9px;left:28px;background:var(--gold);color:#fff;font-size:.56rem;font-weight:700;padding:2px 7px;border-radius:20px;letter-spacing:.5px;}
-.mcard.bestseller .best{display:block;}
 .mb2{padding:11px 12px 0;}
 .mb2 h3{font-family:'Playfair Display',serif;font-size:.92rem;color:var(--text);margin-bottom:2px;line-height:1.3;}
 .mb2 .mta{font-family:'Noto Serif Tamil',serif;font-size:.68rem;color:var(--muted);margin-bottom:3px;}
-.mb2 .md{font-size:.69rem;color:#bbb;font-style:italic;line-height:1.5;min-height:24px;}
+.mb2 .md{font-size:.68rem;color:#bbb;font-style:italic;line-height:1.5;min-height:22px;}
 .mf{display:flex;align-items:center;justify-content:space-between;padding:8px 12px 11px;border-top:1px solid var(--border);margin-top:8px;}
-.mpr{font-family:'Playfair Display',serif;font-weight:700;font-size:1.02rem;color:var(--or);}
-.madd{background:var(--or);color:#fff;border:none;width:30px;height:30px;border-radius:50%;font-size:1.25rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.18s;}
+.mpr{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--or);}
+.madd{background:var(--or);color:#fff;border:none;width:30px;height:30px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.18s;}
 .madd:hover{background:var(--or2);transform:rotate(90deg);}
 .madd:disabled{background:#ccc;cursor:not-allowed;transform:none;}
 .qc{display:flex;align-items:center;gap:5px;}
@@ -234,34 +203,33 @@ nav{background:var(--white);border-bottom:3px solid var(--or);position:sticky;to
 .qc button:hover{background:var(--or);color:#fff;}
 .qc span{font-family:'Playfair Display',serif;font-weight:700;font-size:.86rem;min-width:14px;text-align:center;}
 
-/* ── SPECIAL OFFER BANNER ── */
-.offer-banner{background:linear-gradient(135deg,var(--or) 0%,#8B1A1A 100%);color:#fff;padding:36px 5%;text-align:center;margin:0;}
-.offer-banner h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:8px;}
-.offer-banner p{font-family:'Noto Serif Tamil',serif;font-size:.84rem;color:#FFE082;margin-bottom:18px;}
-.offer-banner .oflink{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--or);text-decoration:none;padding:12px 28px;border-radius:30px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.86rem;transition:.2s;}
-.offer-banner .oflink:hover{background:#FFE082;}
+/* ━━━ OFFER BANNER ━━━ */
+.offer{background:linear-gradient(135deg,var(--or) 0%,#8B1A1A 100%);color:#fff;padding:34px 5%;text-align:center;}
+.offer h2{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:8px;}
+.offer p{font-family:'Noto Serif Tamil',serif;font-size:.82rem;color:#FFE082;margin-bottom:16px;}
+.offer a{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--or);text-decoration:none;padding:12px 28px;border-radius:30px;font-weight:700;font-size:.86rem;}
 
-/* ── TESTIMONIALS ── */
-.testisec{padding:56px 5%;background:#fff;}
-.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:1000px;margin:0 auto;}
-.tcard{background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:22px 18px;}
-.tcard .stars{color:var(--gold);font-size:1rem;margin-bottom:8px;}
-.tcard p{font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:12px;font-style:italic;}
-.tcard .tname{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--or);}
-.tcard .tloc{font-size:.7rem;color:#bbb;}
+/* ━━━ TESTIMONIALS ━━━ */
+.testisec{padding:54px 5%;background:#fff;}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;max-width:1000px;margin:0 auto;}
+.tc{background:var(--warm);border:1.5px solid var(--border);border-radius:12px;padding:20px 16px;}
+.tc .stars{color:var(--gold);font-size:.9rem;margin-bottom:7px;}
+.tc p{font-size:.78rem;color:var(--muted);line-height:1.7;margin-bottom:10px;font-style:italic;}
+.tc .tn{font-family:'Playfair Display',serif;font-size:.86rem;font-weight:700;color:var(--or);}
+.tc .tl{font-size:.68rem;color:#bbb;}
 
-/* ── ABOUT ── */
-.asec{padding:66px 5%;background:var(--warm);}
+/* ━━━ ABOUT ━━━ */
+.asec{padding:60px 5%;background:var(--warm);}
 .ag{max-width:1200px;margin:0 auto;display:flex;gap:56px;align-items:center;flex-wrap:wrap;}
-.av{flex:1;min-width:250px;background:var(--or);padding:40px 28px;text-align:center;border-radius:12px;border:3px solid var(--gold);box-shadow:8px 8px 0 var(--gold);}
+.av{flex:1;min-width:240px;background:var(--or);padding:38px 26px;text-align:center;border-radius:12px;border:3px solid var(--gold);box-shadow:8px 8px 0 var(--gold);}
 .avy{font-family:'Playfair Display',serif;font-size:4.5rem;color:var(--gold);font-weight:800;line-height:1;}
 .ave{font-size:.7rem;letter-spacing:4px;color:rgba(255,255,255,.7);text-transform:uppercase;margin-top:4px;}
 .avd{width:44px;height:3px;background:var(--gold);margin:12px auto;}
 .avt{font-family:'Noto Serif Tamil',serif;font-size:.8rem;color:#FFE082;line-height:1.6;}
 .at{flex:1.3;min-width:280px;}
 .at .etag2{font-size:.7rem;letter-spacing:2px;font-weight:600;color:var(--gold);text-transform:uppercase;margin-bottom:8px;}
-.at h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--text);margin-bottom:12px;line-height:1.25;}
-.at p{font-size:.84rem;color:var(--muted);line-height:1.9;margin-bottom:11px;}
+.at h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--text);margin-bottom:12px;}
+.at p{font-size:.84rem;color:var(--muted);line-height:1.9;margin-bottom:10px;}
 .atbox{font-family:'Noto Serif Tamil',serif;font-size:.8rem;color:var(--muted);background:var(--orl);border-left:4px solid var(--or);padding:11px 14px;border-radius:0 8px 8px 0;line-height:1.8;margin:14px 0;}
 .ibs2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:8px;overflow:hidden;margin-top:16px;}
 .ib2{background:#fff;padding:12px;text-align:center;}
@@ -269,55 +237,54 @@ nav{background:var(--white);border-bottom:3px solid var(--or);position:sticky;to
 .ib2 strong{display:block;font-size:.82rem;font-weight:700;color:var(--or);}
 .ib2 span{font-size:.66rem;color:var(--muted);}
 
-/* ── PAYMENT ── */
-.psec{background:var(--green);padding:46px 5%;color:#fff;text-align:center;}
+/* ━━━ PAYMENT ━━━ */
+.psec{background:var(--green);padding:44px 5%;color:#fff;text-align:center;}
 .psec h2{font-family:'Playfair Display',serif;font-size:1.9rem;margin-bottom:8px;}
-.psec .sub{font-family:'Noto Serif Tamil',serif;font-size:.82rem;color:#A5D6A7;margin-bottom:24px;}
-.pcards{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;max-width:540px;margin:0 auto 18px;}
-.pc{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);border-radius:10px;padding:20px 26px;flex:1;min-width:165px;text-align:center;}
+.psec .sub{font-family:'Noto Serif Tamil',serif;font-size:.82rem;color:#A5D6A7;margin-bottom:22px;}
+.pcards{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;max-width:500px;margin:0 auto 16px;}
+.pc{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);border-radius:10px;padding:18px 24px;flex:1;min-width:160px;text-align:center;}
 .pc .pi{font-size:1.9rem;margin-bottom:7px;}
 .pc strong{display:block;font-family:'Playfair Display',serif;font-size:.92rem;margin-bottom:3px;}
 .pc span{font-size:.7rem;color:#C8E6C9;}
 .gpay-n{font-size:.76rem;color:#A5D6A7;}
 
-/* ── CALL ── */
-.csec{background:var(--brown);padding:38px 5%;text-align:center;color:#fff;}
+/* ━━━ CALL ━━━ */
+.csec{background:var(--brown);padding:36px 5%;text-align:center;color:#fff;}
 .csec h2{font-family:'Playfair Display',serif;font-size:1.7rem;margin-bottom:6px;}
 .csec p{font-family:'Noto Serif Tamil',serif;font-size:.8rem;color:#DEB887;margin-bottom:16px;}
-.clink{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brown);text-decoration:none;padding:12px 30px;border-radius:6px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.92rem;transition:.2s;}
+.clink{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brown);text-decoration:none;padding:12px 30px;border-radius:6px;font-weight:700;font-size:.9rem;}
 .clink:hover{background:var(--orl);color:var(--or);}
 
-/* ── CONTACT ── */
-.ctsec{padding:62px 5%;background:#fff;}
-.ctg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:13px;max-width:1000px;margin:0 auto;}
-.cc{background:var(--warm);border:1.5px solid var(--border);border-radius:10px;padding:20px 15px;text-align:center;transition:.2s;}
+/* ━━━ CONTACT ━━━ */
+.ctsec{padding:60px 5%;background:#fff;}
+.ctg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:13px;max-width:1000px;margin:0 auto;}
+.cc{background:var(--warm);border:1.5px solid var(--border);border-radius:10px;padding:20px 14px;text-align:center;transition:.2s;}
 .cc:hover{border-color:var(--or);box-shadow:0 4px 14px var(--sh);}
 .cc .ci{font-size:1.7rem;margin-bottom:8px;}
 .cc h3{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--or);margin-bottom:5px;}
 .cc p{font-size:.76rem;color:var(--muted);line-height:1.7;}
 .cc a{color:var(--or);text-decoration:none;font-weight:600;}
-.cc a:hover{text-decoration:underline;}
 
-/* ── FOOTER ── */
-footer{background:var(--text);color:#DEB887;padding:28px 5%;}
+/* ━━━ FOOTER ━━━ */
+footer{background:var(--text);color:#DEB887;padding:26px 5%;}
 .fi{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
-.fb strong{display:block;font-family:'Playfair Display',serif;font-size:.98rem;color:var(--gold);margin-bottom:2px;}
+.fb strong{display:block;font-family:'Playfair Display',serif;font-size:.96rem;color:var(--gold);margin-bottom:2px;}
 .fb span{font-family:'Noto Serif Tamil',serif;font-size:.7rem;}
 .fl{display:flex;gap:14px;flex-wrap:wrap;}
-.fl a{color:#DEB887;text-decoration:none;font-size:.74rem;}
+.fl a{color:#DEB887;text-decoration:none;font-size:.72rem;}
 .fl a:hover{color:var(--gold);}
 .fc{font-size:.66rem;color:#888;font-style:italic;}
 
-/* ── CART DRAWER ── */
+/* ━━━ CART DRAWER ━━━ */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:200;opacity:0;pointer-events:none;transition:.25s;}
 .overlay.open{opacity:1;pointer-events:auto;}
 .drawer{position:fixed;top:0;right:-420px;width:390px;max-width:95vw;height:100%;background:#fff;z-index:201;box-shadow:-8px 0 28px rgba(0,0,0,.14);transition:.3s ease;display:flex;flex-direction:column;border-left:3px solid var(--or);overflow:hidden;}
 .drawer.open{right:0;}
-.dh{background:var(--or);color:#fff;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;}
+.dh{background:var(--or);color:#fff;padding:15px 18px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;}
 .dh h3{font-family:'Playfair Display',serif;font-size:.98rem;}
 .dh button{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;}
 .di{flex:1;overflow-y:auto;padding:12px 14px;min-height:0;}
-.dr{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
+.dr{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);}
 .dr img{width:48px;height:38px;object-fit:cover;border-radius:6px;flex-shrink:0;}
 .dri{flex:1;}
 .dri h4{font-size:.8rem;font-weight:600;color:var(--text);margin-bottom:3px;}
@@ -326,80 +293,136 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
 .drq span{font-weight:700;font-size:.8rem;min-width:14px;text-align:center;}
 .drp{font-family:'Playfair Display',serif;font-weight:700;color:var(--or);font-size:.86rem;}
 .de{text-align:center;padding:44px 16px;color:var(--muted);font-size:.82rem;font-style:italic;}
-.df{padding:12px 14px;border-top:2px solid var(--or);overflow-y:auto;flex-shrink:0;max-height:62vh;}
-.dt{display:flex;justify-content:space-between;font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--or);margin-bottom:10px;}
-.cf label{display:block;font-size:.66rem;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px;}
-.cf input,.cf textarea,.cf select{width:100%;padding:9px 11px;margin-bottom:8px;border:1.5px solid var(--border);border-radius:6px;font-family:'Poppins',sans-serif;font-size:.78rem;background:var(--cream);color:var(--text);}
-.cf input:focus,.cf textarea:focus,.cf select:focus{outline:none;border-color:var(--or);}
-.wabtn{width:100%;background:#25D366;color:#fff;border:none;padding:12px;border-radius:7px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.86rem;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;}
-.wabtn:hover{background:#1da851;}
+.df{padding:14px;border-top:2px solid var(--or);overflow-y:auto;max-height:62vh;flex-shrink:0;}
 
-/* ── SCROLL TOP BTN ── */
-.stbtn{position:fixed;bottom:24px;right:24px;background:var(--or);color:#fff;border:none;width:42px;height:42px;border-radius:50%;font-size:1.2rem;cursor:pointer;z-index:150;box-shadow:0 4px 14px var(--sh);display:none;align-items:center;justify-content:center;transition:.2s;}
+/* CHECKOUT FORM */
+.cf label{display:block;font-size:.66rem;font-weight:600;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px;}
+.cf input,.cf textarea,.cf select{width:100%;padding:9px 11px;margin-bottom:9px;border:1.5px solid var(--border);border-radius:6px;font-family:'Poppins',sans-serif;font-size:.8rem;background:var(--cream);color:var(--text);}
+.cf input:focus,.cf textarea:focus,.cf select:focus{outline:none;border-color:var(--or);}
+.dist-info{background:var(--gl2);border:1px solid #A5D6A7;border-radius:6px;padding:9px 11px;margin-bottom:9px;font-size:.72rem;color:var(--green);font-weight:600;}
+.bill-box{background:var(--cream);border:1.5px solid var(--border);border-radius:8px;padding:11px 13px;margin-bottom:10px;}
+.bill-row{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);padding:3px 0;}
+.bill-row.total{border-top:1.5px dashed var(--border);margin-top:6px;padding-top:7px;font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--or);}
+.place-btn{width:100%;background:var(--or);color:#fff;border:none;padding:13px;border-radius:7px;font-weight:700;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s;}
+.place-btn:hover{background:var(--or2);}
+.place-btn:disabled{background:#ccc;cursor:not-allowed;}
+
+/* ━━━ CONFIRMATION SCREEN ━━━ */
+.confirm-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:600;align-items:center;justify-content:center;padding:16px;}
+.confirm-bg.show{display:flex;}
+.confirm-box{background:#fff;width:430px;max-width:100%;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);max-height:92vh;display:flex;flex-direction:column;}
+.confirm-head{background:var(--green);color:#fff;padding:22px;text-align:center;}
+.confirm-head .cico{font-size:2.2rem;margin-bottom:6px;}
+.confirm-head h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:3px;}
+.confirm-head p{font-size:.76rem;color:#C8E6C9;}
+.confirm-body{padding:18px 20px;overflow-y:auto;flex:1;}
+.confirm-body h4{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;}
+.confirm-item{display:flex;justify-content:space-between;font-size:.8rem;color:var(--text);padding:4px 0;border-bottom:1px dotted var(--border);}
+.conf-div{border-top:1px solid var(--border);margin:10px 0;}
+.conf-br{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);padding:4px 0;}
+.conf-br.total{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--or);border-top:1.5px dashed var(--border);margin-top:6px;padding-top:8px;}
+.conf-info{background:var(--cream);border-radius:8px;padding:11px 13px;margin-top:12px;font-size:.76rem;line-height:1.9;color:var(--muted);}
+.conf-info strong{color:var(--text);}
+.confirm-foot{padding:14px 20px;border-top:1.5px solid var(--border);display:flex;gap:10px;flex-shrink:0;}
+.confirm-foot button{flex:1;padding:13px;border-radius:7px;font-weight:700;font-size:.84rem;cursor:pointer;border:none;}
+.cf-edit{background:var(--orl);color:var(--or);border:1.5px solid var(--orm) !important;}
+.cf-send{background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;gap:7px;}
+.cf-send:hover{background:#1da851;}
+
+/* ━━━ ORDER TRACKING MODAL ━━━ */
+.track-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:600;align-items:center;justify-content:center;padding:16px;}
+.track-bg.show{display:flex;}
+.track-box{background:#fff;width:420px;max-width:100%;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);}
+.track-head{background:var(--blue);color:#fff;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;}
+.track-head h3{font-family:'Playfair Display',serif;font-size:1rem;}
+.track-head button{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer;}
+.track-body{padding:20px;}
+.track-search{display:flex;gap:8px;margin-bottom:16px;}
+.track-search input{flex:1;padding:10px 13px;border:1.5px solid var(--border);border-radius:6px;font-family:'Poppins',sans-serif;font-size:.84rem;background:var(--cream);}
+.track-search input:focus{outline:none;border-color:var(--blue);}
+.track-search button{background:var(--blue);color:#fff;border:none;padding:10px 18px;border-radius:6px;font-weight:700;font-size:.82rem;cursor:pointer;}
+.track-result{display:none;}
+.track-result.show{display:block;}
+.track-id{font-family:'Playfair Display',serif;font-size:.98rem;font-weight:700;color:var(--or);margin-bottom:12px;}
+.track-steps{display:flex;flex-direction:column;gap:0;}
+.tstep{display:flex;align-items:flex-start;gap:12px;padding:10px 0;position:relative;}
+.tstep:not(:last-child)::before{content:'';position:absolute;left:16px;top:36px;width:2px;height:calc(100% - 10px);background:var(--border);}
+.tstep.done::before{background:var(--green);}
+.tstep-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;border:2px solid var(--border);background:#fff;z-index:1;}
+.tstep.done .tstep-dot{background:var(--green);border-color:var(--green);color:#fff;}
+.tstep.current .tstep-dot{background:var(--or);border-color:var(--or);color:#fff;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,75,17,.4);}50%{box-shadow:0 0 0 8px rgba(200,75,17,0);}}
+.tstep-text strong{display:block;font-size:.82rem;font-weight:700;color:var(--text);}
+.tstep-text span{font-size:.7rem;color:var(--muted);}
+.track-err{display:none;text-align:center;padding:20px;color:var(--red);font-size:.82rem;}
+.track-err.show{display:block;}
+
+/* ━━━ SCROLL TOP ━━━ */
+.stbtn{position:fixed;bottom:24px;right:24px;background:var(--or);color:#fff;border:none;width:42px;height:42px;border-radius:50%;font-size:1.2rem;cursor:pointer;z-index:150;box-shadow:0 4px 14px var(--sh);display:none;align-items:center;justify-content:center;}
 .stbtn.show{display:flex;}
 .stbtn:hover{background:var(--or2);}
 
 @media(max-width:900px){.nl,.ibdiv{display:none;}.ag{flex-direction:column;}}
 @media(max-width:600px){
-  .hero{padding:40px 5%;}.hl h1{font-size:1.9rem;}.mgrid{grid-template-columns:repeat(2,1fr);gap:12px;}
-  .mimg{height:120px;}.pcards{flex-direction:column;}.fi{flex-direction:column;text-align:center;}
+  .hero{padding:40px 5%;}.hl h1{font-size:1.9rem;}
+  .mgrid{grid-template-columns:repeat(2,1fr);gap:12px;}.mimg{height:118px;}
+  .pcards{flex-direction:column;}.fi{flex-direction:column;text-align:center;}
   .why-grid{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
 <body>
 
-<!-- ANNOUNCEMENT BAR -->
-<div class="ann">🎉 Fresh food daily · 1PM–11PM · <a href="tel:+916379042970">Call +91 63790 42970</a> to order · Cash & GPay accepted</div>
-
 <!-- ADMIN LOGIN MODAL -->
 <div class="modal-bg" id="adminModal">
   <div class="modal">
-    <div class="mh"><h3>🔐 Admin Login — Stock Manager</h3><button onclick="closeAdmin()">✕</button></div>
+    <div class="mh"><h3>🔐 Admin Login</h3><button onclick="closeAdmin()">✕</button></div>
     <div class="mb">
-      <p>⚠️ This section is for hotel owner only. Please enter your credentials to manage daily stock.</p>
-      <label>Username</label>
-      <input type="text" id="aUser" placeholder="Enter username" autocomplete="off">
-      <label>Password</label>
-      <input type="password" id="aPass" placeholder="Enter password">
+      <label>Username</label><input type="text" id="aUser" placeholder="Enter username" autocomplete="off">
+      <label>Password</label><input type="password" id="aPass" placeholder="Enter password">
       <button class="login-btn" onclick="doLogin()">Login →</button>
-      <div class="login-err" id="loginErr">❌ Wrong username or password. Try again.</div>
+      <div class="login-err" id="loginErr">❌ Wrong credentials. Try again.</div>
     </div>
   </div>
 </div>
 
-<!-- ADMIN STOCK PANEL -->
+<!-- ADMIN PANEL -->
 <div class="admin-bar" id="adminBar">
   <div class="ab-inner">
     <div class="ab-top">
-      <h3>🔧 Daily Stock Manager — Toggle each item Available ✅ or Out of Stock ❌</h3>
+      <h3>🔧 Admin Panel — Stock & Order Management</h3>
       <div class="ab-btns">
-        <button onclick="setAll(true)" style="background:var(--green);color:#fff;border:none;padding:5px 11px;border-radius:5px;font-size:.7rem;font-weight:600;cursor:pointer;">✅ All Available</button>
-        <button onclick="setAll(false)" style="background:var(--red);color:#fff;border:none;padding:5px 11px;border-radius:5px;font-size:.7rem;font-weight:600;cursor:pointer;">❌ All Out</button>
-        <button class="logout-btn" onclick="doLogout()">Logout 🔒</button>
+        <button class="btn-green" onclick="setAll(true)">✅ All In Stock</button>
+        <button class="btn-red" onclick="setAll(false)">❌ All Out</button>
+        <button class="btn-logout" onclick="doLogout()">🔒 Logout</button>
       </div>
     </div>
     <div class="sg" id="stockGrid"></div>
-    <div class="orders-section">
-      <h3>📋 Live Orders — Assign Delivery Boy & Update Status</h3>
-      <div id="ordersBoard"><div class="orders-empty">No orders yet. New orders placed by customers will appear here.</div></div>
+    <!-- LIVE ORDERS BOARD -->
+    <div class="ob-title">📋 Live Orders — Assign Delivery & Update Status</div>
+    <div class="ob-tabs">
+      <button class="ob-tab active" onclick="filterOrders('all',this)">All</button>
+      <button class="ob-tab" onclick="filterOrders('new',this)">🆕 New</button>
+      <button class="ob-tab" onclick="filterOrders('preparing',this)">👨‍🍳 Preparing</button>
+      <button class="ob-tab" onclick="filterOrders('outfordelivery',this)">🛵 Out for Delivery</button>
+      <button class="ob-tab" onclick="filterOrders('delivered',this)">✅ Delivered</button>
     </div>
+    <div class="ob-grid" id="ordersBoard"><div class="ob-empty">No orders yet. Customer orders will appear here.</div></div>
   </div>
 </div>
 
 <!-- NAV -->
+<div class="ann">🎉 Fresh food daily · 1PM–11PM · <a href="tel:+916379042970">📞 +91 63790 42970</a> · Cash & GPay · Delivery within 8km</div>
 <nav>
   <div class="ni">
-    <a href="#" class="logo">
-      <div class="lp">KK</div>
-      <div class="lt"><strong>Kalakkal Kitchen</strong><em>கலக்கல் கிச்சன் ஹோட்டல்</em></div>
-    </a>
+    <a href="#" class="logo"><div class="lp">KK</div><div class="lt"><strong>Kalakkal Kitchen</strong><em>கலக்கல் கிச்சன் ஹோட்டல்</em></div></a>
     <div class="nl">
       <a href="#menu">Menu</a><a href="#why">Why Us</a><a href="#about">About</a>
       <a href="#payment">Payment</a><a href="#contact">Contact</a>
       <a href="tel:+916379042970">📞 Call</a>
     </div>
     <div class="nr">
+      <button class="track-btn" onclick="openTrack()">📦 Track Order</button>
       <button class="admin-btn" onclick="openAdmin()">🔐 Admin</button>
       <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span class="cbadge" id="cartCount">0</span></button>
     </div>
@@ -410,26 +433,22 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
 <section class="hero">
   <div class="hi">
     <div class="hl">
-      <div class="hpill">⭐ Kozhipuliyur's Favourite Family Hotel</div>
+      <div class="hpill">⭐ Kozhipuliyur's Favourite Hotel</div>
       <div class="htamil">கலக்கல் கிச்சன் ஹோட்டல்</div>
-      <h1>Fresh <span>Veg & Non-Veg</span> Food, Daily</h1>
+      <h1>Fresh <span>Veg & Non-Veg</span> Food Daily</h1>
       <p class="hdesc">உயர் தர சைவம் & அசைவம் · தினமும் புதிதாக சமைத்த சுவையான உணவு<br>📍 Vandavasi–Chetpet Road, Kozhipuliyur X Road, Near Suraj School</p>
       <div class="hbtns">
         <button class="bf" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">🍽️ Order Now</button>
-        <a href="tel:+916379042970" class="bg">📞 Call Us</a>
+        <a href="tel:+916379042970" class="bg2">📞 Call Us</a>
       </div>
       <div class="hbadges">
         <span class="hbadge">🥦 Veg</span><span class="hbadge">🍗 Non-Veg</span>
         <span class="hbadge">🕑 1PM–11PM</span><span class="hbadge">💵 Cash & GPay</span>
-        <span class="hbadge">📦 Home Delivery (8km)</span><span class="hbadge">🔥 Daily Fresh</span>
+        <span class="hbadge">📦 Delivery 8km</span><span class="hbadge">🔥 Daily Fresh</span>
       </div>
     </div>
     <div class="hr">
-      <div class="hsb">
-        <div class="sbn">கலக்கல் கிச்சன்</div>
-        <div class="sbs">உயர் தர சைவம் & அசைவம்</div>
-        <div class="sbh">HOTEL</div>
-      </div>
+      <div class="hsb"><div class="sbn">கலக்கல் கிச்சன்</div><div class="sbs">உயர் தர சைவம் & அசைவம்</div><div class="sbh">HOTEL</div></div>
       <div class="hstats">
         <div class="hstat"><strong>40+</strong><span>Menu Items</span></div>
         <div class="hstat"><strong>Daily</strong><span>Fresh Cooked</span></div>
@@ -438,6 +457,17 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
     </div>
   </div>
 </section>
+
+<!-- DELIVERY ZONE -->
+<div class="delzone">
+  <h2>📦 We Deliver Within 8 KM!</h2>
+  <p>எங்கள் ஹோட்டலில் இருந்து 8 கி.மீ. சுற்றளவில் Home Delivery கிடைக்கும்</p>
+  <div class="dz-badges">
+    <span class="dz-badge">🛵 Below 3 km → Delivery ₹30</span>
+    <span class="dz-badge">🛵 3 km to 8 km → Delivery ₹40</span>
+    <span class="dz-badge">📦 Track your order live</span>
+  </div>
+</div>
 
 <!-- INFO BAND -->
 <div class="iband">
@@ -451,35 +481,19 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
     <div class="ibitem">💳<div><strong>Cash & GPay</strong><small>Both accepted</small></div></div>
   </div>
 </div>
-<div class="paystrip">💵 <strong>Cash on Delivery</strong> &nbsp;|&nbsp; 📲 <strong>GPay · +91 63790 42970</strong> &nbsp;|&nbsp; 🚀 Fast home delivery available</div>
+<div class="paystrip">💵 <strong>Cash on Delivery</strong> &nbsp;|&nbsp; 📲 <strong>GPay · +91 63790 42970</strong> &nbsp;|&nbsp; 🛵 Delivery ₹30 (below 3km) · ₹40 (3–8km)</div>
 
-<!-- DELIVERY ZONE BANNER -->
-<div class="delzone">
-  <div class="delzone-inner">
-    <div class="dzicon">📦🛵</div>
-    <h2>We Deliver Within 8 KM of KK Kitchen!</h2>
-    <p>எங்கள் ஹோட்டலில் இருந்து 8 கி.மீ. சுற்றளவில் இருப்பவர்கள் மட்டும் ஆன்லைனில் ஆர்டர் செய்யலாம்</p>
-    <p class="dzsub">Order online below — pick your distance at checkout, delivery fee shown automatically</p>
-    <div class="dzbadge">📍 Centered at Kozhipuliyur X Road, Near Suraj School</div>
-    <div class="dzbadge" style="margin-left:8px;">💰 Min order ₹100 for delivery</div>
-  </div>
-</div>
-
-<!-- WHY CHOOSE US -->
+<!-- WHY US -->
 <section class="why" id="why">
-  <div class="why-inner">
-    <div class="sec-head">
-      <div class="etag">Why KK Kitchen?</div>
-      <h2>We Serve with <em>Heart & Quality</em></h2>
-      <p>ஏன் கலக்கல் கிச்சன்? — Our promise to every customer</p>
-    </div>
+  <div class="wi">
+    <div class="sec-head"><div class="etag">Why KK Kitchen?</div><h2>We Serve with <em>Heart & Quality</em></h2><p>ஏன் கலக்கல் கிச்சன்? — Our promise to every customer</p></div>
     <div class="why-grid">
-      <div class="why-card"><div class="wico">🌿</div><h3>100% Fresh Daily</h3><p>All food cooked fresh every day. No stale food, no compromises on quality ever.</p></div>
-      <div class="why-card"><div class="wico">💰</div><h3>Best Prices</h3><p>Affordable prices for everyone — from a cup of tea ₹15 to full biriyani ₹120.</p></div>
-      <div class="why-card"><div class="wico">🏠</div><h3>Home Delivery</h3><p>Order from home. We deliver to your doorstep. Call us to confirm delivery area.</p></div>
-      <div class="why-card"><div class="wico">👨‍🍳</div><h3>Traditional Recipes</h3><p>Authentic Tamil Nadu recipes passed down generations. Real taste, real flavours.</p></div>
-      <div class="why-card"><div class="wico">🥦</div><h3>Veg & Non-Veg</h3><p>Wide variety for everyone — from plain dosa to chicken chettinad, all under one roof.</p></div>
-      <div class="why-card"><div class="wico">📲</div><h3>Easy Ordering</h3><p>Order online via WhatsApp or just call us. Cash or GPay — your choice.</p></div>
+      <div class="wc"><div class="wi2">🌿</div><h3>100% Fresh Daily</h3><p>All food cooked fresh every day. No stale food ever.</p></div>
+      <div class="wc"><div class="wi2">💰</div><h3>Best Prices</h3><p>Affordable prices from ₹15 tea to ₹120 biriyani.</p></div>
+      <div class="wc"><div class="wi2">🛵</div><h3>Fast Delivery</h3><p>Hot food delivered to your door within 8 km.</p></div>
+      <div class="wc"><div class="wi2">📦</div><h3>Track Your Order</h3><p>Know exactly when your food is coming — live status updates.</p></div>
+      <div class="wc"><div class="wi2">👨‍🍳</div><h3>Traditional Recipes</h3><p>Authentic Tamil Nadu recipes. Real taste, real flavours.</p></div>
+      <div class="wc"><div class="wi2">📲</div><h3>Easy Ordering</h3><p>Order online, pay by Cash or GPay — your choice.</p></div>
     </div>
   </div>
 </section>
@@ -487,11 +501,7 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
 <!-- MENU -->
 <section class="msec" id="menu">
   <div class="si2">
-    <div class="sec-head">
-      <div class="etag">Fresh Every Day</div>
-      <h2>Our <em>Full Menu</em></h2>
-      <p>சுவையான உணவு தினமும் புதிதாக — Real prices, real food from KK Kitchen</p>
-    </div>
+    <div class="sec-head"><div class="etag">Fresh Every Day</div><h2>Our <em>Full Menu</em></h2><p>சுவையான உணவு தினமும் புதிதாக — Real prices, real food</p></div>
     <div class="tabs">
       <button class="tab active" onclick="filterMenu('nonveg',this)">🍗 Non-Veg</button>
       <button class="tab" onclick="filterMenu('veg',this)">🥦 Veg</button>
@@ -503,23 +513,20 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
 </section>
 
 <!-- OFFER BANNER -->
-<div class="offer-banner">
-  <h2>📦 Order Now & Get it Delivered Fresh!</h2>
+<div class="offer">
+  <h2>📦 Order Now & Get It Delivered Fresh!</h2>
   <p>WhatsApp-ல் ஆர்டர் செய்யுங்கள் — Kozhipuliyur பகுதியில் Home Delivery கிடைக்கும்</p>
-  <a href="https://wa.me/916379042970" target="_blank" class="oflink">📲 Order on WhatsApp Now</a>
+  <a href="https://wa.me/916379042970" target="_blank">📲 Order on WhatsApp</a>
 </div>
 
 <!-- TESTIMONIALS -->
-<section class="testisec" id="reviews">
+<section class="testisec">
   <div class="si2">
-    <div class="sec-head">
-      <div class="etag">Customer Love</div>
-      <h2>What Our <em>Customers Say</em></h2>
-    </div>
+    <div class="sec-head"><div class="etag">Customer Love</div><h2>What Our <em>Customers Say</em></h2></div>
     <div class="tgrid">
-      <div class="tcard"><div class="stars">★★★★★</div><p>"Biriyani is absolutely amazing! Fresh, hot and very tasty. Best hotel near Kozhipuliyur!"</p><div class="tname">Rajan K.</div><div class="tloc">Kozhipuliyur</div></div>
-      <div class="tcard"><div class="stars">★★★★★</div><p>"Kothu parotta is the best I've had! Price is very reasonable. Will order again!"</p><div class="tname">Priya S.</div><div class="tloc">Vandavasi Road</div></div>
-      <div class="tcard"><div class="stars">★★★★★</div><p>"Dosas are perfectly crispy. Filter coffee is superb. Love this hotel!"</p><div class="tname">Murugan T.</div><div class="tloc">Near Suraj School</div></div>
+      <div class="tc"><div class="stars">★★★★★</div><p>"Biriyani is amazing! Fresh, hot and tasty. Best hotel near Kozhipuliyur!"</p><div class="tn">Rajan K.</div><div class="tl">Kozhipuliyur</div></div>
+      <div class="tc"><div class="stars">★★★★★</div><p>"Kothu parotta is the best! Price is very reasonable. Will order again!"</p><div class="tn">Priya S.</div><div class="tl">Vandavasi Road</div></div>
+      <div class="tc"><div class="stars">★★★★★</div><p>"Dosas perfectly crispy. Filter coffee is superb. Love this hotel!"</p><div class="tn">Murugan T.</div><div class="tl">Near Suraj School</div></div>
     </div>
   </div>
 </section>
@@ -531,9 +538,9 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
     <div class="at">
       <div class="etag2">Our Story</div>
       <h2>Good Food, Made Fresh Every Day</h2>
-      <p>Kalakkal Kitchen Hotel — Vandavasi to Chetpet Road, Kozhipuliyur X Road, Near Suraj School. Fresh, quality food every afternoon. Open 1 PM to 11 PM daily.</p>
-      <p>From crispy dosas and biriyani to kothu parotta, juices and snacks — everything made fresh with traditional Tamil recipes and the best ingredients.</p>
-      <div class="atbox">கலக்கல் கிச்சன் ஹோட்டல் — தரமான சமையல், புத்தம் புதிய உணவு. Kozhipuliyur X Road, Suraj School அருகில். தினமும் மதியம் 1 மணி முதல் இரவு 11 மணி வரை.</div>
+      <p>Kalakkal Kitchen Hotel — Vandavasi to Chetpet Road, Kozhipuliyur X Road, Near Suraj School. Fresh food open 1 PM to 11 PM daily.</p>
+      <p>From crispy dosas and biriyani to kothu parotta, fresh juices and snacks — everything made fresh with traditional Tamil recipes.</p>
+      <div class="atbox">கலக்கல் கிச்சன் ஹோட்டல் — தரமான சமையல், புத்தம் புதிய உணவு. Kozhipuliyur X Road, Suraj School அருகில்.</div>
       <div class="ibs2">
         <div class="ib2"><div class="ico">🕑</div><strong>1:00 PM</strong><span>Opens</span></div>
         <div class="ib2"><div class="ico">🌙</div><strong>11:00 PM</strong><span>Closes</span></div>
@@ -546,7 +553,7 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
 <!-- PAYMENT -->
 <section class="psec" id="payment">
   <h2>💳 We Accept Both Payments</h2>
-  <p class="sub">பணம் கட்ட எந்த முறையும் சரி — Pay however is easy for you!</p>
+  <p class="sub">பணம் கட்ட எந்த முறையும் சரி — Pay however is easy!</p>
   <div class="pcards">
     <div class="pc"><div class="pi">💵</div><strong>Cash on Delivery</strong><span>Pay when order arrives</span></div>
     <div class="pc"><div class="pi">📲</div><strong>GPay / UPI</strong><span>Pay instantly online</span></div>
@@ -554,10 +561,9 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
   <div class="gpay-n">GPay Number: <strong style="color:#fff">+91 63790 42970</strong></div>
 </section>
 
-<!-- CALL -->
 <div class="csec">
   <h2>Prefer to order by phone?</h2>
-  <p>தொலைபேசியில் ஆர்டர் செய்யலாம் — நாங்கள் இங்கே இருக்கிறோம்!</p>
+  <p>தொலைபேசியில் ஆர்டர் செய்யலாம்!</p>
   <a href="tel:+916379042970" class="clink">📱 +91 63790 42970 — Call Now</a>
 </div>
 
@@ -566,12 +572,12 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
   <div class="si2">
     <div class="sec-head"><div class="etag">Find Us</div><h2>Visit <em>KK Kitchen</em></h2></div>
     <div class="ctg">
-      <div class="cc"><div class="ci">📍</div><h3>Address</h3><p>Vandavasi to Chetpet Road<br>Kozhipuliyur X Road<br>Near Suraj School<br>Pin: 604502</p></div>
-      <div class="cc"><div class="ci">📞</div><h3>Call / WhatsApp</h3><p><a href="tel:+916379042970">+91 63790 42970</a><br><a href="https://wa.me/916379042970" target="_blank">Chat on WhatsApp</a></p></div>
+      <div class="cc"><div class="ci">📍</div><h3>Address</h3><p>Vandavasi to Chetpet Road<br>Kozhipuliyur X Road<br>Near Suraj School, 604502</p></div>
+      <div class="cc"><div class="ci">📞</div><h3>Call / WhatsApp</h3><p><a href="tel:+916379042970">+91 63790 42970</a><br><a href="https://wa.me/916379042970">WhatsApp Us</a></p></div>
       <div class="cc"><div class="ci">🕑</div><h3>Hours</h3><p>1:00 PM – 11:00 PM<br>Open every day</p></div>
       <div class="cc"><div class="ci">💳</div><h3>Payment</h3><p>Cash on Delivery<br>GPay: <a href="tel:+916379042970">+91 63790 42970</a></p></div>
-      <div class="cc"><div class="ci">📦</div><h3>Delivery</h3><p>Home delivery within <strong>8 km</strong><br>Call to confirm your area</p></div>
-      <div class="cc"><div class="ci">⭐</div><h3>Reviews</h3><p>Loved by hundreds of<br>customers since 2024</p></div>
+      <div class="cc"><div class="ci">🛵</div><h3>Delivery</h3><p>Within 8 km only<br>₹30 below 3km · ₹40 above</p></div>
+      <div class="cc"><div class="ci">📦</div><h3>Track Order</h3><p>Click "Track Order" button<br>Enter your Order ID</p></div>
     </div>
   </div>
 </section>
@@ -580,81 +586,89 @@ footer{background:var(--text);color:#DEB887;padding:28px 5%;}
   <div class="fi">
     <div class="fb"><strong>Kalakkal Kitchen Hotel</strong><span>கலக்கல் கிச்சன் ஹோட்டல் · Kozhipuliyur · 604502</span></div>
     <div class="fl"><a href="#menu">Menu</a><a href="#why">Why Us</a><a href="#about">About</a><a href="#payment">Payment</a><a href="#contact">Contact</a><a href="https://wa.me/916379042970">📲 WhatsApp</a></div>
-    <div class="fc">© 2026 KK Kitchen Hotel. All rights reserved. · Made with ❤️ for Kozhipuliyur</div>
+    <div class="fc">© 2026 KK Kitchen Hotel. All rights reserved.</div>
   </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
 <button class="stbtn" id="stbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- CART DRAWER -->
+<!-- OVERLAY -->
 <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<!-- CART DRAWER -->
 <div class="drawer" id="cartDrawer">
-  <div class="dh"><h3>🛒 Your Order / உங்கள் ஆர்டர்</h3><button onclick="toggleCart()">✕</button></div>
+  <div class="dh"><h3>🛒 Your Order</h3><button onclick="toggleCart()">✕</button></div>
   <div class="di" id="diItems"><div class="de">Cart is empty.<br>சாப்பாடு சேர்க்கவும்! 🍽️</div></div>
   <div class="df" id="diFooter" style="display:none;">
-    <div class="dt"><span>Total / மொத்தம்</span><span id="diTotal">₹0</span></div>
     <form class="cf" id="checkoutForm">
-      <div class="dist-box">
-        <label>📍 Your Distance from Hotel</label>
-        <select class="dist-select" id="distSelect" onchange="updateBill()">
-          <option value="0">0 – 2 km (Nearby)</option>
-          <option value="2">2 – 4 km</option>
-          <option value="4">4 – 6 km</option>
-          <option value="6">6 – 8 km (Max delivery range)</option>
-        </select>
-        <div class="dist-note">📦 We deliver within <strong>8 km</strong> of KK Kitchen only. Delivery fee depends on distance.</div>
-      </div>
-
       <label>Your Name / பெயர்</label>
       <input type="text" id="custName" placeholder="உங்கள் பெயர்..." required>
       <label>Phone / தொலைபேசி</label>
       <input type="tel" id="custPhone" placeholder="+91 ..." required>
-      <label>Address / முகவரி</label>
-      <textarea id="custAddress" rows="2" placeholder="வீட்டு முகவரி அல்லது 'Pickup at hotel'" required></textarea>
+      <label>Delivery Area / தூரம்</label>
+      <select id="distSelect" onchange="updateBill()">
+        <option value="below3">📍 Below 3 km — Delivery ₹30</option>
+        <option value="above3">📍 3 km to 8 km — Delivery ₹40</option>
+        <option value="pickup">🏠 Self Pickup (No delivery charge)</option>
+      </select>
+      <div class="dist-info" id="distInfo">🛵 Delivery charge: ₹30</div>
+      <label>Delivery Address / முகவரி</label>
+      <textarea id="custAddress" rows="2" placeholder="வீட்டு முகவரி அல்லது 'Self Pickup'" required></textarea>
       <label>Payment / பணம்</label>
       <select id="payMethod">
         <option value="Cash on Delivery">💵 Cash on Delivery</option>
         <option value="GPay +91 63790 42970">📲 GPay (+91 63790 42970)</option>
       </select>
-
       <div class="bill-box">
         <div class="bill-row"><span>Item Total</span><span id="billItems">₹0</span></div>
-        <div class="bill-row"><span>Delivery Fee</span><span id="billDelivery">₹0</span></div>
+        <div class="bill-row"><span id="billDeliveryLabel">Delivery Fee (below 3km)</span><span id="billDelivery">₹30</span></div>
         <div class="bill-row total"><span>Grand Total</span><span id="billGrand">₹0</span></div>
       </div>
-      <div class="min-warn" id="minWarn">⚠️ Minimum order for delivery is ₹100. Please add more items.</div>
-
-      <button type="submit" class="wabtn" id="placeOrderBtn">✅ Place Order</button>
+      <button type="submit" class="place-btn" id="placeBtn">✅ Review & Place Order</button>
     </form>
   </div>
 </div>
 
-<!-- ORDER CONFIRMATION SCREEN -->
+<!-- CONFIRMATION SCREEN -->
 <div class="confirm-bg" id="confirmBg">
   <div class="confirm-box">
-    <div class="confirm-head">
-      <div class="cico">✅</div>
-      <h3>Confirm Your Order</h3>
-      <p>உங்கள் ஆர்டரை உறுதிப்படுத்தவும்</p>
-    </div>
+    <div class="confirm-head"><div class="cico">🧾</div><h3>Review Your Order</h3><p>உங்கள் ஆர்டரை சரிபார்க்கவும்</p></div>
     <div class="confirm-body">
       <h4>Order Items</h4>
       <div id="confirmItems"></div>
-      <div class="confirm-divider"></div>
-      <div class="confirm-bill-row"><span>Item Total</span><span id="cfItemTotal">₹0</span></div>
-      <div class="confirm-bill-row"><span>Delivery Fee (<span id="cfDistLabel">0–2km</span>)</span><span id="cfDeliveryFee">₹0</span></div>
-      <div class="confirm-bill-row total"><span>Grand Total</span><span id="cfGrandTotal">₹0</span></div>
-      <div class="confirm-info">
+      <div class="conf-div"></div>
+      <div class="conf-br"><span>Item Total</span><span id="cfItemTotal">₹0</span></div>
+      <div class="conf-br"><span>Delivery Fee</span><span id="cfDelivery">₹0</span></div>
+      <div class="conf-br total"><span>Grand Total</span><span id="cfGrand">₹0</span></div>
+      <div class="conf-info">
         👤 <strong id="cfName"></strong><br>
         📞 <span id="cfPhone"></span><br>
-        📍 <span id="cfAddress"></span><br>
-        💳 <span id="cfPayment"></span>
+        📍 <span id="cfAddr"></span><br>
+        🛵 <span id="cfDist"></span><br>
+        💳 <span id="cfPay"></span>
       </div>
     </div>
     <div class="confirm-foot">
-      <button class="cf-edit" onclick="closeConfirm()">← Edit Order</button>
-      <button class="cf-send" onclick="sendToWhatsApp()">📲 Send to WhatsApp</button>
+      <button class="cf-edit" onclick="closeConfirm()">← Edit</button>
+      <button class="cf-send" onclick="sendOrder()">📲 Confirm & WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER TRACKING MODAL -->
+<div class="track-bg" id="trackBg">
+  <div class="track-box">
+    <div class="track-head"><h3>📦 Track Your Order</h3><button onclick="closeTrack()">✕</button></div>
+    <div class="track-body">
+      <div class="track-search">
+        <input type="text" id="trackInput" placeholder="Enter Order ID (e.g. KK001)">
+        <button onclick="doTrack()">Track</button>
+      </div>
+      <div class="track-result" id="trackResult">
+        <div class="track-id" id="trackOrderId"></div>
+        <div class="track-steps" id="trackSteps"></div>
+      </div>
+      <div class="track-err" id="trackErr">❌ Order not found. Please check your Order ID.</div>
     </div>
   </div>
 </div>
@@ -706,196 +720,153 @@ const DISH_IMAGES = {
 };
 </script>
 <script>
-// ══════════ ADMIN CREDENTIALS ══════════
-// Username: kkkitchen   Password: KK@2024
+// ══════════ CONFIG ══════════
 const ADMIN_USER = "kkkitchen";
 const ADMIN_PASS = "KK@2024";
-// ════════════════════════════════════════
-
 const WA = "916379042970";
-let loggedIn = false;
+const DELIVERY_BOYS = ["Not Assigned","Boy 1","Boy 2","Boy 3"];
+const DELIVERY_FEES = {below3:30, above3:40, pickup:0};
+const DIST_LABELS = {below3:"Below 3 km","above3":"3 km to 8 km","pickup":"Self Pickup"};
+// ═══════════════════════════
 
-function openAdmin(){ document.getElementById('adminModal').classList.add('show'); setTimeout(()=>document.getElementById('aUser').focus(),100); }
-function closeAdmin(){ document.getElementById('adminModal').classList.remove('show'); document.getElementById('loginErr').style.display='none'; document.getElementById('aUser').value=''; document.getElementById('aPass').value=''; }
-function doLogin(){
-  const u=document.getElementById('aUser').value.trim();
-  const p=document.getElementById('aPass').value.trim();
-  if(u===ADMIN_USER && p===ADMIN_PASS){
-    loggedIn=true; closeAdmin();
-    document.getElementById('adminBar').classList.add('show');
-    buildStockGrid();
-    renderOrdersBoard();
-  } else {
-    document.getElementById('loginErr').style.display='block';
-  }
-}
-function doLogout(){ loggedIn=false; document.getElementById('adminBar').classList.remove('show'); }
-document.addEventListener('keydown',e=>{ if(e.key==='Enter' && document.getElementById('adminModal').classList.contains('show')) doLogin(); });
+let loggedIn=false, orders=[], orderCounter=1, pendingOrder=null;
+let stock={}, cart={}, currentCat='nonveg', currentOrderFilter='all';
 
-// Scroll to top button
-window.addEventListener('scroll',()=>{
-  document.getElementById('stbtn').classList.toggle('show', window.scrollY > 400);
-});
-
+// ── MENU DATA ──
 const menuData = {
   nonveg:{items:[
-    {id:1,  en:"Biryani",              ta:"பிரியாணி",               price:120, img:"biryani",           veg:false, desc:"Flavourful chicken biryani", best:true},
-    {id:2,  en:"Chicken Fried Rice",   ta:"சிக்கன் ஃப்ரைட் ரைஸ்", price:120, img:"chicken_fried_rice", veg:false, desc:"Spiced chicken fried rice"},
-    {id:3,  en:"Chilli Chicken",       ta:"சில்லி சிக்கன்",         price:110, img:"chilli_chicken",    veg:false, desc:"Crispy chilli chicken", best:true},
-    {id:4,  en:"Pepper Chicken",       ta:"பெப்பர் சிக்கன்",        price:110, img:"pepper_chicken",    veg:false, desc:"Aromatic pepper chicken"},
-    {id:5,  en:"Chicken Chettinad",    ta:"சிக்கன் சேத்திநாடு",    price:120, img:"chicken_chettinad", veg:false, desc:"Traditional Chettinad chicken"},
-    {id:6,  en:"Egg Fried Rice",       ta:"முட்டை ஃப்ரைட் ரைஸ்",  price:110, img:"egg_fried_rice",    veg:false, desc:"Egg fried rice with veggies"},
-    {id:7,  en:"Omelette",             ta:"ஆம்லெட்",                price:25,  img:"omelette",          veg:false, desc:"Fresh egg omelette"},
-    {id:8,  en:"Egg Podimas",          ta:"முட்டை போடிமாஸ்",       price:50,  img:"egg_podimas",        veg:false, desc:"Scrambled spiced egg"},
-    {id:9,  en:"Half Boil Egg",        ta:"ஹாஃப் போயில் முட்டை",  price:25,  img:"half_boil_egg",     veg:false, desc:"Half boiled egg"},
-    {id:10, en:"Full Boil Egg",        ta:"பூல் போயில் முட்டை",   price:25,  img:"full_boil_egg",     veg:false, desc:"Full boiled egg"},
-    {id:11, en:"Parotta + Curry (NV)", ta:"பரோட்டா + கறி (அசைவம்)",price:45, img:"parotta_nonveg",    veg:false, desc:"Soft parotta with non-veg curry"},
-    {id:12, en:"Kothu Parotta",        ta:"கோத்து பரோட்டா",        price:100, img:"kothu_parotta",     veg:false, desc:"Minced parotta with egg & masala", best:true},
+    {id:1,en:"Biryani",ta:"பிரியாணி",price:120,img:"biryani",veg:false,desc:"Flavourful chicken biryani",best:true},
+    {id:2,en:"Chicken Fried Rice",ta:"சிக்கன் ஃப்ரைட் ரைஸ்",price:120,img:"chicken_fried_rice",veg:false,desc:"Spiced chicken fried rice"},
+    {id:3,en:"Chilli Chicken",ta:"சில்லி சிக்கன்",price:110,img:"chilli_chicken",veg:false,desc:"Crispy chilli chicken",best:true},
+    {id:4,en:"Pepper Chicken",ta:"பெப்பர் சிக்கன்",price:110,img:"pepper_chicken",veg:false,desc:"Aromatic pepper chicken"},
+    {id:5,en:"Chicken Chettinad",ta:"சிக்கன் சேத்திநாடு",price:120,img:"chicken_chettinad",veg:false,desc:"Traditional Chettinad chicken"},
+    {id:6,en:"Egg Fried Rice",ta:"முட்டை ஃப்ரைட் ரைஸ்",price:110,img:"egg_fried_rice",veg:false,desc:"Egg fried rice with veggies"},
+    {id:7,en:"Omelette",ta:"ஆம்லெட்",price:25,img:"omelette",veg:false,desc:"Fresh egg omelette"},
+    {id:8,en:"Egg Podimas",ta:"முட்டை போடிமாஸ்",price:50,img:"egg_podimas",veg:false,desc:"Scrambled spiced egg"},
+    {id:9,en:"Half Boil Egg",ta:"ஹாஃப் போயில் முட்டை",price:25,img:"half_boil_egg",veg:false,desc:"Half boiled egg"},
+    {id:10,en:"Full Boil Egg",ta:"பூல் போயில் முட்டை",price:25,img:"full_boil_egg",veg:false,desc:"Full boiled egg"},
+    {id:11,en:"Parotta + Curry (NV)",ta:"பரோட்டா + கறி (அசைவம்)",price:45,img:"parotta_nonveg",veg:false,desc:"Soft parotta with non-veg curry"},
+    {id:12,en:"Kothu Parotta",ta:"கோத்து பரோட்டா",price:100,img:"kothu_parotta",veg:false,desc:"Minced parotta with egg & masala",best:true},
   ]},
   veg:{items:[
-    {id:13, en:"Idly (4 pcs)",         ta:"இட்லி (4 இட்லி)",        price:40,  img:"idly",              veg:true, desc:"Soft idly with sambar & chutney"},
-    {id:14, en:"Parotta Set (Veg)",    ta:"பரோட்டா செட் (சைவம்)",  price:45,  img:"parotta_set",       veg:true, desc:"Soft parotta with veg curry"},
-    {id:15, en:"Veg Fried Rice",       ta:"வெஜ் ஃப்ரைட் ரைஸ்",    price:100, img:"veg_fried_rice",    veg:true, desc:"Mixed vegetable fried rice"},
-    {id:16, en:"Chapathi (2 set)",     ta:"சப்பாத்தி (2 செட்)",     price:50,  img:"chapathi",          veg:true, desc:"Soft chapathi with kurma"},
-    {id:17, en:"Gobi Chilli",          ta:"கோபி சில்லி",            price:110, img:"gobi_chilli",       veg:true, desc:"Crispy cauliflower chilli"},
-    {id:18, en:"Plain Dosa",           ta:"பேளன் தோசை",             price:40,  img:"plain_dosa",        veg:true, desc:"Crispy plain dosa with chutney"},
-    {id:19, en:"Onion Dosa",           ta:"வெங்காய தோசை",           price:40,  img:"onion_dosa",        veg:true, desc:"Dosa with onion topping"},
-    {id:20, en:"Masala Dosa",          ta:"மசாலா தோசை",             price:60,  img:"masala_dosa",       veg:true, desc:"Crispy dosa with potato masala", best:true},
-    {id:21, en:"Podi Dosa",            ta:"பொடி தோசை",              price:60,  img:"podi_dosa",         veg:true, desc:"Dosa with gun powder chutney"},
-    {id:22, en:"Ghee Dosa",            ta:"கீ தோசை",                price:70,  img:"ghee_dosa",         veg:true, desc:"Crispy dosa with pure ghee"},
+    {id:13,en:"Idly (4 pcs)",ta:"இட்லி (4 இட்லி)",price:40,img:"idly",veg:true,desc:"Soft idly with sambar & chutney"},
+    {id:14,en:"Parotta Set (Veg)",ta:"பரோட்டா செட் (சைவம்)",price:45,img:"parotta_set",veg:true,desc:"Soft parotta with veg curry"},
+    {id:15,en:"Veg Fried Rice",ta:"வெஜ் ஃப்ரைட் ரைஸ்",price:100,img:"veg_fried_rice",veg:true,desc:"Mixed vegetable fried rice"},
+    {id:16,en:"Chapathi (2 set)",ta:"சப்பாத்தி (2 செட்)",price:50,img:"chapathi",veg:true,desc:"Soft chapathi with kurma"},
+    {id:17,en:"Gobi Chilli",ta:"கோபி சில்லி",price:110,img:"gobi_chilli",veg:true,desc:"Crispy cauliflower chilli"},
+    {id:18,en:"Plain Dosa",ta:"பேளன் தோசை",price:40,img:"plain_dosa",veg:true,desc:"Crispy plain dosa"},
+    {id:19,en:"Onion Dosa",ta:"வெங்காய தோசை",price:40,img:"onion_dosa",veg:true,desc:"Dosa with onion topping"},
+    {id:20,en:"Masala Dosa",ta:"மசாலா தோசை",price:60,img:"masala_dosa",veg:true,desc:"Crispy dosa with potato masala",best:true},
+    {id:21,en:"Podi Dosa",ta:"பொடி தோசை",price:60,img:"podi_dosa",veg:true,desc:"Dosa with gun powder chutney"},
+    {id:22,en:"Ghee Dosa",ta:"கீ தோசை",price:70,img:"ghee_dosa",veg:true,desc:"Crispy dosa with pure ghee"},
   ]},
   drinks:{items:[
-    {id:23, en:"Tea",                  ta:"தேநீர்",           price:15, img:"tea",              veg:true, desc:"Hot fresh tea"},
-    {id:24, en:"Coffee",               ta:"காபி",             price:20, img:"coffee",           veg:true, desc:"Filter coffee", best:true},
-    {id:25, en:"Boost",                ta:"பூஸ்ட்",           price:30, img:"boost",            veg:true, desc:"Boost energy drink"},
-    {id:26, en:"Horlicks",             ta:"ஹார்லிக்ஸ்",      price:30, img:"horlicks",         veg:true, desc:"Horlicks health drink"},
-    {id:27, en:"Lemon Soda",           ta:"லெமன் சோடா",      price:30, img:"lemon_soda",       veg:true, desc:"Fresh lemon soda"},
-    {id:28, en:"Sprite",               ta:"ஸ்பிரைட்",        price:30, img:"sprite",           veg:true, desc:"Chilled Sprite"},
-    {id:29, en:"Coke",                 ta:"கோக்",             price:30, img:"coke",             veg:true, desc:"Chilled Coca-Cola"},
-    {id:30, en:"Mango Juice",          ta:"மாம்பழ ஜூஸ்",    price:50, img:"mango_juice",      veg:true, desc:"Fresh mango juice"},
-    {id:31, en:"Watermelon Juice",     ta:"தர்பூசணி ஜூஸ்",  price:50, img:"watermelon_juice", veg:true, desc:"Fresh watermelon juice"},
-    {id:32, en:"Orange Juice",         ta:"ஆரஞ்சு ஜூஸ்",    price:50, img:"orange_juice",     veg:true, desc:"Fresh orange juice"},
-    {id:33, en:"Water Bottle",         ta:"தண்ணீர் பாட்டில்",price:20, img:"water_bottle",     veg:true, desc:"500ml water bottle"},
+    {id:23,en:"Tea",ta:"தேநீர்",price:15,img:"tea",veg:true,desc:"Hot fresh tea"},
+    {id:24,en:"Coffee",ta:"காபி",price:20,img:"coffee",veg:true,desc:"Filter coffee",best:true},
+    {id:25,en:"Boost",ta:"பூஸ்ட்",price:30,img:"boost",veg:true,desc:"Boost energy drink"},
+    {id:26,en:"Horlicks",ta:"ஹார்லிக்ஸ்",price:30,img:"horlicks",veg:true,desc:"Horlicks health drink"},
+    {id:27,en:"Lemon Soda",ta:"லெமன் சோடா",price:30,img:"lemon_soda",veg:true,desc:"Fresh lemon soda"},
+    {id:28,en:"Sprite",ta:"ஸ்பிரைட்",price:30,img:"sprite",veg:true,desc:"Chilled Sprite"},
+    {id:29,en:"Coke",ta:"கோக்",price:30,img:"coke",veg:true,desc:"Chilled Coca-Cola"},
+    {id:30,en:"Mango Juice",ta:"மாம்பழ ஜூஸ்",price:50,img:"mango_juice",veg:true,desc:"Fresh mango juice"},
+    {id:31,en:"Watermelon Juice",ta:"தர்பூசணி ஜூஸ்",price:50,img:"watermelon_juice",veg:true,desc:"Fresh watermelon juice"},
+    {id:32,en:"Orange Juice",ta:"ஆரஞ்சு ஜூஸ்",price:50,img:"orange_juice",veg:true,desc:"Fresh orange juice"},
+    {id:33,en:"Water Bottle",ta:"தண்ணீர் பாட்டில்",price:20,img:"water_bottle",veg:true,desc:"500ml water bottle"},
   ]},
   snacks:{items:[
-    {id:34, en:"Pani Puri",              ta:"பானி பூரி",               price:50,  img:"pani_puri",             veg:true,  desc:"6 pcs crispy puri with spiced water"},
-    {id:35, en:"Bread Omelette",         ta:"பிரட் ஆம்லெட்",          price:60,  img:"bread_omelette",        veg:false, desc:"Egg omelette with toasted bread"},
-    {id:36, en:"Cheese Bread Omelette",  ta:"சீஸ் பிரட் ஆம்லெட்",    price:80,  img:"cheese_bread_omelette", veg:false, desc:"Cheese omelette with bread"},
-    {id:37, en:"Chicken Bread Omelette", ta:"சிக்கன் பிரட் ஆம்லெட்", price:100, img:"chicken_bread_omelette",veg:false, desc:"Chicken omelette with bread", best:true},
-    {id:38, en:"Samosa (2 pcs)",         ta:"சமோசா (2 பீஸ்)",          price:30,  img:"samosa",                veg:true,  desc:"Crispy fried samosa with chutney"},
-    {id:39, en:"Puffs (Veg)",            ta:"வெஜ் பஃப்ஸ்",             price:25,  img:"puffs",                 veg:true,  desc:"Flaky pastry puff with veg filling"},
-    {id:40, en:"Egg Puffs",              ta:"முட்டை பஃப்ஸ்",           price:30,  img:"veg_egg",               veg:false, desc:"Flaky pastry puff with egg filling"},
-    {id:41, en:"Paneer Snack",           ta:"பனீர் ஸ்நாக்",            price:80,  img:"paneer",                veg:true,  desc:"Crispy paneer bites with sauce"},
+    {id:34,en:"Pani Puri",ta:"பானி பூரி",price:50,img:"pani_puri",veg:true,desc:"6 pcs crispy puri with spiced water"},
+    {id:35,en:"Bread Omelette",ta:"பிரட் ஆம்லெட்",price:60,img:"bread_omelette",veg:false,desc:"Egg omelette with toasted bread"},
+    {id:36,en:"Cheese Bread Omelette",ta:"சீஸ் பிரட் ஆம்லெட்",price:80,img:"cheese_bread_omelette",veg:false,desc:"Cheese omelette with bread"},
+    {id:37,en:"Chicken Bread Omelette",ta:"சிக்கன் பிரட் ஆம்லெட்",price:100,img:"chicken_bread_omelette",veg:false,desc:"Chicken omelette with bread",best:true},
+    {id:38,en:"Samosa (2 pcs)",ta:"சமோசா",price:30,img:"samosa",veg:true,desc:"Crispy fried samosa with chutney"},
+    {id:39,en:"Veg Puffs",ta:"வெஜ் பஃப்ஸ்",price:25,img:"puffs",veg:true,desc:"Flaky pastry with veg filling"},
+    {id:40,en:"Egg Puffs",ta:"முட்டை பஃப்ஸ்",price:30,img:"veg_egg",veg:false,desc:"Flaky pastry with egg filling"},
+    {id:41,en:"Paneer Snack",ta:"பனீர் ஸ்நாக்",price:80,img:"paneer",veg:true,desc:"Crispy paneer bites"},
   ]}
 };
 
-let stock={}, cart={}, currentCat='nonveg';
-function allItems(){ return Object.values(menuData).flatMap(c=>c.items); }
-allItems().forEach(i=>{ stock[i.id]=true; });
+function allItems(){return Object.values(menuData).flatMap(c=>c.items);}
+allItems().forEach(i=>{stock[i.id]=true;});
 
+// ── ADMIN ──
+function openAdmin(){document.getElementById('adminModal').classList.add('show');setTimeout(()=>document.getElementById('aUser').focus(),100);}
+function closeAdmin(){document.getElementById('adminModal').classList.remove('show');document.getElementById('loginErr').style.display='none';}
+function doLogin(){
+  if(document.getElementById('aUser').value.trim()===ADMIN_USER && document.getElementById('aPass').value.trim()===ADMIN_PASS){
+    loggedIn=true;closeAdmin();
+    document.getElementById('adminBar').classList.add('show');
+    buildStockGrid();renderOrdersBoard();
+  }else{document.getElementById('loginErr').style.display='block';}
+}
+function doLogout(){loggedIn=false;document.getElementById('adminBar').classList.remove('show');}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&document.getElementById('adminModal').classList.contains('show'))doLogin();});
+
+// ── STOCK ──
 function buildStockGrid(){
-  const g=document.getElementById('stockGrid'); g.innerHTML='';
+  const g=document.getElementById('stockGrid');g.innerHTML='';
   allItems().forEach(item=>{
-    const d=document.createElement('div'); d.className='si';
+    const d=document.createElement('div');d.className='si';
     d.innerHTML=`<span class="si-n">${item.en}</span>
       <label class="tog"><input type="checkbox" ${stock[item.id]?'checked':''} onchange="toggleStock(${item.id},this)"><span class="tsl"></span></label>
       <span class="slbl ${stock[item.id]?'in':'out'}" id="sl-${item.id}">${stock[item.id]?'✅ In':'❌ Out'}</span>`;
     g.appendChild(d);
   });
 }
-
 function toggleStock(id,el){
   stock[id]=el.checked;
   const l=document.getElementById('sl-'+id);
-  if(l){l.textContent=stock[id]?'✅ In':'❌ Out'; l.className='slbl '+(stock[id]?'in':'out');}
+  if(l){l.textContent=stock[id]?'✅ In':'❌ Out';l.className='slbl '+(stock[id]?'in':'out');}
   renderMenu();
 }
+function setAll(val){allItems().forEach(i=>{stock[i.id]=val;});buildStockGrid();renderMenu();}
 
-function setAll(val){
-  allItems().forEach(i=>{ stock[i.id]=val; });
-  buildStockGrid(); renderMenu();
-}
-
+// ── MENU ──
 function filterMenu(cat,el){
   currentCat=cat;
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active'); renderMenu();
+  el.classList.add('active');renderMenu();
 }
-
 function renderMenu(){
-  const g=document.getElementById('menuGrid'); g.innerHTML='';
+  const g=document.getElementById('menuGrid');g.innerHTML='';
   menuData[currentCat].items.forEach(item=>{
-    const qty=cart[item.id]||0, inStock=stock[item.id];
+    const qty=cart[item.id]||0,inStock=stock[item.id];
     const imgSrc=(typeof DISH_IMAGES!=='undefined'&&DISH_IMAGES[item.img])?DISH_IMAGES[item.img]:'';
     const d=document.createElement('div');
     d.className='mcard'+(inStock?'':' oos')+(item.best?' bestseller':'');
     d.innerHTML=`
       <div class="oos-tag">OUT OF STOCK</div>
+      <div class="best-tag">⭐ BESTSELLER</div>
       <div class="mimg">
-        <img src="${imgSrc}" alt="${item.en}" loading="lazy" onerror="this.parentElement.style.background='var(--orl)'">
+        <img src="${imgSrc}" alt="${item.en}" loading="lazy" onerror="this.parentElement.style.background='#FFF0E6'">
         <div class="vd ${item.veg?'v':'nv'}"></div>
-        <div class="best">⭐ BESTSELLER</div>
       </div>
-      <div class="mb2">
-        <h3>${item.en}</h3>
-        <div class="mta">${item.ta}</div>
-        <p class="md">${item.desc}</p>
-      </div>
+      <div class="mb2"><h3>${item.en}</h3><div class="mta">${item.ta}</div><p class="md">${item.desc}</p></div>
       <div class="mf">
         <div class="mpr">₹${item.price}</div>
-        ${!inStock
-          ?'<span style="font-size:.66rem;color:#bbb">Not available</span>'
-          :qty===0
-            ?`<button class="madd" onclick="addItem(${item.id})">+</button>`
-            :`<div class="qc"><button onclick="removeItem(${item.id})">−</button><span>${qty}</span><button onclick="addItem(${item.id})">+</button></div>`}
+        ${!inStock?'<span style="font-size:.66rem;color:#bbb">Not available</span>':
+          qty===0?`<button class="madd" onclick="addItem(${item.id})">+</button>`:
+          `<div class="qc"><button onclick="removeItem(${item.id})">−</button><span>${qty}</span><button onclick="addItem(${item.id})">+</button></div>`}
       </div>`;
     g.appendChild(d);
   });
 }
 
-function addItem(id){ if(!stock[id])return; cart[id]=(cart[id]||0)+1; refresh(); }
-function removeItem(id){ if(cart[id])cart[id]--; if(cart[id]<=0)delete cart[id]; refresh(); }
+// ── CART ──
+function addItem(id){if(!stock[id])return;cart[id]=(cart[id]||0)+1;refresh();}
+function removeItem(id){if(cart[id])cart[id]--;if(cart[id]<=0)delete cart[id];refresh();}
 
-// ══════════ DELIVERY FEE CONFIG ══════════
-const DELIVERY_FEES = { "0": 0, "2": 15, "4": 25, "6": 35 };
-const MIN_ORDER = 100;
-const DIST_LABELS = { "0": "0–2 km", "2": "2–4 km", "4": "4–6 km", "6": "6–8 km" };
-// ════════════════════════════════════════
-
-function getItemTotal(){
-  let total=0;
-  Object.keys(cart).forEach(id=>{
-    const item=allItems().find(i=>i.id==id); if(!item)return;
-    total += item.price * cart[id];
-  });
-  return total;
-}
+function getItemTotal(){return Object.keys(cart).reduce((t,id)=>{const item=allItems().find(i=>i.id==id);return t+(item?item.price*cart[id]:0);},0);}
 
 function updateBill(){
-  const itemTotal = getItemTotal();
-  const dist = document.getElementById('distSelect') ? document.getElementById('distSelect').value : "0";
-  const deliveryFee = itemTotal > 0 ? DELIVERY_FEES[dist] : 0;
-  const grand = itemTotal + deliveryFee;
-
-  const billItems = document.getElementById('billItems');
-  const billDelivery = document.getElementById('billDelivery');
-  const billGrand = document.getElementById('billGrand');
-  const minWarn = document.getElementById('minWarn');
-  const placeBtn = document.getElementById('placeOrderBtn');
-
-  if(billItems){
-    billItems.textContent = '₹'+itemTotal;
-    billDelivery.textContent = deliveryFee===0 ? 'Free' : '₹'+deliveryFee;
-    billGrand.textContent = '₹'+grand;
-
-    if(itemTotal > 0 && itemTotal < MIN_ORDER){
-      minWarn.classList.add('show');
-      placeBtn.disabled = true;
-    } else {
-      minWarn.classList.remove('show');
-      placeBtn.disabled = false;
-    }
-  }
+  const dist=document.getElementById('distSelect').value;
+  const fee=DELIVERY_FEES[dist];
+  const itemTotal=getItemTotal();
+  const grand=itemTotal+fee;
+  document.getElementById('distInfo').textContent=dist==='pickup'?'🏠 Self Pickup — No delivery charge':`🛵 Delivery charge: ₹${fee}`;
+  document.getElementById('billDeliveryLabel').textContent=`Delivery Fee (${DIST_LABELS[dist]})`;
+  document.getElementById('billItems').textContent='₹'+itemTotal;
+  document.getElementById('billDelivery').textContent=fee===0?'Free':'₹'+fee;
+  document.getElementById('billGrand').textContent='₹'+grand;
 }
 
 function refresh(){
@@ -903,14 +874,14 @@ function refresh(){
   const count=Object.values(cart).reduce((a,b)=>a+b,0);
   document.getElementById('cartCount').textContent=count;
   const ids=Object.keys(cart);
-  const el=document.getElementById('diItems'), foot=document.getElementById('diFooter');
-  if(!ids.length){ el.innerHTML='<div class="de">Cart is empty.<br>சாப்பாடு சேர்க்கவும்! 🍽️</div>'; foot.style.display='none'; return; }
+  const el=document.getElementById('diItems'),foot=document.getElementById('diFooter');
+  if(!ids.length){el.innerHTML='<div class="de">Cart is empty.<br>சாப்பாடு சேர்க்கவும்! 🍽️</div>';foot.style.display='none';return;}
   el.innerHTML='';
   ids.forEach(id=>{
-    const item=allItems().find(i=>i.id==id); if(!item)return;
+    const item=allItems().find(i=>i.id==id);if(!item)return;
     const qty=cart[id];
     const imgSrc=(typeof DISH_IMAGES!=='undefined'&&DISH_IMAGES[item.img])?DISH_IMAGES[item.img]:'';
-    const row=document.createElement('div'); row.className='dr';
+    const row=document.createElement('div');row.className='dr';
     row.innerHTML=`<img src="${imgSrc}" alt="${item.en}" onerror="this.style.display='none'">
       <div class="dri"><h4>${item.en}</h4>
         <div class="drq"><button onclick="removeItem(${id})">−</button><span>${qty}</span><button onclick="addItem(${id})">+</button></div>
@@ -926,124 +897,137 @@ function toggleCart(){
   document.getElementById('overlay').classList.toggle('open');
 }
 
-// ══════════ ORDER TRACKING SYSTEM ══════════
-let orders = [];
-let orderCounter = 1;
-const DELIVERY_BOYS = ["Not Assigned", "Boy 1 - Murugan", "Boy 2 - Selvam", "Boy 3 - Karthik"];
-let pendingOrder = null;
-
+// ── CHECKOUT → CONFIRMATION ──
 document.getElementById('checkoutForm').addEventListener('submit',function(e){
   e.preventDefault();
-  const ids=Object.keys(cart); if(!ids.length)return;
-  const itemTotal = getItemTotal();
-  if(itemTotal < MIN_ORDER){ return; }
-
+  const ids=Object.keys(cart);if(!ids.length)return;
   const name=document.getElementById('custName').value;
   const phone=document.getElementById('custPhone').value;
   const addr=document.getElementById('custAddress').value;
   const pay=document.getElementById('payMethod').value;
   const dist=document.getElementById('distSelect').value;
-  const deliveryFee=DELIVERY_FEES[dist];
-  const grand=itemTotal+deliveryFee;
+  const fee=DELIVERY_FEES[dist];
+  const itemTotal=getItemTotal();
+  const grand=itemTotal+fee;
+  const items=ids.map(id=>{const item=allItems().find(i=>i.id==id);return{name:item.en,qty:cart[id],price:item.price};});
+  pendingOrder={name,phone,addr,pay,dist,fee,itemTotal,grand,items};
 
-  // Build order object
-  const items = ids.map(id=>{
-    const item=allItems().find(i=>i.id==id);
-    return {name:item.en, qty:cart[id], price:item.price};
-  });
-
-  pendingOrder = {name, phone, addr, pay, dist, deliveryFee, itemTotal, grand, items};
-
-  // Populate confirmation screen
-  document.getElementById('cfName').textContent = name;
-  document.getElementById('cfPhone').textContent = phone;
-  document.getElementById('cfAddress').textContent = addr;
-  document.getElementById('cfPayment').textContent = pay;
-  document.getElementById('cfDistLabel').textContent = DIST_LABELS[dist];
-  document.getElementById('cfItemTotal').textContent = '₹'+itemTotal;
-  document.getElementById('cfDeliveryFee').textContent = deliveryFee===0?'Free':'₹'+deliveryFee;
-  document.getElementById('cfGrandTotal').textContent = '₹'+grand;
-
-  const cfItemsEl = document.getElementById('confirmItems');
-  cfItemsEl.innerHTML = items.map(it=>`<div class="confirm-item"><span>${it.name} x${it.qty}</span><span>₹${it.price*it.qty}</span></div>`).join('');
-
+  document.getElementById('cfName').textContent=name;
+  document.getElementById('cfPhone').textContent=phone;
+  document.getElementById('cfAddr').textContent=addr;
+  document.getElementById('cfDist').textContent=DIST_LABELS[dist]+(fee>0?' — ₹'+fee:' — Free');
+  document.getElementById('cfPay').textContent=pay;
+  document.getElementById('cfItemTotal').textContent='₹'+itemTotal;
+  document.getElementById('cfDelivery').textContent=fee===0?'Free':'₹'+fee;
+  document.getElementById('cfGrand').textContent='₹'+grand;
+  document.getElementById('confirmItems').innerHTML=items.map(it=>`<div class="confirm-item"><span>${it.name} x${it.qty}</span><span>₹${it.price*it.qty}</span></div>`).join('');
   document.getElementById('confirmBg').classList.add('show');
 });
+function closeConfirm(){document.getElementById('confirmBg').classList.remove('show');}
 
-function closeConfirm(){
-  document.getElementById('confirmBg').classList.remove('show');
-}
-
-function sendToWhatsApp(){
-  if(!pendingOrder) return;
-  const o = pendingOrder;
-
-  // Save order to order board
-  const orderId = 'KK'+String(orderCounter).padStart(3,'0');
+// ── SEND ORDER + SAVE TO BOARD ──
+function sendOrder(){
+  if(!pendingOrder)return;
+  const o=pendingOrder;
+  const orderId='KK'+String(orderCounter).padStart(3,'0');
   orderCounter++;
-  const now = new Date();
-  const timeStr = now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
-  orders.unshift({
-    id: orderId, time: timeStr, name:o.name, phone:o.phone, addr:o.addr,
-    pay:o.pay, dist:DIST_LABELS[o.dist], grand:o.grand, items:o.items,
-    status:'new', boy:'Not Assigned'
-  });
-  renderOrdersBoard();
+  const now=new Date();
+  const timeStr=now.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  const order={id:orderId,time:timeStr,name:o.name,phone:o.phone,addr:o.addr,pay:o.pay,dist:DIST_LABELS[o.dist],fee:o.fee,itemTotal:o.itemTotal,grand:o.grand,items:o.items,status:'new',boy:'Not Assigned'};
+  orders.unshift(order);
+  if(loggedIn)renderOrdersBoard();
 
-  // Build WhatsApp message
-  let msg=`🍽️ *New Order — கலக்கல் கிச்சன் ஹோட்டல்*\n📦 Order ID: *${orderId}*\n📍 Kozhipuliyur X Road, Near Suraj School\n\n`;
-  msg+=`👤 *Name:* ${o.name}\n📞 *Phone:* ${o.phone}\n📍 *Address:* ${o.addr}\n📏 *Distance:* ${DIST_LABELS[o.dist]}\n💳 *Payment:* ${o.pay}\n\n*Order:*\n`;
-  o.items.forEach(it=>{ msg+=`• ${it.name} x${it.qty} = ₹${it.price*it.qty}\n`; });
-  msg+=`\n💰 *Item Total: ₹${o.itemTotal}*\n🛵 *Delivery Fee: ${o.deliveryFee===0?'Free':'₹'+o.deliveryFee}*\n💵 *Grand Total: ₹${o.grand}*`;
-  if(o.pay.includes('GPay')) msg+=`\n📲 Please send GPay to +91 63790 42970`;
-  msg+=`\n\nPlease confirm my order. நன்றி! 🙏`;
-
+  // WhatsApp message
+  let msg=`🍽️ *New Order — கலக்கல் கிச்சன்*\n📦 Order ID: *${orderId}*\n📍 Kozhipuliyur\n\n`;
+  msg+=`👤 *${o.name}*\n📞 ${o.phone}\n📍 ${o.addr}\n🛵 ${DIST_LABELS[o.dist]}${o.fee>0?' — Delivery ₹'+o.fee:' — Self Pickup'}\n💳 ${o.pay}\n\n*Items:*\n`;
+  o.items.forEach(it=>{msg+=`• ${it.name} x${it.qty} = ₹${it.price*it.qty}\n`;});
+  msg+=`\n💰 Item Total: ₹${o.itemTotal}\n🛵 Delivery: ${o.fee===0?'Free':'₹'+o.fee}\n💵 *Grand Total: ₹${o.grand}*`;
+  if(o.pay.includes('GPay'))msg+=`\n📲 GPay to +91 63790 42970`;
+  msg+=`\n\n📦 Track order with ID: *${orderId}*\nநன்றி! 🙏`;
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
 
-  // Reset
   closeConfirm();
-  cart={}; refresh(); toggleCart();
+  cart={};refresh();toggleCart();
   document.getElementById('checkoutForm').reset();
+  updateBill();
+
+  // Show order ID to customer
+  setTimeout(()=>{alert(`✅ Order placed!\n\nYour Order ID: ${orderId}\n\nShare this ID with us to track your order status.\nSave it now!`);},500);
 }
 
+// ── ORDER BOARD (Admin) ──
+function filterOrders(f,el){
+  currentOrderFilter=f;
+  document.querySelectorAll('.ob-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  renderOrdersBoard();
+}
 function renderOrdersBoard(){
-  const board = document.getElementById('ordersBoard');
-  if(!orders.length){ board.innerHTML='<div class="orders-empty">No orders yet. New orders placed by customers will appear here.</div>'; return; }
-  board.innerHTML = orders.map(o=>`
-    <div class="order-card">
-      <div class="order-top">
-        <span class="order-id">${o.id}</span>
-        <span class="status-badge ${o.status}">${ {new:'🆕 New',assigned:'🛵 Assigned',pickedup:'📦 Picked Up',delivered:'✅ Delivered'}[o.status] }</span>
-        <span class="order-time">${o.time}</span>
+  const board=document.getElementById('ordersBoard');
+  let filtered=orders;
+  if(currentOrderFilter!=='all')filtered=orders.filter(o=>o.status===currentOrderFilter);
+  if(!filtered.length){board.innerHTML='<div class="ob-empty">No orders in this category.</div>';return;}
+  const statusLabels={new:'🆕 New',preparing:'👨‍🍳 Preparing',outfordelivery:'🛵 Out for Delivery',delivered:'✅ Delivered',cancelled:'❌ Cancelled'};
+  board.innerHTML=filtered.map(o=>`
+    <div class="ob-card status-${o.status}">
+      <div class="ob-head">
+        <span class="ob-id">${o.id}</span>
+        <span class="ob-badge ${o.status}">${statusLabels[o.status]||o.status}</span>
+        <span class="ob-time">${o.time}</span>
       </div>
-      <div class="order-cust">👤 <strong>${o.name}</strong> · 📞 ${o.phone} · 📏 ${o.dist}</div>
-      <div class="order-cust">📍 ${o.addr}</div>
-      <div class="order-items-mini">${o.items.map(it=>`${it.name} x${it.qty}`).join(', ')}<br>💰 Total: ₹${o.grand} (${o.pay.includes('GPay')?'GPay':'Cash'})</div>
-      <div class="order-controls">
-        <select class="order-status-select" onchange="updateOrderStatus('${o.id}',this.value)">
+      <div class="ob-cust">👤 <strong>${o.name}</strong> · 📞 ${o.phone}</div>
+      <div class="ob-addr">📍 ${o.addr} · 🛵 ${o.dist}${o.fee>0?' (₹'+o.fee+')':' (Pickup)'}</div>
+      <div class="ob-items">${o.items.map(it=>`${it.name} ×${it.qty}`).join(' · ')}</div>
+      <div class="ob-total">💰 ₹${o.grand} · ${o.pay.includes('GPay')?'📲 GPay':'💵 Cash'}</div>
+      <div class="ob-controls">
+        <select class="ob-select" onchange="updateStatus('${o.id}',this.value)">
           <option value="new" ${o.status==='new'?'selected':''}>🆕 New</option>
-          <option value="assigned" ${o.status==='assigned'?'selected':''}>🛵 Assigned</option>
-          <option value="pickedup" ${o.status==='pickedup'?'selected':''}>📦 Picked Up</option>
+          <option value="preparing" ${o.status==='preparing'?'selected':''}>👨‍🍳 Preparing</option>
+          <option value="outfordelivery" ${o.status==='outfordelivery'?'selected':''}>🛵 Out for Delivery</option>
           <option value="delivered" ${o.status==='delivered'?'selected':''}>✅ Delivered</option>
+          <option value="cancelled" ${o.status==='cancelled'?'selected':''}>❌ Cancelled</option>
         </select>
-        <select class="order-boy-select" onchange="updateOrderBoy('${o.id}',this.value)">
+        <select class="ob-select" onchange="updateBoy('${o.id}',this.value)">
           ${DELIVERY_BOYS.map(b=>`<option ${o.boy===b?'selected':''}>${b}</option>`).join('')}
         </select>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
+function updateStatus(id,s){const o=orders.find(x=>x.id===id);if(o)o.status=s;renderOrdersBoard();}
+function updateBoy(id,b){const o=orders.find(x=>x.id===id);if(o)o.boy=b;renderOrdersBoard();}
 
-function updateOrderStatus(id, status){
-  const o = orders.find(x=>x.id===id);
-  if(o) o.status = status;
-  renderOrdersBoard();
+// ── ORDER TRACKING (Customer) ──
+function openTrack(){document.getElementById('trackBg').classList.add('show');}
+function closeTrack(){document.getElementById('trackBg').classList.remove('show');}
+function doTrack(){
+  const input=document.getElementById('trackInput').value.trim().toUpperCase();
+  const o=orders.find(x=>x.id===input);
+  document.getElementById('trackResult').classList.remove('show');
+  document.getElementById('trackErr').classList.remove('show');
+  if(!o){document.getElementById('trackErr').classList.add('show');return;}
+  document.getElementById('trackOrderId').textContent=`Order ${o.id} — ${o.name}`;
+  const steps=[
+    {key:'new',label:'Order Placed',sub:'Your order was received'},
+    {key:'preparing',label:'Preparing Your Food',sub:'Kitchen is cooking your order'},
+    {key:'outfordelivery',label:'Out for Delivery',sub:`Delivery boy: ${o.boy}`},
+    {key:'delivered',label:'Delivered',sub:'Enjoy your meal! 😊'},
+  ];
+  const statusOrder=['new','preparing','outfordelivery','delivered'];
+  const cur=statusOrder.indexOf(o.status);
+  const icons=['📋','👨‍🍳','🛵','✅'];
+  document.getElementById('trackSteps').innerHTML=steps.map((s,i)=>{
+    const done=i<cur;const current=i===cur;
+    return`<div class="tstep ${done?'done':''} ${current?'current':''}">
+      <div class="tstep-dot">${done||current?icons[i]:'○'}</div>
+      <div class="tstep-text"><strong>${s.label}</strong><span>${s.sub}</span></div>
+    </div>`;
+  }).join('');
+  document.getElementById('trackResult').classList.add('show');
 }
-function updateOrderBoy(id, boy){
-  const o = orders.find(x=>x.id===id);
-  if(o) o.boy = boy;
-  renderOrdersBoard();
-}
+document.getElementById('trackInput').addEventListener('keydown',e=>{if(e.key==='Enter')doTrack();});
+
+// ── SCROLL TOP ──
+window.addEventListener('scroll',()=>{document.getElementById('stbtn').classList.toggle('show',window.scrollY>400);});
 
 renderMenu();
 </script>
