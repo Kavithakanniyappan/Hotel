@@ -61,7 +61,16 @@ body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--cream);c
 @keyframes slideInRight{from{transform:translateX(100%);opacity:0;}to{transform:translateX(0);opacity:1;}}
 @keyframes slideOutRight{from{transform:translateX(0);opacity:1;}to{transform:translateX(120%);opacity:0;}}
 
-/* ━━━ HERO BG ━━━ */
+/* ━━━ FLYING FOOD ANIMATIONS on hero ━━━ */
+.flying-foods{position:fixed;inset:0;pointer-events:none;z-index:50;display:none;}
+.flying-foods.active{display:block;}
+.ff{position:absolute;font-size:2rem;animation:flyAcross linear forwards;opacity:0;}
+@keyframes flyAcross{
+  0%{transform:translate(0,0) rotate(0deg) scale(0.5);opacity:0;}
+  10%{opacity:1;}
+  90%{opacity:1;}
+  100%{transform:translate(var(--tx),var(--ty)) rotate(var(--rot)) scale(1.2);opacity:0;}
+}
 .hero{
   background:linear-gradient(135deg,rgba(253,248,242,.97) 0%,rgba(255,240,230,.96) 55%,rgba(255,251,240,.97) 100%);
   padding:70px 5% 60px;border-bottom:2px solid var(--border);position:relative;overflow:hidden;
@@ -83,20 +92,29 @@ body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--cream);c
 
 /* ━━━ NAV ━━━ */
 nav{background:#fff;border-bottom:3px solid var(--or);position:sticky;top:0;z-index:100;box-shadow:0 2px 18px var(--sh);}
-.ni{max-width:1200px;margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;}
-.logo-nav{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-nav img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);}
-.lt strong{display:block;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1rem;color:var(--or);}
-.lt em{display:block;font-family:'Noto Serif Tamil','Segoe UI',Arial,sans-serif;font-size:.68rem;color:var(--muted);font-style:normal;}
+.ni{max-width:1200px;margin:0 auto;padding:0 3%;display:flex;align-items:center;justify-content:space-between;height:60px;gap:8px;}
+.logo-nav{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0;}
+.logo-nav img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0;}
+.lt{min-width:0;}
+.lt strong{display:block;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:.88rem;color:var(--or);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.lt em{display:block;font-family:'Noto Serif Tamil','Segoe UI',Arial,sans-serif;font-size:.6rem;color:var(--muted);font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .nl{display:flex;gap:22px;}
 .nl a{text-decoration:none;color:var(--text);font-size:.8rem;font-weight:500;border-bottom:2px solid transparent;padding-bottom:2px;transition:.2s;}
 .nl a:hover{color:var(--or);border-bottom-color:var(--or);}
-.nr{display:flex;gap:8px;align-items:center;}
-.admin-btn{background:var(--gl);color:var(--gold);border:1.5px solid var(--gold);padding:7px 12px;border-radius:5px;font-size:.72rem;font-weight:600;cursor:pointer;}
-.cart-btn{background:var(--or);color:#fff;border:none;padding:9px 16px;font-weight:600;font-size:.8rem;cursor:pointer;display:flex;align-items:center;gap:6px;border-radius:5px;transition:.2s;}
+.nr{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+.admin-btn{background:var(--gl);color:var(--gold);border:1.5px solid var(--gold);padding:6px 10px;border-radius:5px;font-size:.68rem;font-weight:600;cursor:pointer;white-space:nowrap;}
+.cart-btn{background:var(--or);color:#fff;border:none;padding:8px 12px;font-weight:600;font-size:.76rem;cursor:pointer;display:flex;align-items:center;gap:5px;border-radius:5px;transition:.2s;white-space:nowrap;}
 .cart-btn:hover{background:var(--or2);}
-.cbadge{background:var(--gold);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.66rem;font-weight:700;}
-.track-btn{background:var(--blue);color:#fff;border:none;padding:9px 14px;font-weight:600;font-size:.78rem;cursor:pointer;border-radius:5px;}
+.cbadge{background:var(--gold);color:#fff;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;}
+.track-btn{background:var(--blue);color:#fff;border:none;padding:8px 10px;font-weight:600;font-size:.7rem;cursor:pointer;border-radius:5px;white-space:nowrap;}
+/* Mobile nav: hide track text on very small screens */
+@media(max-width:400px){
+  .track-btn{padding:8px 8px;font-size:.66rem;}
+  .admin-btn{padding:6px 8px;font-size:.66rem;}
+  .cart-btn{padding:8px 10px;font-size:.72rem;}
+  .logo-nav img{width:34px;height:34px;}
+  .lt strong{font-size:.78rem;}
+}
 
 /* ━━━ ADMIN MODAL ━━━ */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:500;align-items:center;justify-content:center;}
@@ -429,6 +447,9 @@ footer{background:var(--text);color:#DEB887;padding:26px 5%;}
 
 <!-- ━━━ NOTIFICATION CONTAINER ━━━ -->
 <div class="notif-container" id="notifContainer"></div>
+
+<!-- ━━━ FLYING FOOD ANIMATIONS ━━━ -->
+<div class="flying-foods" id="flyingFoods"></div>
 
 <!-- ━━━ ADMIN MODAL ━━━ -->
 <div class="modal-bg" id="adminModal">
@@ -1244,18 +1265,70 @@ window.addEventListener('scroll',()=>{document.getElementById('stbtn').classList
 
 renderMenu();
 
+// ━━━ LOGO + SPLASH + FLYING FOODS ━━━
 window.addEventListener('DOMContentLoaded', function(){
+  // Set logo everywhere
   ['animLogo','navLogo','heroLogo'].forEach(id=>{
-    const el=document.getElementById(id); if(el) el.src=LOGO_IMG;
+    const el=document.getElementById(id);
+    if(el && typeof LOGO_IMG !== 'undefined') el.src=LOGO_IMG;
   });
+
+  // Show splash AFTER page ready
   const overlay = document.getElementById('animOverlay');
-  overlay.classList.add('show');
-  setTimeout(()=>{
-    overlay.classList.add('hidden');
-    setTimeout(()=>{ overlay.classList.remove('show'); overlay.classList.remove('hidden'); }, 900);
-  }, 2500);
+  if(overlay){
+    overlay.classList.add('show');
+    // Hide after 2.5s then fly foods
+    setTimeout(()=>{
+      overlay.classList.add('hidden');
+      setTimeout(()=>{
+        overlay.classList.remove('show');
+        overlay.classList.remove('hidden');
+        launchFlyingFoods(); // 🍛 Fire foods after splash
+      }, 900);
+    }, 2500);
+  }
 });
 
+// 🍛 Flying food animations after splash closes
+function launchFlyingFoods(){
+  const container = document.getElementById('flyingFoods');
+  if(!container) return;
+  const foods = ['🍛','🍗','🥘','🥞','🍲','☕','🧆','🥗','🍱','🍜','🥙','🍳','🥘','🌶️'];
+  container.classList.add('active');
+  let count = 0;
+  const total = 20;
+
+  function spawnFood(){
+    if(count >= total){
+      setTimeout(()=>container.classList.remove('active'), 3000);
+      return;
+    }
+    const el = document.createElement('div');
+    el.className = 'ff';
+    el.textContent = foods[Math.floor(Math.random()*foods.length)];
+
+    // Start from random edge of screen
+    const side = Math.floor(Math.random()*4);
+    let sx, sy;
+    if(side===0){sx=Math.random()*100+'vw'; sy='-8vh';}
+    else if(side===1){sx='108vw'; sy=Math.random()*100+'vh';}
+    else if(side===2){sx=Math.random()*100+'vw'; sy='108vh';}
+    else{sx='-8vw'; sy=Math.random()*100+'vh';}
+
+    const tx = (Math.random()-0.5)*180+'vw';
+    const ty = (Math.random()-0.5)*180+'vh';
+    const rot = (Math.random()-0.5)*720+'deg';
+    const dur = (1.2 + Math.random()*2).toFixed(1)+'s';
+    const size = (1.4 + Math.random()*2).toFixed(1)+'rem';
+
+    el.style.cssText = `left:${sx};top:${sy};--tx:${tx};--ty:${ty};--rot:${rot};animation-duration:${dur};font-size:${size};`;
+    container.appendChild(el);
+    count++;
+    setTimeout(()=>el.remove(), parseFloat(dur)*1000+300);
+    setTimeout(spawnFood, 120 + Math.random()*180);
+  }
+  spawnFood();
+}
 </script>
 </body>
 </html>
